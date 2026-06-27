@@ -8,23 +8,34 @@ import { SectionHeading } from "@/components/section-heading";
 import { Stats } from "@/components/stats";
 import { Testimonials } from "@/components/testimonials";
 import { Timeline } from "@/components/timeline";
-import { caseStudies, industries, services, why365 } from "@/lib/content";
+import { industries as industryModels, services as serviceModels } from "@/lib/content";
+import { getEditableSiteContent } from "@/lib/site-content";
 
 export default function HomePage() {
+  const content = getEditableSiteContent();
+  const editableServices = content.services.map((service, index) => ({
+    ...service,
+    icon: serviceModels[index]?.icon ?? serviceModels[0].icon
+  }));
+  const editableIndustries = content.industries.map((title, index) => ({
+    title,
+    icon: industryModels[index]?.icon ?? industryModels[0].icon
+  }));
+
   return (
     <>
-      <Hero />
-      <Stats />
+      <Hero content={content.hero} />
+      <Stats stats={content.stats} />
 
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
           <SectionHeading
-            eyebrow="Enterprise capabilities"
-            title="Modernization services built for measurable business outcomes."
-            description="365INO connects strategy, technology, and disciplined execution so organizations can move from ambition to adoption."
+            eyebrow={content.homeSections.services.eyebrow}
+            title={content.homeSections.services.title}
+            description={content.homeSections.services.description}
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {services.slice(0, 6).map((service) => (
+            {editableServices.map((service) => (
               <ServiceCard key={service.title} {...service} />
             ))}
           </div>
@@ -34,12 +45,12 @@ export default function HomePage() {
       <AnimatedSection className="bg-slate-50 py-20">
         <div className="container-pad grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
-            eyebrow="Why 365INO"
-            title="Business-first technology leadership for complex environments."
-            description="The firm brings enterprise delivery discipline, AI readiness, and vendor-neutral advisory support to organizations that need practical modernization."
+            eyebrow={content.homeSections.why.eyebrow}
+            title={content.homeSections.why.title}
+            description={content.homeSections.why.description}
           />
           <div className="grid gap-4 sm:grid-cols-2">
-            {why365.map((item) => (
+            {content.why365.map((item) => (
               <div key={item} className="rounded-md border border-slate-200 bg-white p-5 text-lg font-black text-navy">
                 {item}
               </div>
@@ -51,9 +62,9 @@ export default function HomePage() {
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
           <SectionHeading
-            eyebrow="Delivery model"
-            title="From strategy to execution, with adoption in mind."
-            description="Every engagement starts with clarity, then moves into practical roadmaps, delivery governance, and continuous improvement."
+            eyebrow={content.homeSections.delivery.eyebrow}
+            title={content.homeSections.delivery.title}
+            description={content.homeSections.delivery.description}
           />
           <div className="mt-10">
             <Timeline />
@@ -64,9 +75,9 @@ export default function HomePage() {
       <AnimatedSection className="bg-slate-50 py-20">
         <div className="container-pad">
           <SectionHeading
-            eyebrow="Technology ecosystem"
-            title="AI, cloud, automation, and enterprise platforms working together."
-            description="365INO helps teams evaluate the right platforms and operating practices for secure modernization."
+            eyebrow={content.homeSections.technology.eyebrow}
+            title={content.homeSections.technology.title}
+            description={content.homeSections.technology.description}
           />
           <div className="mt-10">
             <TechnologyGrid />
@@ -77,11 +88,11 @@ export default function HomePage() {
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
           <SectionHeading
-            eyebrow="Industries"
-            title="Consulting support for mission-driven and commercial organizations."
+            eyebrow={content.homeSections.industries.eyebrow}
+            title={content.homeSections.industries.title}
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {industries.slice(0, 6).map(({ title, icon: Icon }) => (
+            {editableIndustries.map(({ title, icon: Icon }) => (
               <div key={title} className="rounded-md border border-slate-200 bg-white p-6">
                 <Icon className="mb-4 h-7 w-7 text-cyan-700" aria-hidden="true" />
                 <h3 className="text-xl font-black text-navy">{title}</h3>
@@ -94,12 +105,12 @@ export default function HomePage() {
       <AnimatedSection className="bg-slate-50 py-20">
         <div className="container-pad">
           <SectionHeading
-            eyebrow="Case studies"
-            title="Sample modernization patterns."
-            description="These illustrative examples show engagement structures without naming clients or claiming unsourced results."
+            eyebrow={content.homeSections.caseStudies.eyebrow}
+            title={content.homeSections.caseStudies.title}
+            description={content.homeSections.caseStudies.description}
           />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {caseStudies.map((study) => (
+            {content.caseStudies.map((study) => (
               <CaseStudyCard key={study.title} {...study} />
             ))}
           </div>
@@ -109,9 +120,9 @@ export default function HomePage() {
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
-            eyebrow="Client perspective"
-            title="Modernization work needs clarity, confidence, and momentum."
-            description="These representative testimonials can be replaced with approved client quotes when available."
+            eyebrow={content.homeSections.testimonials.eyebrow}
+            title={content.homeSections.testimonials.title}
+            description={content.homeSections.testimonials.description}
           />
           <Testimonials />
         </div>
@@ -120,8 +131,8 @@ export default function HomePage() {
       <AnimatedSection className="bg-slate-50 py-20">
         <div className="container-pad grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
-            eyebrow="Common questions"
-            title="A practical partner for AI-ready modernization."
+            eyebrow={content.homeSections.faq.eyebrow}
+            title={content.homeSections.faq.title}
           />
           <FAQ />
         </div>

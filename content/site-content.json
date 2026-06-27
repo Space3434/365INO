@@ -1,0 +1,162 @@
+{
+  "hero": {
+    "eyebrow": "Strategy. Innovation. Execution.",
+    "headline": "Technology Strategy. AI Transformation. Enterprise Delivery.",
+    "subheading": "Helping government agencies and commercial organizations modernize operations through Artificial Intelligence, intelligent automation, cloud technologies, and expert technology leadership.",
+    "primaryButton": "Schedule Consultation",
+    "secondaryButton": "View Services",
+    "consoleTitle": "AI Transformation Console",
+    "consoleStatus": "Live",
+    "consoleItems": [
+      "Assess enterprise readiness",
+      "Automate priority workflows",
+      "Modernize cloud operations"
+    ],
+    "capabilityTiles": [
+      "AI",
+      "Cloud",
+      "Data"
+    ]
+  },
+  "stats": [
+    {
+      "value": 20,
+      "suffix": "+",
+      "label": "Years Enterprise Leadership"
+    },
+    {
+      "value": 100,
+      "suffix": "+",
+      "label": "Technology Initiatives"
+    },
+    {
+      "value": 2,
+      "suffix": "x",
+      "label": "Government & Commercial Focus"
+    },
+    {
+      "value": 365,
+      "suffix": "",
+      "label": "AI Ready Transformation Focus"
+    }
+  ],
+  "homeSections": {
+    "services": {
+      "eyebrow": "Enterprise capabilities",
+      "title": "Modernization services built for measurable business outcomes.",
+      "description": "365INO connects strategy, technology, and disciplined execution so organizations can move from ambition to adoption."
+    },
+    "why": {
+      "eyebrow": "Why 365INO",
+      "title": "Business-first technology leadership for complex environments.",
+      "description": "The firm brings enterprise delivery discipline, AI readiness, and vendor-neutral advisory support to organizations that need practical modernization."
+    },
+    "delivery": {
+      "eyebrow": "Delivery model",
+      "title": "From strategy to execution, with adoption in mind.",
+      "description": "Every engagement starts with clarity, then moves into practical roadmaps, delivery governance, and continuous improvement."
+    },
+    "technology": {
+      "eyebrow": "Technology ecosystem",
+      "title": "AI, cloud, automation, and enterprise platforms working together.",
+      "description": "365INO helps teams evaluate the right platforms and operating practices for secure modernization."
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Consulting support for mission-driven and commercial organizations."
+    },
+    "caseStudies": {
+      "eyebrow": "Case studies",
+      "title": "Sample modernization patterns.",
+      "description": "These illustrative examples show engagement structures without naming clients or claiming unsourced results."
+    },
+    "testimonials": {
+      "eyebrow": "Client perspective",
+      "title": "Modernization work needs clarity, confidence, and momentum.",
+      "description": "These representative testimonials can be replaced with approved client quotes when available."
+    },
+    "faq": {
+      "eyebrow": "Common questions",
+      "title": "A practical partner for AI-ready modernization."
+    }
+  },
+  "services": [
+    {
+      "title": "AI & Intelligent Automation",
+      "description": "Design responsible AI use cases, automate manual workflows, and create measurable operational lift."
+    },
+    {
+      "title": "Enterprise Project & Program Management",
+      "description": "Lead complex technology portfolios with disciplined governance, transparency, and outcome focus."
+    },
+    {
+      "title": "Cloud Modernization",
+      "description": "Modernize platforms, data environments, and application delivery across secure cloud ecosystems."
+    },
+    {
+      "title": "Business Process Optimization",
+      "description": "Redesign operating models and workflows to reduce friction, waste, cycle time, and risk."
+    },
+    {
+      "title": "Data Analytics",
+      "description": "Turn enterprise data into dashboards, performance insight, and decision intelligence."
+    },
+    {
+      "title": "Technology Strategy",
+      "description": "Align technology investment with mission, customer experience, security, and business value."
+    }
+  ],
+  "why365": [
+    "Business First",
+    "AI Ready",
+    "Enterprise Experience",
+    "Government Expertise",
+    "Vendor Neutral",
+    "Trusted Advisors",
+    "Agile Delivery",
+    "Innovation Focused"
+  ],
+  "industries": [
+    "Government",
+    "Healthcare",
+    "Veterans Affairs",
+    "Financial Services",
+    "Retail",
+    "Manufacturing"
+  ],
+  "caseStudies": [
+    {
+      "title": "AI Readiness Roadmap",
+      "challenge": "A public-sector organization needed a pragmatic path to evaluate AI opportunities without increasing operational risk.",
+      "solution": "365INO structured discovery workshops, prioritized automation candidates, and defined governance for responsible adoption.",
+      "outcome": "Leadership gained a sequenced roadmap for pilots, controls, workforce enablement, and investment decisions.",
+      "metrics": [
+        "Illustrative: 30% faster intake triage",
+        "Illustrative: 5 pilot use cases prioritized",
+        "Illustrative: 90-day execution plan"
+      ]
+    },
+    {
+      "title": "Enterprise Portfolio Visibility",
+      "challenge": "Executives lacked consistent insight into program health, blockers, dependencies, and delivery tradeoffs.",
+      "solution": "365INO designed a right-sized PMO operating model, reporting cadence, and executive dashboard framework.",
+      "outcome": "Decision makers could spot risk earlier, coordinate cross-team work, and focus meetings on outcomes.",
+      "metrics": [
+        "Illustrative: 40% reduction in status prep time",
+        "Illustrative: 12 portfolio indicators",
+        "Illustrative: weekly leadership rhythm"
+      ]
+    },
+    {
+      "title": "Cloud Workflow Modernization",
+      "challenge": "Manual request routing and legacy collaboration patterns were slowing service delivery.",
+      "solution": "365INO mapped the process, redesigned handoffs, and recommended low-code automation with secure data practices.",
+      "outcome": "Teams received a practical modernization blueprint for workflow automation and scalable reporting.",
+      "metrics": [
+        "Illustrative: 25% fewer manual handoffs",
+        "Illustrative: 3 priority workflows",
+        "Illustrative: role-based dashboard concept"
+      ]
+    }
+  ]
+}

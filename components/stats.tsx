@@ -2,7 +2,7 @@
 
 import { animate, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { stats } from "@/lib/content";
+import type { EditableSiteContent } from "@/lib/site-content";
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -31,7 +31,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   );
 }
 
-export function Stats() {
+export function Stats({ stats }: { stats: EditableSiteContent["stats"] }) {
   return (
     <section className="bg-navy py-12 text-white">
       <div className="container-pad grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

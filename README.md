@@ -11,6 +11,16 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Browser Content Editor
+
+After the development server is running, open:
+
+```text
+http://localhost:3000/editor
+```
+
+Use the editor to update homepage hero text, section headings, stats, services, industries, why-365INO items, and case study copy without editing React files directly. Click **Save Changes**, then refresh the website. The editor saves to `content/site-content.json`.
+
 ## Production Build
 
 ```bash
