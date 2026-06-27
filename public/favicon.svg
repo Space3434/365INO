@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="365INO favicon">
+  <rect width="64" height="64" rx="10" fill="#07162f"/>
+  <path d="M14 20h21a9 9 0 0 1 0 18H23" fill="none" stroke="#22d3ee" stroke-width="6" stroke-linecap="round"/>
+  <path d="M18 44h29" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <text x="14" y="36" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="800">365</text>
+</svg>
