@@ -13,3 +13,6 @@ coverage
 outputs
 work
 test.txt
+*.log
+pnpm-lock.yaml
+pnpm-workspace.yaml
