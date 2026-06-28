@@ -3,6 +3,7 @@ export const companyContact = {
   email: "info@365ino.com",
   phone: "727-819-4456",
   fax: "813-475-6665",
+  linkedIn: "https://www.linkedin.com/company/77123276",
   address: {
     street: "7901 4th St. N.",
     suite: "Suite 4540",

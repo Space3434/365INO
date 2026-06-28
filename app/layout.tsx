@@ -63,7 +63,7 @@ export default function RootLayout({
       addressCountry: companyContact.address.country
     },
     slogan: "Technology That Moves Business Forward.",
-    sameAs: ["https://www.linkedin.com/"]
+    sameAs: [companyContact.linkedIn]
   };
 
   return (
