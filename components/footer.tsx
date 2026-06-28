@@ -1,6 +1,7 @@
-import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Printer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { companyAddressLines, companyContact } from "@/lib/contact";
 import { navItems } from "@/lib/content";
 
 export function Footer() {
@@ -45,14 +46,24 @@ export function Footer() {
           <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Connect</h2>
           <div className="space-y-3 text-sm text-slate-300">
             <p className="flex items-center gap-3">
-              <Mail className="h-4 w-4 text-cyan-300" aria-hidden="true" /> info@365ino.com
+              <Mail className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.email}
             </p>
             <p className="flex items-center gap-3">
-              <Phone className="h-4 w-4 text-cyan-300" aria-hidden="true" /> Available by consultation
+              <Phone className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.phone}
             </p>
             <p className="flex items-center gap-3">
-              <MapPin className="h-4 w-4 text-cyan-300" aria-hidden="true" /> United States
+              <Printer className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.fax}
             </p>
+            <div className="flex items-start gap-3">
+              <MapPin className="mt-1 h-4 w-4 shrink-0 text-cyan-300" aria-hidden="true" />
+              <address className="not-italic leading-6">
+                {companyAddressLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </address>
+            </div>
             <a href="https://www.linkedin.com/" className="inline-flex items-center gap-2 hover:text-white">
               <Linkedin className="h-4 w-4" aria-hidden="true" /> LinkedIn
             </a>

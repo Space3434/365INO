@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
+import { companyContact } from "@/lib/contact";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata(
@@ -29,7 +30,8 @@ export default function PrivacyPolicyPage() {
           </p>
           <p>
             365INO does not sell personal information. Requests about submitted information can be directed to
-            info@365ino.com.
+            {" "}
+            {companyContact.email}.
           </p>
         </div>
       </section>

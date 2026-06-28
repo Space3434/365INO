@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { companyContact } from "@/lib/contact";
 import "./globals.css";
 
 const siteUrl = "https://365ino.com";
@@ -50,6 +51,17 @@ export default function RootLayout({
     name: "365 Innovations Corporation",
     alternateName: "365INO",
     url: siteUrl,
+    email: companyContact.email,
+    telephone: companyContact.phone,
+    faxNumber: companyContact.fax,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: `${companyContact.address.street} ${companyContact.address.suite}`,
+      addressLocality: companyContact.address.city,
+      addressRegion: companyContact.address.state,
+      postalCode: companyContact.address.postalCode,
+      addressCountry: companyContact.address.country
+    },
     slogan: "Technology That Moves Business Forward.",
     sameAs: ["https://www.linkedin.com/"]
   };
