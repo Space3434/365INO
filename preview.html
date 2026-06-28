@@ -226,6 +226,52 @@
       section {
         padding: 80px 0;
       }
+      .capability {
+        padding: 64px 0;
+        background: #fff;
+      }
+      .capability-card {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 32px;
+        align-items: center;
+        border: 1px solid #cffafe;
+        border-radius: 8px;
+        background: #f8fafc;
+        box-shadow: 0 24px 80px rgba(7, 22, 47, 0.12);
+        padding: 28px;
+      }
+      .capability-preview {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .capability-preview img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .capability-preview span {
+        position: absolute;
+        inset: auto 0 0;
+        background: rgba(7, 22, 47, 0.92);
+        color: #fff;
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 900;
+      }
+      .capability h2 {
+        margin: 0;
+      }
+      .capability p {
+        color: #64748b;
+        font-size: 18px;
+        line-height: 1.65;
+      }
       h2 {
         margin: 0;
         max-width: 760px;
@@ -278,7 +324,8 @@
         }
         .hero-grid,
         .stats-grid,
-        .cards {
+        .cards,
+        .capability-card {
           grid-template-columns: 1fr;
         }
       }
@@ -337,6 +384,24 @@
           <div class="stat"><strong>100+</strong>Technology Initiatives</div>
           <div class="stat"><strong>Gov + Commercial</strong>Consulting Focus</div>
           <div class="stat"><strong>AI Ready</strong>Transformation Focused</div>
+        </div>
+      </div>
+      <div class="capability">
+        <div class="wrap capability-card">
+          <a class="capability-preview" href="public/365ino-capability-statement.pdf" download>
+            <img src="public/capability-statement-thumbnail.png" alt="Preview of the 365INO capability statement" />
+            <span>Download PDF</span>
+          </a>
+          <div>
+            <h2>Download the 365INO capability statement.</h2>
+            <p>
+              Review 365INO's services, differentiators, business information, and enterprise technology consulting
+              capabilities in a concise downloadable PDF.
+            </p>
+            <a class="btn primary" href="public/365ino-capability-statement.pdf" download>
+              Download Capability Statement
+            </a>
+          </div>
         </div>
       </div>
       <section>
