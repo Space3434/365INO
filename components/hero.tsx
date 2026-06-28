@@ -4,7 +4,7 @@ import { AnimatedBackground } from "@/components/animated-background";
 import { ButtonLink } from "@/components/button-link";
 import type { EditableSiteContent } from "@/lib/site-content";
 
-const collaborationImage = "/team-collaboration-it.jpg";
+const collaborationImage = "/homepage-header.png";
 
 export function Hero({ content }: { content: EditableSiteContent["hero"] }) {
   return (
