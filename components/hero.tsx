@@ -1,7 +1,10 @@
 import { ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
 import { AnimatedBackground } from "@/components/animated-background";
 import { ButtonLink } from "@/components/button-link";
 import type { EditableSiteContent } from "@/lib/site-content";
+
+const collaborationImage = "/team-collaboration-it.jpg";
 
 export function Hero({ content }: { content: EditableSiteContent["hero"] }) {
   return (
@@ -27,9 +30,19 @@ export function Hero({ content }: { content: EditableSiteContent["hero"] }) {
           </div>
         </div>
 
-        <div className="relative min-h-[420px]">
-          <div className="absolute inset-0 rounded-[2rem] border border-cyan-100 bg-white/70 shadow-enterprise backdrop-blur-md" />
-          <div className="absolute left-8 right-8 top-8 rounded-md border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="relative min-h-[520px]">
+          <div className="absolute inset-0 overflow-hidden rounded-[2rem] border border-cyan-100 bg-navy shadow-enterprise">
+            <Image
+              src={collaborationImage}
+              alt="IT professionals collaborating around laptops in a modern workplace"
+              fill
+              priority
+              sizes="(min-width: 1024px) 48vw, 100vw"
+              className="object-cover opacity-85"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-transparent" />
+          </div>
+          <div className="absolute left-6 right-6 top-6 rounded-md border border-white/40 bg-white/92 p-5 shadow-sm backdrop-blur-md sm:left-8 sm:right-8 sm:top-8">
             <div className="mb-5 flex items-center justify-between">
               <p className="text-sm font-black text-navy">{content.consoleTitle}</p>
               <span className="rounded-md bg-emerald-50 px-3 py-1 text-xs font-black text-emerald-700">
@@ -54,7 +67,7 @@ export function Hero({ content }: { content: EditableSiteContent["hero"] }) {
               ))}
             </div>
           </div>
-          <div className="absolute bottom-8 left-8 right-8 grid gap-4 sm:grid-cols-3">
+          <div className="absolute bottom-8 left-6 right-6 grid gap-4 sm:left-8 sm:right-8 sm:grid-cols-3">
             {content.capabilityTiles.map((label) => (
               <div key={label} className="rounded-md border border-white/80 bg-navy p-5 text-white shadow-lg">
                 <p className="text-3xl font-black">{label}</p>
@@ -62,6 +75,9 @@ export function Hero({ content }: { content: EditableSiteContent["hero"] }) {
               </div>
             ))}
           </div>
+          <p className="absolute bottom-3 right-8 text-xs font-semibold text-white/80">
+            Photo: Mimi Thian / Unsplash
+          </p>
         </div>
       </div>
     </section>
