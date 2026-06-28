@@ -1,4 +1,5 @@
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { navItems } from "@/lib/content";
 
@@ -8,12 +9,15 @@ export function Footer() {
       <div className="container-pad grid gap-10 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <div className="mb-5 flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-md bg-cyan-500 text-lg font-black">365</span>
-            <div>
-              <p className="text-xl font-black">365INO</p>
-              <p className="text-sm text-cyan-100">Technology That Moves Business Forward.</p>
-            </div>
+            <Image
+              src="/365ino-logo.png"
+              alt="365INO"
+              width={614}
+              height={137}
+              className="h-auto w-44"
+            />
           </div>
+          <p className="mb-4 text-sm text-cyan-100">Technology That Moves Business Forward.</p>
           <p className="max-w-xl text-sm leading-7 text-slate-300">
             365 Innovations Corporation helps organizations modernize operations through AI, automation,
             cloud technologies, data insight, and enterprise delivery leadership.

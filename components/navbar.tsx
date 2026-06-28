@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -20,14 +21,15 @@ export function Navbar() {
       </a>
       <nav className="container-pad flex min-h-20 items-center justify-between" aria-label="Primary navigation">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-md">
-          <span className="grid h-11 w-11 place-items-center rounded-md bg-navy text-lg font-black text-white">
-            365
-          </span>
-          <span>
-            <span className="block text-lg font-black tracking-tight text-navy">365INO</span>
-            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-cyan-700">
-              Innovations
-            </span>
+          <span className="grid h-12 w-40 place-items-center rounded-md bg-navy px-3 shadow-sm">
+            <Image
+              src="/365ino-logo.png"
+              alt="365INO"
+              width={614}
+              height={137}
+              priority
+              className="h-auto w-full"
+            />
           </span>
         </Link>
 
