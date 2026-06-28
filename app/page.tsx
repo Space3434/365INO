@@ -31,26 +31,7 @@ export default function HomePage() {
 
       <AnimatedSection className="bg-white py-16">
         <div className="container-pad">
-          <div className="grid items-center gap-8 rounded-md border border-cyan-100 bg-slate-50 p-6 shadow-enterprise md:grid-cols-[0.8fr_1.2fr] lg:p-8">
-            <a
-              href="/365ino-capability-statement.pdf"
-              download
-              className="focus-ring group relative block overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm"
-              aria-label="Download the 365INO capability statement PDF"
-            >
-              <Image
-                src="/capability-statement-thumbnail.png"
-                alt="Preview of the 365INO capability statement"
-                width={1280}
-                height={720}
-                className="h-auto w-full transition duration-300 group-hover:scale-[1.02]"
-              />
-              <span className="absolute inset-x-0 bottom-0 flex items-center justify-center gap-2 bg-navy/90 px-4 py-3 text-sm font-black text-white">
-                <Download className="h-4 w-4" aria-hidden="true" />
-                Download PDF
-              </span>
-            </a>
-
+          <div className="grid items-center gap-8 rounded-md border border-cyan-100 bg-slate-50 p-6 shadow-enterprise md:grid-cols-[1.2fr_0.8fr] lg:p-8">
             <div>
               <div className="mb-4 inline-flex items-center gap-2 rounded-md bg-cyan-50 px-3 py-2 text-sm font-black uppercase tracking-[0.16em] text-cyan-800">
                 <FileText className="h-4 w-4" aria-hidden="true" />
@@ -72,6 +53,21 @@ export default function HomePage() {
                 Download Capability Statement
               </a>
             </div>
+
+            <a
+              href="/365ino-capability-statement.pdf"
+              download
+              className="focus-ring group mx-auto block w-full max-w-xs overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm md:max-w-sm"
+              aria-label="Download the 365INO capability statement PDF"
+            >
+              <Image
+                src="/capability-statement-thumbnail.png"
+                alt="Preview of the 365INO capability statement"
+                width={1280}
+                height={720}
+                className="h-auto w-full transition duration-300 group-hover:scale-[1.02]"
+              />
+            </a>
           </div>
         </div>
       </AnimatedSection>

@@ -232,7 +232,7 @@
       }
       .capability-card {
         display: grid;
-        grid-template-columns: 0.8fr 1.2fr;
+        grid-template-columns: 1.2fr 0.8fr;
         gap: 32px;
         align-items: center;
         border: 1px solid #cffafe;
@@ -242,27 +242,18 @@
         padding: 28px;
       }
       .capability-preview {
-        position: relative;
         display: block;
+        width: min(100%, 360px);
         overflow: hidden;
         border: 1px solid #e2e8f0;
         border-radius: 8px;
         background: #fff;
+        justify-self: center;
       }
       .capability-preview img {
         display: block;
         width: 100%;
         height: auto;
-      }
-      .capability-preview span {
-        position: absolute;
-        inset: auto 0 0;
-        background: rgba(7, 22, 47, 0.92);
-        color: #fff;
-        padding: 12px;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 900;
       }
       .capability h2 {
         margin: 0;
@@ -388,10 +379,6 @@
       </div>
       <div class="capability">
         <div class="wrap capability-card">
-          <a class="capability-preview" href="public/365ino-capability-statement.pdf" download>
-            <img src="public/capability-statement-thumbnail.png" alt="Preview of the 365INO capability statement" />
-            <span>Download PDF</span>
-          </a>
           <div>
             <h2>Download the 365INO capability statement.</h2>
             <p>
@@ -402,6 +389,9 @@
               Download Capability Statement
             </a>
           </div>
+          <a class="capability-preview" href="public/365ino-capability-statement.pdf" download>
+            <img src="public/capability-statement-thumbnail.png" alt="Preview of the 365INO capability statement" />
+          </a>
         </div>
       </div>
       <section>
