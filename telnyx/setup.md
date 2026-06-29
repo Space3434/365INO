@@ -25,6 +25,8 @@ This folder contains the first-version setup for a Telnyx-only inbound voice sup
    TELNYX_API_KEY=YOUR_TELNYX_API_KEY
    ```
 
+   Use only the key value after the equals sign. Do not include `Bearer`, quotes, spaces, or the placeholder text.
+
 2. Create the assistant:
 
    ```bash
