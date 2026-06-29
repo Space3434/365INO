@@ -56,9 +56,9 @@ export function Footer() {
             <Link href="/privacy-policy" className="hover:text-white">
               Privacy
             </Link>
-            <span className="cursor-default text-slate-400" aria-label="Terms page unavailable for review">
+            <Link href="/terms-of-use" className="hover:text-white">
               Terms
-            </span>
+            </Link>
           </div>
         </div>
 
