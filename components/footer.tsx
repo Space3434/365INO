@@ -23,6 +23,26 @@ export function Footer() {
             365 Innovations Corporation helps organizations modernize operations through AI, automation,
             cloud technologies, data insight, and enterprise delivery leadership.
           </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <div className="flex h-14 w-36 items-center justify-center rounded-md bg-white p-2.5">
+              <Image
+                src="/pmi-logo.png"
+                alt="Project Management Institute"
+                width={483}
+                height={161}
+                className="max-h-full w-auto max-w-full object-contain"
+              />
+            </div>
+            <div className="flex h-14 w-36 items-center justify-center rounded-md bg-white p-2.5">
+              <Image
+                src="/iiba-logo.png"
+                alt="IIBA"
+                width={238}
+                height={99}
+                className="max-h-full w-auto max-w-full object-contain"
+              />
+            </div>
+          </div>
         </div>
 
         <div>
@@ -67,28 +87,6 @@ export function Footer() {
             <a href={companyContact.linkedIn} className="inline-flex items-center gap-3 hover:text-white">
               <Linkedin className="h-4 w-4 text-cyan-300" aria-hidden="true" /> LinkedIn
             </a>
-          </div>
-        </div>
-      </div>
-      <div className="border-t border-white/10 py-6">
-        <div className="container-pad flex flex-wrap items-center justify-center gap-6">
-          <div className="flex h-16 w-44 items-center justify-center rounded-md bg-white p-3">
-            <Image
-              src="/pmi-logo.png"
-              alt="Project Management Institute"
-              width={483}
-              height={161}
-              className="max-h-full w-auto max-w-full object-contain"
-            />
-          </div>
-          <div className="flex h-16 w-44 items-center justify-center rounded-md bg-white p-3">
-            <Image
-              src="/iiba-logo.png"
-              alt="IIBA"
-              width={238}
-              height={99}
-              className="max-h-full w-auto max-w-full object-contain"
-            />
           </div>
         </div>
       </div>
