@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowRight, BadgeCheck, Brain, BriefcaseBusiness, Cloud, Code2, GraduationCap, Handshake, ShieldCheck, Users } from "lucide-react";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
@@ -90,6 +91,20 @@ export default function CareersPage() {
               challenging assignments, flexible collaboration, and a culture that values trusted relationships as much
               as technical excellence.
             </p>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="bg-white pb-20">
+        <div className="container-pad">
+          <div className="overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-sm">
+            <Image
+              src="/careers-collaboration.png"
+              alt="Professional technology consultants collaborating in a modern workplace"
+              width={1680}
+              height={960}
+              className="h-72 w-full object-cover md:h-96"
+            />
           </div>
         </div>
       </AnimatedSection>
