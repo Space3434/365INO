@@ -6,6 +6,7 @@ import { ServiceCard, TechnologyGrid } from "@/components/card-grids";
 import { CtaBanner } from "@/components/cta-banner";
 import { FAQ } from "@/components/faq";
 import { Hero } from "@/components/hero";
+import { PerformanceSection } from "@/components/performance-section";
 import { SectionHeading } from "@/components/section-heading";
 import { Stats } from "@/components/stats";
 import { Testimonials } from "@/components/testimonials";
@@ -71,6 +72,8 @@ export default function HomePage() {
           </div>
         </div>
       </AnimatedSection>
+
+      <PerformanceSection />
 
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
