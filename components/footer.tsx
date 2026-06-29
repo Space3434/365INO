@@ -71,7 +71,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-5">
-        <div className="container-pad text-sm text-slate-400">
+        <div className="container-pad text-center text-sm text-slate-400">
           Copyright {new Date().getFullYear()} 365INO, CO. All rights reserved.
         </div>
       </div>
