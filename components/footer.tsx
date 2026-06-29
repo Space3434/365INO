@@ -65,7 +65,7 @@ export function Footer() {
               </address>
             </div>
             <a href={companyContact.linkedIn} className="inline-flex items-center gap-2 hover:text-white">
-              <Linkedin className="h-4 w-4" aria-hidden="true" /> LinkedIn
+              <Linkedin className="h-4 w-4 text-cyan-300" aria-hidden="true" /> LinkedIn
             </a>
           </div>
         </div>
