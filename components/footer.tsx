@@ -33,12 +33,12 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/privacy-policy" className="hover:text-white">
+            <span className="cursor-default text-slate-400" aria-label="Privacy page unavailable for review">
               Privacy
-            </Link>
-            <Link href="/terms-of-use" className="hover:text-white">
+            </span>
+            <span className="cursor-default text-slate-400" aria-label="Terms page unavailable for review">
               Terms
-            </Link>
+            </span>
           </div>
         </div>
 
@@ -67,6 +67,28 @@ export function Footer() {
             <a href={companyContact.linkedIn} className="inline-flex items-center gap-3 hover:text-white">
               <Linkedin className="h-4 w-4 text-cyan-300" aria-hidden="true" /> LinkedIn
             </a>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-white/10 py-6">
+        <div className="container-pad flex flex-wrap items-center justify-center gap-6">
+          <div className="flex h-16 w-44 items-center justify-center rounded-md bg-white p-3">
+            <Image
+              src="/pmi-logo.png"
+              alt="Project Management Institute"
+              width={483}
+              height={161}
+              className="max-h-full w-auto max-w-full object-contain"
+            />
+          </div>
+          <div className="flex h-16 w-44 items-center justify-center rounded-md bg-white p-3">
+            <Image
+              src="/iiba-logo.png"
+              alt="IIBA"
+              width={238}
+              height={99}
+              className="max-h-full w-auto max-w-full object-contain"
+            />
           </div>
         </div>
       </div>

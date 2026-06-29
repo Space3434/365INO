@@ -336,6 +336,27 @@
         line-height: 1.5;
         text-align: center;
       }
+      .footer-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 22px;
+      }
+      .footer-logo {
+        display: grid;
+        place-items: center;
+        width: 176px;
+        height: 64px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .footer-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
       @media (max-width: 880px) {
         .links {
           display: none;
@@ -465,10 +486,19 @@
       </section>
     </main>
     <footer>
+      <div class="wrap footer-logos">
+        <div class="footer-logo">
+          <img src="public/pmi-logo.png" alt="Project Management Institute" />
+        </div>
+        <div class="footer-logo">
+          <img src="public/iiba-logo.png" alt="IIBA" />
+        </div>
+      </div>
       <div class="wrap footer-lines">
         <strong>365INO, CO.</strong>
         <span>7901 4th St. N., Suite 4540, St. Petersburg, FL 33702</span>
         <span>T 727-819-4456 | F 813-475-6665 | E info@365ino.com</span>
+        <span>Privacy | Terms</span>
         <span>Copyright 2026 365INO, CO. All rights reserved.</span>
       </div>
     </footer>
