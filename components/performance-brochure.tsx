@@ -21,7 +21,7 @@ export function PerformanceBrochure() {
           href="/past-performance-client-success.png"
           target="_blank"
           rel="noreferrer"
-          className="focus-ring block overflow-hidden rounded-md border border-slate-200 bg-slate-50"
+          className="focus-ring mx-auto block w-full max-w-[75%] overflow-hidden rounded-md border border-slate-200 bg-slate-50"
           aria-label="Open the 365INO past performance and client success brochure image"
         >
           <Image
