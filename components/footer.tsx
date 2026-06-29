@@ -53,9 +53,9 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
-            <span className="cursor-default text-slate-400" aria-label="Privacy page unavailable for review">
+            <Link href="/privacy-policy" className="hover:text-white">
               Privacy
-            </span>
+            </Link>
             <span className="cursor-default text-slate-400" aria-label="Terms page unavailable for review">
               Terms
             </span>
