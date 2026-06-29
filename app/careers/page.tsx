@@ -4,11 +4,11 @@ import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { createMetadata } from "@/lib/metadata";
 
-const values = ["Remote opportunities", "Technology", "Innovation", "Learning", "Diversity"];
+const values = ["Remote opportunities", "Technology", "Innovation", "Learning", "Collaboration"];
 
 export const metadata: Metadata = createMetadata(
   "Careers",
-  "Explore careers with 365INO across remote opportunities, technology, innovation, learning, and diverse teams.",
+  "Explore careers with 365INO across remote opportunities, technology, innovation, learning, and collaboration.",
   "/careers"
 );
 
