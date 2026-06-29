@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone, Printer } from "lucide-react";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
 import { ContactForm } from "@/components/contact-form";
 import { PageHero } from "@/components/page-hero";
@@ -45,10 +46,24 @@ export default function ContactPage() {
                 </address>
               </div>
             </div>
-            <div className="mt-8 grid min-h-64 place-items-center rounded-md border border-dashed border-cyan-300 bg-cyan-50 text-center">
-              <p className="px-6 text-sm font-bold text-cyan-900">
-                Map placeholder: {companyContact.address.city}, {companyContact.address.state}
-              </p>
+            <div className="mt-8 overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-sm">
+              <Image
+                src="/tampa-bay-community.png"
+                alt="Tampa Bay waterfront and skyline representing 365INO's regional community presence"
+                width={1680}
+                height={960}
+                className="h-64 w-full object-cover"
+              />
+              <div className="p-5">
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-cyan-700">
+                  Tampa Bay community
+                </p>
+                <p className="mt-3 text-base leading-7 text-slate-600">
+                  365INO is proud to serve the Tampa Bay region while operating as a remote-first team.
+                  Our physical office supports business administration, but our work is built around
+                  responsive collaboration with clients wherever they need us.
+                </p>
+              </div>
             </div>
           </div>
           <ContactForm />
