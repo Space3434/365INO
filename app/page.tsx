@@ -6,6 +6,7 @@ import { ServiceCard, TechnologyGrid } from "@/components/card-grids";
 import { CtaBanner } from "@/components/cta-banner";
 import { FAQ } from "@/components/faq";
 import { Hero } from "@/components/hero";
+import { PerformanceBrochure } from "@/components/performance-brochure";
 import { SectionHeading } from "@/components/section-heading";
 import { Stats } from "@/components/stats";
 import { Testimonials } from "@/components/testimonials";
@@ -154,6 +155,9 @@ export default function HomePage() {
             title={content.homeSections.caseStudies.title}
             description={content.homeSections.caseStudies.description}
           />
+          <div className="mt-10">
+            <PerformanceBrochure />
+          </div>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {content.caseStudies.map((study) => (
               <CaseStudyCard key={study.title} {...study} />

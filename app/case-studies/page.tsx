@@ -3,6 +3,7 @@ import { AnimatedSection } from "@/components/animated-section";
 import { CaseStudyCard } from "@/components/case-study-card";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
+import { PerformanceBrochure } from "@/components/performance-brochure";
 import { caseStudies } from "@/lib/content";
 import { createMetadata } from "@/lib/metadata";
 
@@ -21,10 +22,13 @@ export default function CaseStudiesPage() {
         description="These examples use illustrative metrics where source data is not available and avoid naming clients without public reference."
       />
       <AnimatedSection className="bg-white py-20">
-        <div className="container-pad grid gap-6 lg:grid-cols-3">
-          {caseStudies.map((study) => (
-            <CaseStudyCard key={study.title} {...study} />
-          ))}
+        <div className="container-pad">
+          <PerformanceBrochure />
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {caseStudies.map((study) => (
+              <CaseStudyCard key={study.title} {...study} />
+            ))}
+          </div>
         </div>
       </AnimatedSection>
       <CtaBanner />
