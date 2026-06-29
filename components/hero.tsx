@@ -20,9 +20,6 @@ export function Hero({ content }: { content: EditableSiteContent["hero"] }) {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/15 to-transparent" />
-        <p className="absolute bottom-4 right-5 text-xs font-semibold text-white/85 sm:right-8">
-          Photo: Mimi Thian / Unsplash
-        </p>
       </div>
 
       <div className="container-pad relative grid items-center gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
