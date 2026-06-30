@@ -16,24 +16,10 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-function normalizeApiKey(value) {
-  return (value ?? "").trim().replace(/^Bearer\s+/i, "").trim();
-}
-
-function fail(message) {
-  console.error(message);
-  process.exitCode = 1;
-}
-
-const apiKey = normalizeApiKey(process.env.TELNYX_API_KEY);
+const apiKey = process.env.TELNYX_API_KEY;
 
 if (!apiKey) {
   console.error("Missing TELNYX_API_KEY. Add it to .env.local or set it in your shell.");
-  process.exit(1);
-}
-
-if (/your_|placeholder|paste_/i.test(apiKey)) {
-  console.error("TELNYX_API_KEY still looks like a placeholder. Replace it with your real Telnyx API key.");
   process.exit(1);
 }
 
@@ -64,10 +50,11 @@ const json = await response.json().catch(() => null);
 if (!response.ok) {
   console.error(`Telnyx API error: ${response.status} ${response.statusText}`);
   console.error(JSON.stringify(json, null, 2));
-  fail("Check that .env.local contains only: TELNYX_API_KEY=your_real_telnyx_key");
-} else {
-  console.log("Created Telnyx assistant:");
-  console.log(JSON.stringify(json, null, 2));
-  console.log("");
-  console.log("Next: assign this assistant to your inbound Telnyx phone number in Mission Control.");
+  process.exit(1);
 }
+
+console.log("Created Telnyx assistant:");
+console.log(JSON.stringify(json, null, 2));
+console.log("");
+console.log("Next: assign this assistant to your inbound Telnyx phone number in Mission Control.");
+
