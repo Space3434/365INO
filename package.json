@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit",
-    "telnyx:create-assistant": "node scripts/create-telnyx-assistant.mjs"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
