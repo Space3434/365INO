@@ -40,24 +40,6 @@ This folder contains the first-version setup for a Telnyx-only inbound voice sup
    - Enable Conversation History.
    - Enable Insights for the assistant if available in your Telnyx plan/configuration.
 
-## Getting a Toll-Free Number
-
-If you want a new Telnyx number, start by searching for available toll-free voice numbers:
-
-```bash
-npm run telnyx:search-tollfree
-```
-
-To show a different number of results, pass a count:
-
-```bash
-npm run telnyx:search-tollfree -- 20
-```
-
-This script only searches available numbers. It does not buy a number or create charges.
-
-After choosing a number, purchase it in Telnyx Mission Control, confirm the monthly/usage costs, then assign it to the `365INO Customer Support` AI Assistant.
-
 ## Recommended First Tests
 
 Call the assigned Telnyx number and test:
@@ -84,3 +66,4 @@ Confirm:
 - Add live transfer rules
 - Add business-hours handling
 - Add a website page for voice-agent operations
+

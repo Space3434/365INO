@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "telnyx:create-assistant": "node scripts/create-telnyx-assistant.mjs",
-    "telnyx:search-tollfree": "node scripts/search-telnyx-tollfree.mjs"
+    "telnyx:create-assistant": "node scripts/create-telnyx-assistant.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
