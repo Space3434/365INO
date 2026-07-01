@@ -95,14 +95,14 @@ export default function HomePage() {
             title={content.homeSections.why.title}
             description={content.homeSections.why.description}
           />
-          <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise">
+          <div className="mx-auto mt-10 max-w-[840px] overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise">
             <Image
               src="/why-365ino-principles.png"
               alt="Why 365INO graphic highlighting mission focus, government experience, AI and innovation, proven results, trusted partnership, and quality and integrity"
               width={1536}
               height={1024}
               className="h-auto w-full"
-              sizes="(min-width: 1024px) 576px, calc(100vw - 32px)"
+              sizes="(min-width: 1024px) 840px, calc(100vw - 32px)"
             />
           </div>
         </div>
