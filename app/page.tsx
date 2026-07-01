@@ -88,32 +88,6 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="bg-slate-50 py-20">
-        <div className="container-pad">
-          <SectionHeading
-            eyebrow={content.homeSections.why.eyebrow}
-            title={content.homeSections.why.title}
-            description={content.homeSections.why.description}
-          />
-          <a
-            href="/why-365ino-principles.png"
-            target="_blank"
-            rel="noreferrer"
-            className="focus-ring group mx-auto mt-10 block max-w-[620px] overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise"
-            aria-label="Open the full-size Why 365INO graphic"
-          >
-            <Image
-              src="/why-365ino-principles.png"
-              alt="Why 365INO graphic highlighting mission focus, government experience, AI and innovation, proven results, trusted partnership, and quality and integrity"
-              width={1003}
-              height={565}
-              className="h-auto w-full transition duration-300 group-hover:scale-[1.02]"
-              sizes="(min-width: 1024px) 620px, calc(100vw - 32px)"
-            />
-          </a>
-        </div>
-      </AnimatedSection>
-
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
           <SectionHeading
