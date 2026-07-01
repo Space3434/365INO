@@ -54,7 +54,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="rounded-md border border-slate-200 bg-white p-7 shadow-sm">
-            <h2 className="text-2xl font-black text-navy">Tagline</h2>
+            <h2 className="text-2xl font-black text-navy">Focus</h2>
             <p className="mt-4 leading-8 text-slate-600">Technology That Moves Business Forward.</p>
           </div>
         </div>
