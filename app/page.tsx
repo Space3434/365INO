@@ -89,18 +89,21 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="bg-slate-50 py-20">
-        <div className="container-pad grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="container-pad">
           <SectionHeading
             eyebrow={content.homeSections.why.eyebrow}
             title={content.homeSections.why.title}
             description={content.homeSections.why.description}
           />
-          <div className="grid gap-4 sm:grid-cols-2">
-            {content.why365.map((item) => (
-              <div key={item} className="rounded-md border border-slate-200 bg-white p-5 text-lg font-black text-navy">
-                {item}
-              </div>
-            ))}
+          <div className="mt-10 overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise">
+            <Image
+              src="/why-365ino-principles.png"
+              alt="Why 365INO graphic highlighting mission focus, government experience, AI and innovation, proven results, trusted partnership, and quality and integrity"
+              width={1536}
+              height={1024}
+              className="h-auto w-full"
+              sizes="(min-width: 1280px) 1120px, calc(100vw - 32px)"
+            />
           </div>
         </div>
       </AnimatedSection>
