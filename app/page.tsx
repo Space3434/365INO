@@ -95,16 +95,22 @@ export default function HomePage() {
             title={content.homeSections.why.title}
             description={content.homeSections.why.description}
           />
-          <div className="mx-auto mt-10 max-w-[840px] overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise">
+          <a
+            href="/why-365ino-principles.png"
+            target="_blank"
+            rel="noreferrer"
+            className="focus-ring group mx-auto mt-10 block max-w-[620px] overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise"
+            aria-label="Open the full-size Why 365INO graphic"
+          >
             <Image
               src="/why-365ino-principles.png"
               alt="Why 365INO graphic highlighting mission focus, government experience, AI and innovation, proven results, trusted partnership, and quality and integrity"
-              width={1536}
-              height={1024}
-              className="h-auto w-full"
-              sizes="(min-width: 1024px) 840px, calc(100vw - 32px)"
+              width={1003}
+              height={565}
+              className="h-auto w-full transition duration-300 group-hover:scale-[1.02]"
+              sizes="(min-width: 1024px) 620px, calc(100vw - 32px)"
             />
-          </div>
+          </a>
         </div>
       </AnimatedSection>
 

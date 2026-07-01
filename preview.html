@@ -305,7 +305,7 @@
       .why-graphic {
         display: block;
         margin-top: 36px;
-        width: min(100%, 840px);
+        width: min(100%, 620px);
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
@@ -318,6 +318,10 @@
         display: block;
         width: 100%;
         height: auto;
+        transition: transform 0.3s ease;
+      }
+      .why-graphic:hover img {
+        transform: scale(1.02);
       }
       .cards {
         grid-template-columns: repeat(3, 1fr);
@@ -489,12 +493,12 @@
             365INO combines government experience, AI and innovation, proven delivery results, trusted partnership, and
             quality-driven execution to help organizations create lasting value.
           </p>
-          <div class="why-graphic">
+          <a class="why-graphic" href="public/why-365ino-principles.png" target="_blank" rel="noreferrer">
             <img
               src="public/why-365ino-principles.png"
               alt="Why 365INO graphic highlighting mission focus, government experience, AI and innovation, proven results, trusted partnership, and quality and integrity"
             />
-          </div>
+          </a>
         </div>
       </section>
       <section>
