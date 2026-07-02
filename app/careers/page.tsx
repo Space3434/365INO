@@ -95,21 +95,6 @@ export default function CareersPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="bg-white pb-20">
-        <div className="container-pad">
-          <div className="mx-auto max-w-5xl overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-enterprise">
-            <Image
-              src="/careers-at-365ino.png"
-              alt="Careers at 365INO graphic highlighting innovation, collaboration, impact, future-focused vision, equal opportunity employment, and resume submission"
-              width={900}
-              height={600}
-              className="h-auto w-full"
-              sizes="(min-width: 1280px) 1024px, calc(100vw - 32px)"
-            />
-          </div>
-        </div>
-      </AnimatedSection>
-
       <AnimatedSection className="bg-slate-50 py-20">
         <div className="container-pad">
           <SectionHeading
@@ -175,6 +160,21 @@ export default function CareersPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      <AnimatedSection className="bg-white pt-20">
+        <div className="container-pad">
+          <div className="mx-auto max-w-5xl overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-enterprise">
+            <Image
+              src="/careers-at-365ino.png"
+              alt="Careers at 365INO graphic highlighting innovation, collaboration, impact, future-focused vision, equal opportunity employment, and resume submission"
+              width={900}
+              height={600}
+              className="h-64 w-full object-cover object-center md:h-[390px]"
+              sizes="(min-width: 1280px) 1024px, calc(100vw - 32px)"
+            />
           </div>
         </div>
       </AnimatedSection>
