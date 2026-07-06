@@ -181,14 +181,14 @@ export default function CareersPage() {
 
       <AnimatedSection className="bg-white pt-20">
         <div className="container-pad">
-          <div className="relative mx-auto max-w-[768px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-enterprise">
+          <div className="relative mx-auto max-w-[666px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-enterprise">
             <Image
               src="/careers-at-365ino.png"
               alt="Careers at 365INO graphic highlighting innovation, collaboration, impact, future-focused vision, equal opportunity employment, and resume submission"
               width={1024}
               height={1536}
               className="h-auto w-full"
-              sizes="(min-width: 1024px) 768px, calc(100vw - 32px)"
+              sizes="(min-width: 1024px) 666px, calc(100vw - 32px)"
             />
             <a
               href="mailto:careers@365ino.com"
