@@ -181,15 +181,22 @@ export default function CareersPage() {
 
       <AnimatedSection className="bg-white pt-20">
         <div className="container-pad">
-          <div className="mx-auto max-w-[900px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-enterprise">
+          <div className="relative mx-auto max-w-[768px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-enterprise">
             <Image
               src="/careers-at-365ino.png"
               alt="Careers at 365INO graphic highlighting innovation, collaboration, impact, future-focused vision, equal opportunity employment, and resume submission"
-              width={900}
-              height={600}
+              width={1024}
+              height={1536}
               className="h-auto w-full"
-              sizes="(min-width: 1024px) 900px, calc(100vw - 32px)"
+              sizes="(min-width: 1024px) 768px, calc(100vw - 32px)"
             />
+            <a
+              href="mailto:careers@365ino.com"
+              className="focus-ring absolute left-[56.5%] top-[88.9%] h-[4.6%] w-[37.8%] rounded-md bg-transparent transition hover:bg-cyan-200/15"
+              aria-label="Send resume to careers@365ino.com"
+            >
+              <span className="sr-only">careers@365ino.com</span>
+            </a>
           </div>
         </div>
       </AnimatedSection>
