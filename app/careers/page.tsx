@@ -95,6 +95,21 @@ export default function CareersPage() {
         </div>
       </AnimatedSection>
 
+      <AnimatedSection className="bg-white pb-20">
+        <div className="container-pad">
+          <div className="overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-sm">
+            <Image
+              src="/careers-collaboration.png"
+              alt="Professional team collaborating around project materials in a modern office"
+              width={1680}
+              height={960}
+              className="h-72 w-full object-cover md:h-96"
+              sizes="(min-width: 1280px) 1120px, calc(100vw - 32px)"
+            />
+          </div>
+        </div>
+      </AnimatedSection>
+
       <AnimatedSection className="bg-slate-50 py-20">
         <div className="container-pad">
           <SectionHeading
