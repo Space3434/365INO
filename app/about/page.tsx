@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
+import { PerformanceBrochureLink } from "@/components/performance-brochure-link";
 import { SectionHeading } from "@/components/section-heading";
 import { createMetadata } from "@/lib/metadata";
 
@@ -91,6 +92,9 @@ export default function AboutPage() {
                 sizes="(min-width: 1024px) 520px, calc(100vw - 32px)"
               />
             </a>
+          </div>
+          <div className="mt-10">
+            <PerformanceBrochureLink />
           </div>
         </div>
       </AnimatedSection>
