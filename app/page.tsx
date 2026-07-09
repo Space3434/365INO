@@ -1,6 +1,5 @@
 import { ExternalLink, FileText, Maximize2 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
 import { CaseStudyCard } from "@/components/case-study-card";
 import { ServiceCard, TechnologyGrid } from "@/components/card-grids";
@@ -46,17 +45,19 @@ export default function HomePage() {
                 Review 365INO&apos;s services, differentiators, business information, and delivery experience in
                 the Case Studies capability overview.
               </p>
-              <Link
-                href="/case-studies#capability-statement"
+              <a
+                href="/past-performance-client-success.png"
+                target="_blank"
+                rel="noreferrer"
                 className="focus-ring mt-6 inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-cyan-300 bg-white px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-navy shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-500 hover:bg-cyan-50 hover:shadow-md"
               >
-                Preview Capability Statement
+                View Capability Statement
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </Link>
+              </a>
             </div>
 
             <a
-              href="/365ino-capability-statement.pdf"
+              href="/past-performance-client-success.png"
               target="_blank"
               rel="noreferrer"
               className="focus-ring group relative mx-auto block aspect-square w-full max-w-[340px] overflow-hidden rounded-md border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise"
