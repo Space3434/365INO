@@ -23,6 +23,10 @@ export function Footer() {
             365 Innovations Corporation helps organizations modernize operations through AI, automation,
             cloud technologies, data insight, and enterprise delivery leadership.
           </p>
+          <div className="mt-5 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100">
+            <span className="rounded-md border border-cyan-300/30 bg-white/5 px-3 py-2">UEI: YLN7PLWJGMP6</span>
+            <span className="rounded-md border border-cyan-300/30 bg-white/5 px-3 py-2">CAGE: 8NW98</span>
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <div className="flex h-14 w-36 items-center justify-center rounded-md bg-white p-2.5">
               <Image
