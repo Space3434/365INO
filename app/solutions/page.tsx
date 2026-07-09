@@ -15,16 +15,16 @@ const solutions = [
 ];
 
 const technologyPartners = [
-  { name: "AWS", logo: "/partner-logos/aws.png", width: 264, height: 170 },
-  { name: "Azure", logo: "/partner-logos/azure.png", width: 348, height: 200 },
-  { name: "Cerner", logo: "/partner-logos/cerner.png", width: 291, height: 190 },
-  { name: "Databricks", logo: "/partner-logos/databricks.png", width: 232, height: 141 },
-  { name: "Intel", logo: "/partner-logos/intel.png", width: 314, height: 302 },
-  { name: "Microsoft", logo: "/partner-logos/microsoft.png", width: 348, height: 107 },
-  { name: "PEGA", logo: "/partner-logos/pega.png", width: 275, height: 91 },
-  { name: "Salesforce", logo: "/partner-logos/salesforce.png", width: 342, height: 246 },
-  { name: "SAP", logo: "/partner-logos/sap.png", width: 372, height: 201 },
-  { name: "ServiceNow", logo: "/partner-logos/servicenow.png", width: 321, height: 83 }
+  { name: "AWS", logo: "/partner-logos/aws.svg", width: 264, height: 170 },
+  { name: "Azure", logo: "/partner-logos/azure.svg", width: 348, height: 200 },
+  { name: "Cerner", logo: "/partner-logos/cerner.png", width: 976, height: 240 },
+  { name: "Databricks", logo: "/partner-logos/databricks.svg", width: 232, height: 141 },
+  { name: "Intel", logo: "/partner-logos/intel.svg", width: 314, height: 302 },
+  { name: "Microsoft", logo: "/partner-logos/microsoft.svg", width: 348, height: 107 },
+  { name: "PEGA", logo: "/partner-logos/pega.png", width: 6943, height: 1840 },
+  { name: "Salesforce", logo: "/partner-logos/salesforce.svg", width: 342, height: 246 },
+  { name: "SAP", logo: "/partner-logos/sap.svg", width: 372, height: 201 },
+  { name: "ServiceNow", logo: "/partner-logos/servicenow.svg", width: 321, height: 83 }
 ];
 
 const partnershipBenefits = [
@@ -93,14 +93,14 @@ export default function SolutionsPage() {
             {technologyPartners.map((partner) => (
               <div
                 key={partner.name}
-                className="flex min-h-20 items-center justify-center rounded-md border border-cyan-200 bg-cyan-50 px-4 py-5 shadow-sm transition hover:border-cyan-500 hover:bg-white hover:shadow-md"
+                className="flex min-h-24 items-center justify-center rounded-md border border-cyan-200 bg-white px-4 py-4 shadow-sm transition hover:border-cyan-500 hover:shadow-md"
               >
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} logo`}
                   width={partner.width}
                   height={partner.height}
-                  className="max-h-12 w-auto max-w-full object-contain"
+                  className="h-14 w-full object-contain"
                 />
               </div>
             ))}
