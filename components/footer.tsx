@@ -68,16 +68,16 @@ export function Footer() {
         <div>
           <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Connect</h2>
           <div className="space-y-3 text-sm text-slate-300">
-            <p className="flex items-center gap-3">
+            <p className="flex items-center gap-4">
               <Mail className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.email}
             </p>
-            <p className="flex items-center gap-3">
+            <p className="flex items-center gap-4">
               <Phone className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.phone}
             </p>
-            <p className="flex items-center gap-3">
+            <p className="flex items-center gap-4">
               <Printer className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.fax}
             </p>
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-4">
               <MapPin className="mt-1 h-4 w-4 shrink-0 text-cyan-300" aria-hidden="true" />
               <address className="not-italic leading-6">
                 {companyAddressLines.map((line) => (
@@ -87,7 +87,7 @@ export function Footer() {
                 ))}
               </address>
             </div>
-            <a href={companyContact.linkedIn} className="inline-flex items-center gap-3 hover:text-white">
+            <a href={companyContact.linkedIn} className="inline-flex items-center gap-4 hover:text-white">
               <Linkedin className="h-4 w-4 text-cyan-300" aria-hidden="true" /> LinkedIn
             </a>
           </div>
