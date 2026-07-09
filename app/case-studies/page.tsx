@@ -4,10 +4,9 @@ import { CaseStudyCard } from "@/components/case-study-card";
 import { CtaBanner } from "@/components/cta-banner";
 import { PageHero } from "@/components/page-hero";
 import { PerformanceBrochure } from "@/components/performance-brochure";
-import { SectionHeading } from "@/components/section-heading";
-import { Testimonials } from "@/components/testimonials";
 import { caseStudies } from "@/lib/content";
 import { createMetadata } from "@/lib/metadata";
+import Image from "next/image";
 
 export const metadata: Metadata = createMetadata(
   "Case Studies",
@@ -25,15 +24,15 @@ export default function CaseStudiesPage() {
       />
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
-          <div className="rounded-md border border-slate-200 bg-slate-50 p-6 shadow-sm lg:p-8">
-            <SectionHeading
-              eyebrow="Client Perspective"
-              title="Confidence built through clear execution."
-              description="Representative perspectives that reflect the kind of clarity, delivery rhythm, and modernization support clients can expect from 365INO engagements."
+          <div className="overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise">
+            <Image
+              src="/client-perspective-modernization.png"
+              alt="Client perspective graphic highlighting modernization that delivers clarity, confidence, and momentum"
+              width={858}
+              height={458}
+              className="h-auto w-full"
+              sizes="(min-width: 1280px) 1180px, calc(100vw - 32px)"
             />
-            <div className="mt-8">
-              <Testimonials />
-            </div>
           </div>
           <div id="capability-statement" className="mt-10 scroll-mt-28">
             <PerformanceBrochure />
