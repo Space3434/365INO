@@ -15,6 +15,7 @@ const solutions = [
 
 const technologyPartners = [
   "AWS",
+  "Azure",
   "Cerner",
   "Databricks",
   "Intel",
@@ -91,7 +92,7 @@ export default function SolutionsPage() {
             {technologyPartners.map((partner) => (
               <div
                 key={partner}
-                className="flex min-h-20 items-center justify-center rounded-md border border-slate-200 bg-white px-4 py-5 text-center text-base font-black text-navy shadow-sm transition hover:border-cyan-400 hover:shadow-md"
+                className="flex min-h-20 items-center justify-center rounded-md border border-cyan-200 bg-cyan-50 px-4 py-5 text-center text-base font-black text-navy shadow-sm transition hover:border-cyan-500 hover:bg-navy hover:text-white hover:shadow-md"
               >
                 {partner}
               </div>
