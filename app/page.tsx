@@ -55,10 +55,12 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <Link
-              href="/case-studies#capability-statement"
+            <a
+              href="/365ino-capability-statement.pdf"
+              target="_blank"
+              rel="noreferrer"
               className="focus-ring group relative mx-auto block aspect-square w-full max-w-[340px] overflow-hidden rounded-md border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise"
-              aria-label="Preview the 365INO capability statement on the Case Studies page"
+              aria-label="Open the 365INO capability statement PDF"
             >
               <Image
                 src="/capability-statement-link-button.png"
@@ -71,7 +73,7 @@ export default function HomePage() {
               <span className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-md bg-navy text-white shadow-md transition group-hover:bg-cyan-600">
                 <Maximize2 className="h-5 w-5" aria-hidden="true" />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </AnimatedSection>
