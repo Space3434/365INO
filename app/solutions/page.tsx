@@ -5,6 +5,7 @@ import { PageHero } from "@/components/page-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { createMetadata } from "@/lib/metadata";
 import { Blocks, Rocket, Workflow } from "lucide-react";
+import Image from "next/image";
 
 const solutions = [
   "AI & Automation",
@@ -14,16 +15,16 @@ const solutions = [
 ];
 
 const technologyPartners = [
-  "AWS",
-  "Azure",
-  "Cerner",
-  "Databricks",
-  "Intel",
-  "Microsoft",
-  "PEGA",
-  "Salesforce",
-  "SAP",
-  "ServiceNow"
+  { name: "AWS", logo: "/partner-logos/aws.png", width: 264, height: 170 },
+  { name: "Azure", logo: "/partner-logos/azure.png", width: 348, height: 200 },
+  { name: "Cerner", logo: "/partner-logos/cerner.png", width: 291, height: 190 },
+  { name: "Databricks", logo: "/partner-logos/databricks.png", width: 232, height: 141 },
+  { name: "Intel", logo: "/partner-logos/intel.png", width: 314, height: 302 },
+  { name: "Microsoft", logo: "/partner-logos/microsoft.png", width: 348, height: 107 },
+  { name: "PEGA", logo: "/partner-logos/pega.png", width: 275, height: 91 },
+  { name: "Salesforce", logo: "/partner-logos/salesforce.png", width: 342, height: 246 },
+  { name: "SAP", logo: "/partner-logos/sap.png", width: 372, height: 201 },
+  { name: "ServiceNow", logo: "/partner-logos/servicenow.png", width: 321, height: 83 }
 ];
 
 const partnershipBenefits = [
@@ -91,10 +92,16 @@ export default function SolutionsPage() {
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {technologyPartners.map((partner) => (
               <div
-                key={partner}
-                className="flex min-h-20 items-center justify-center rounded-md border border-cyan-200 bg-cyan-50 px-4 py-5 text-center text-base font-black text-navy shadow-sm transition hover:border-cyan-500 hover:bg-navy hover:text-white hover:shadow-md"
+                key={partner.name}
+                className="flex min-h-20 items-center justify-center rounded-md border border-cyan-200 bg-cyan-50 px-4 py-5 shadow-sm transition hover:border-cyan-500 hover:bg-white hover:shadow-md"
               >
-                {partner}
+                <Image
+                  src={partner.logo}
+                  alt={`${partner.name} logo`}
+                  width={partner.width}
+                  height={partner.height}
+                  className="max-h-12 w-auto max-w-full object-contain"
+                />
               </div>
             ))}
           </div>
