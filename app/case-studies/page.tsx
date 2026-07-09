@@ -34,13 +34,13 @@ export default function CaseStudiesPage() {
               sizes="(min-width: 1280px) 1180px, calc(100vw - 32px)"
             />
           </div>
-          <div id="capability-statement" className="mt-10 scroll-mt-28">
-            <PerformanceBrochure />
-          </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {caseStudies.map((study) => (
               <CaseStudyCard key={study.title} {...study} />
             ))}
+          </div>
+          <div id="capability-statement" className="mt-10 scroll-mt-28">
+            <PerformanceBrochure />
           </div>
         </div>
       </AnimatedSection>
