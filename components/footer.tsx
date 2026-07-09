@@ -18,10 +18,10 @@ export function Footer() {
               className="h-auto w-44"
             />
           </div>
-          <p className="mb-4 text-sm text-cyan-100">Technology That Moves Business Forward.</p>
           <p className="max-w-xl text-sm leading-7 text-slate-300">
-            365 Innovations Corporation helps organizations modernize operations through AI, automation,
-            cloud technologies, data insight, and enterprise delivery leadership.
+            <span className="text-cyan-100">Technology That Moves Business Forward.</span> 365INO Corporation
+            helps organizations modernize operations through AI, automation, cloud technologies, data insight,
+            and enterprise delivery leadership.
           </p>
           <p className="mt-5 text-sm font-medium leading-6 text-cyan-100">
             UEI: YLN7PLWJGMP6 <span className="mx-2 text-cyan-300/70">|</span> CAGE: 8NW98
