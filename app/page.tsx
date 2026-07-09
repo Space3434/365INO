@@ -8,7 +8,6 @@ import { FAQ } from "@/components/faq";
 import { Hero } from "@/components/hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Stats } from "@/components/stats";
-import { Testimonials } from "@/components/testimonials";
 import { Timeline } from "@/components/timeline";
 import { industries, services as serviceModels } from "@/lib/content";
 import { getEditableSiteContent } from "@/lib/site-content";
@@ -146,17 +145,6 @@ export default function HomePage() {
               <CaseStudyCard key={study.title} {...study} />
             ))}
           </div>
-        </div>
-      </AnimatedSection>
-
-      <AnimatedSection className="bg-white py-20">
-        <div className="container-pad grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionHeading
-            eyebrow={content.homeSections.testimonials.eyebrow}
-            title={content.homeSections.testimonials.title}
-            description={content.homeSections.testimonials.description}
-          />
-          <Testimonials />
         </div>
       </AnimatedSection>
 
