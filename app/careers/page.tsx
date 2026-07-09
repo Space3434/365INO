@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, BadgeCheck, Brain, BriefcaseBusiness, Cloud, Code2, GraduationCap, Handshake, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight, BadgeCheck, Brain, BriefcaseBusiness, Cloud, Code2, GraduationCap, Handshake, Maximize2, ShieldCheck, Users } from "lucide-react";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
 import { ButtonLink } from "@/components/button-link";
@@ -181,18 +181,29 @@ export default function CareersPage() {
 
       <AnimatedSection className="bg-white pt-20">
         <div className="container-pad">
-          <div className="relative mx-auto max-w-[666px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-enterprise">
-            <Image
-              src="/careers-at-365ino.png"
-              alt="Careers at 365INO graphic highlighting innovation, collaboration, impact, future-focused vision, equal opportunity employment, and resume submission"
-              width={1024}
-              height={1536}
-              className="h-auto w-full"
-              sizes="(min-width: 1024px) 666px, calc(100vw - 32px)"
-            />
+          <div className="group relative mx-auto aspect-[2/3] w-full max-w-[312px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise">
+            <a
+              href="/careers-at-365ino.png"
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring block h-full w-full"
+              aria-label="Open the full-size Build Your Future careers graphic"
+            >
+              <Image
+                src="/careers-at-365ino.png"
+                alt="Build Your Future with 365INO careers graphic"
+                width={1024}
+                height={1536}
+                className="h-full w-full object-cover"
+                sizes="312px"
+              />
+              <span className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-md bg-navy text-white shadow-md transition group-hover:bg-cyan-600">
+                <Maximize2 className="h-5 w-5" aria-hidden="true" />
+              </span>
+            </a>
             <a
               href="mailto:careers@365ino.com"
-              className="focus-ring absolute left-[56.5%] top-[88.9%] h-[4.6%] w-[37.8%] rounded-md bg-transparent transition hover:bg-cyan-200/15"
+              className="focus-ring absolute left-[56.5%] top-[88.9%] z-10 h-[4.6%] w-[37.8%] rounded-md bg-transparent transition hover:bg-cyan-200/15"
               aria-label="Send resume to careers@365ino.com"
             >
               <span className="sr-only">careers@365ino.com</span>
