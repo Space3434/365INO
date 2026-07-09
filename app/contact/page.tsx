@@ -49,9 +49,9 @@ export default function ContactPage() {
             <div className="mt-8 overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-sm">
               <Image
                 src="/tampa-bay-community.png"
-                alt="Tampa Bay waterfront and skyline representing 365INO's regional community presence"
-                width={1680}
-                height={960}
+                alt="Historic Tampa skyline at sunset representing 365INO's Tampa Bay community presence"
+                width={1536}
+                height={1024}
                 className="h-64 w-full object-cover"
               />
               <div className="p-5">
