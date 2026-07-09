@@ -82,14 +82,23 @@ export default function CareersPage() {
           <SectionHeading
             eyebrow="Impact"
             title="Make an impact every day."
-            description="Our teams support organizations that need modern systems, intelligent automation, data-driven decisions, and dependable delivery. Every engagement is an opportunity to simplify complex work and help clients move forward with confidence."
+            description="365INO is a rapidly growing technology consulting firm driven by a singular mission: helping organizations transform, modernize, and achieve their most ambitious technology objectives. We are looking for exceptional professionals who combine technical excellence with compassion, curiosity, integrity, and the courage to think differently. Here, you&apos;ll solve meaningful challenges, work alongside talented teammates, and contribute to solutions that create lasting impact for our clients."
           />
           <div className="rounded-md border border-slate-200 bg-slate-50 p-6 lg:p-8">
-            <h3 className="text-2xl font-black text-navy">Invested in your success</h3>
+            <h3 className="text-2xl font-black text-navy">Grow your career with us</h3>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              365INO supports professional growth, work-life balance, and meaningful career development through
-              challenging assignments, flexible collaboration, and a culture that values trusted relationships as much
-              as technical excellence.
+              As we grow, we&apos;re committed to investing in your success, providing opportunities to learn, lead,
+              innovate, and build a career that grows with the company. If you&apos;re passionate about making a
+              difference through technology, 365INO is where your future begins.
+            </p>
+            <p className="mt-6 font-bold text-navy">
+              Respond to{" "}
+              <a
+                href="mailto:careers@365ino.com"
+                className="focus-ring text-cyan-700 underline decoration-cyan-300 underline-offset-4 transition hover:text-cyan-900"
+              >
+                careers@365ino.com
+              </a>
             </p>
           </div>
         </div>
