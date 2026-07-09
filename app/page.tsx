@@ -81,8 +81,8 @@ export default function HomePage() {
             description={content.homeSections.services.description}
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {editableServices.map((service) => (
-              <ServiceCard key={service.title} {...service} />
+            {editableServices.map((service, index) => (
+              <ServiceCard key={service.title} {...service} index={index} />
             ))}
           </div>
         </div>
