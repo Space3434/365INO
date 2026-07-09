@@ -188,8 +188,8 @@ export default function CareersPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="bg-white pt-20">
-        <div className="container-pad">
+      <AnimatedSection className="bg-white py-20">
+        <div className="container-pad grid items-center gap-10 lg:grid-cols-[312px_1fr]">
           <div className="group relative mx-auto aspect-[2/3] w-full max-w-[312px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise">
             <a
               href="/careers-at-365ino.png"
@@ -218,11 +218,7 @@ export default function CareersPage() {
               <span className="sr-only">careers@365ino.com</span>
             </a>
           </div>
-        </div>
-      </AnimatedSection>
 
-      <AnimatedSection className="bg-white py-20">
-        <div className="container-pad">
           <div className="grid items-center gap-8 rounded-md bg-navy p-8 text-white shadow-enterprise md:grid-cols-[1fr_auto] md:p-10">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.2em] text-cyan-200">Talent network</p>
