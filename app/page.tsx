@@ -1,5 +1,6 @@
-import { Download, FileText } from "lucide-react";
+import { ExternalLink, FileText, Maximize2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
 import { CaseStudyCard } from "@/components/case-study-card";
 import { ServiceCard, TechnologyGrid } from "@/components/card-grids";
@@ -39,36 +40,38 @@ export default function HomePage() {
                 Capability Statement
               </div>
               <h2 className="text-balance text-3xl font-black tracking-tight text-navy sm:text-4xl">
-                Download the 365INO capability statement.
+                Preview the 365INO capability statement.
               </h2>
               <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
-                Review 365INO&apos;s services, differentiators, business information, and enterprise technology
-                consulting capabilities in a concise downloadable PDF.
+                Review 365INO&apos;s services, differentiators, business information, and delivery experience in
+                the Case Studies capability overview.
               </p>
-              <a
-                href="/365ino-capability-statement.pdf"
-                download
-                className="focus-ring mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-navy px-5 py-3 text-sm font-black text-white shadow-sm transition hover:bg-cyan-800"
+              <Link
+                href="/case-studies#capability-statement"
+                className="focus-ring mt-6 inline-flex min-h-12 items-center justify-center gap-3 rounded-md border border-cyan-300 bg-white px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-navy shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-500 hover:bg-cyan-50 hover:shadow-md"
               >
-                <Download className="h-4 w-4" aria-hidden="true" />
-                Download Capability Statement
-              </a>
+                Preview Capability Statement
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </Link>
             </div>
 
-            <a
-              href="/365ino-capability-statement.pdf"
-              download
-              className="focus-ring group mx-auto block w-full max-w-xs overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm md:max-w-sm"
-              aria-label="Download the 365INO capability statement PDF"
+            <Link
+              href="/case-studies#capability-statement"
+              className="focus-ring group relative mx-auto block aspect-[2/3] w-full max-w-[312px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise"
+              aria-label="Preview the 365INO capability statement on the Case Studies page"
             >
               <Image
-                src="/capability-statement-thumbnail.png"
-                alt="Preview of the 365INO capability statement"
-                width={1280}
-                height={720}
-                className="h-auto w-full transition duration-300 group-hover:scale-[1.02]"
+                src="/past-performance-client-success.png"
+                alt="365INO capability statement and past performance preview"
+                width={1024}
+                height={1536}
+                className="h-full w-full object-cover"
+                sizes="312px"
               />
-            </a>
+              <span className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-md bg-navy text-white shadow-md transition group-hover:bg-cyan-600">
+                <Maximize2 className="h-5 w-5" aria-hidden="true" />
+              </span>
+            </Link>
           </div>
         </div>
       </AnimatedSection>

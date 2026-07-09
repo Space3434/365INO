@@ -23,7 +23,9 @@ export default function CaseStudiesPage() {
       />
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
-          <PerformanceBrochure />
+          <div id="capability-statement" className="scroll-mt-28">
+            <PerformanceBrochure />
+          </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {caseStudies.map((study) => (
               <CaseStudyCard key={study.title} {...study} />
