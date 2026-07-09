@@ -22,7 +22,7 @@ export function PerformanceBrochure() {
           href="/past-performance-client-success.png"
           target="_blank"
           rel="noreferrer"
-          className="focus-ring group relative mx-auto block aspect-[2/3] w-full max-w-[260px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise"
+          className="focus-ring group relative mx-auto block aspect-[2/3] w-full max-w-[312px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise"
           aria-label="Open the 365INO past performance and client success brochure image"
         >
           <Image
@@ -31,7 +31,7 @@ export function PerformanceBrochure() {
             width={1024}
             height={1536}
             className="h-full w-full object-cover"
-            sizes="260px"
+            sizes="312px"
           />
           <span className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-md bg-navy text-white shadow-md transition group-hover:bg-cyan-600">
             <Maximize2 className="h-5 w-5" aria-hidden="true" />
