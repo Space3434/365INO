@@ -25,15 +25,7 @@ export default function CaseStudiesPage() {
       />
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
-          <div id="capability-statement" className="scroll-mt-28">
-            <PerformanceBrochure />
-          </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {caseStudies.map((study) => (
-              <CaseStudyCard key={study.title} {...study} />
-            ))}
-          </div>
-          <div className="mt-16 rounded-md border border-slate-200 bg-slate-50 p-6 shadow-sm lg:p-8">
+          <div className="rounded-md border border-slate-200 bg-slate-50 p-6 shadow-sm lg:p-8">
             <SectionHeading
               eyebrow="Client Perspective"
               title="Confidence built through clear execution."
@@ -42,6 +34,14 @@ export default function CaseStudiesPage() {
             <div className="mt-8">
               <Testimonials />
             </div>
+          </div>
+          <div id="capability-statement" className="mt-10 scroll-mt-28">
+            <PerformanceBrochure />
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {caseStudies.map((study) => (
+              <CaseStudyCard key={study.title} {...study} />
+            ))}
           </div>
         </div>
       </AnimatedSection>
