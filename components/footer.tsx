@@ -7,7 +7,7 @@ import { navItems } from "@/lib/content";
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
-      <div className="container-pad grid gap-10 py-14 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+      <div className="container-pad grid gap-10 py-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <div className="mb-5 flex items-center gap-3">
             <Image
@@ -93,7 +93,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5">
+      <div className="border-t border-white/10 py-3">
         <div className="container-pad text-center text-sm text-slate-400">
           Copyright {new Date().getFullYear()} 365INO, CO. All rights reserved.
         </div>
