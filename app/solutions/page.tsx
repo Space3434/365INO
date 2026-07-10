@@ -14,6 +14,8 @@ const solutions = [
   "Commercial Solutions"
 ];
 
+const solutionLabels = ["One", "Two", "Three", "Four"];
+
 const technologyPartners = [
   { name: "AWS", logo: "/partner-logos/aws.svg", width: 264, height: 170 },
   { name: "Azure", logo: "/partner-logos/azure.svg", width: 348, height: 200 },
@@ -62,10 +64,15 @@ export default function SolutionsPage() {
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
           <SectionHeading eyebrow="Focus areas" title="Four paths to technology-enabled performance." />
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {solutions.map((solution) => (
-              <div key={solution} className="rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm">
-                <h2 className="text-2xl font-black text-cyan-200">{solution}</h2>
+          <div className="mt-10 grid justify-center gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {solutions.map((solution, index) => (
+              <div
+                key={solution}
+                className="min-h-56 w-full max-w-[17rem] justify-self-center rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm"
+              >
+                <h2 className="whitespace-nowrap text-[15px] font-black text-cyan-200">
+                  {solutionLabels[index]}: {solution}
+                </h2>
                 <p className="mt-4 leading-8 text-white">
                   Define the roadmap, align stakeholders, prioritize practical use cases, and deliver with
                   transparent governance.
