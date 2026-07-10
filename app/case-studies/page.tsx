@@ -24,14 +24,14 @@ export default function CaseStudiesPage() {
       />
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
-          <div className="overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise">
+          <div className="mx-auto max-w-4xl overflow-hidden rounded-md border border-slate-200 bg-white shadow-enterprise">
             <Image
               src="/client-perspective-modernization.png"
               alt="Client perspective graphic highlighting modernization that delivers clarity, confidence, and momentum"
               width={858}
               height={458}
               className="h-auto w-full"
-              sizes="(min-width: 1280px) 1180px, calc(100vw - 32px)"
+              sizes="(min-width: 1024px) 896px, calc(100vw - 32px)"
             />
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
