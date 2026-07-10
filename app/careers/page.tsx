@@ -78,13 +78,15 @@ export default function CareersPage() {
       />
 
       <AnimatedSection className="bg-white py-20">
-        <div className="container-pad grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <SectionHeading
-            eyebrow="Impact"
-            title="Make an impact every day."
-            description="365INO is a rapidly growing technology consulting firm driven by a singular mission: helping organizations transform, modernize, and achieve their most ambitious technology objectives. We are looking for exceptional professionals who combine technical excellence with compassion, curiosity, integrity, and the courage to think differently. Here, you&apos;ll solve meaningful challenges, work alongside talented teammates, and contribute to solutions that create lasting impact for our clients."
-          />
-          <div className="bg-white lg:pt-10">
+        <div className="container-pad grid gap-10 lg:grid-cols-2">
+          <div className="max-w-2xl">
+            <SectionHeading
+              eyebrow="Impact"
+              title="Make an impact every day."
+              description="365INO is a rapidly growing technology consulting firm driven by a singular mission: helping organizations transform, modernize, and achieve their most ambitious technology objectives. We are looking for exceptional professionals who combine technical excellence with compassion, curiosity, integrity, and the courage to think differently. Here, you&apos;ll solve meaningful challenges, work alongside talented teammates, and contribute to solutions that create lasting impact for our clients."
+            />
+          </div>
+          <div className="max-w-2xl bg-white lg:pt-8">
             <h3 className="text-balance text-4xl font-black tracking-tight text-navy sm:text-5xl">
               Grow your career with us.
             </h3>
