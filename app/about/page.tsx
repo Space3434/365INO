@@ -42,21 +42,21 @@ export default function AboutPage() {
       />
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad grid gap-10 lg:grid-cols-3">
-          <div className="rounded-md border border-slate-200 bg-white p-7 shadow-sm">
-            <h2 className="text-2xl font-black text-navy">Mission</h2>
-            <p className="mt-4 leading-8 text-slate-600">
+          <div className="rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm">
+            <h2 className="text-2xl font-black text-cyan-200">Mission</h2>
+            <p className="mt-4 leading-8 text-white">
               Empower organizations through innovation, intelligent automation, and technology leadership.
             </p>
           </div>
-          <div className="rounded-md border border-slate-200 bg-white p-7 shadow-sm">
-            <h2 className="text-2xl font-black text-navy">Vision</h2>
-            <p className="mt-4 leading-8 text-slate-600">
+          <div className="rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm">
+            <h2 className="text-2xl font-black text-sky-200">Vision</h2>
+            <p className="mt-4 leading-8 text-white">
               Become a trusted partner helping organizations confidently adopt emerging technologies.
             </p>
           </div>
-          <div className="rounded-md border border-slate-200 bg-white p-7 shadow-sm">
-            <h2 className="text-2xl font-black text-navy">Focus</h2>
-            <p className="mt-4 leading-8 text-slate-600">Technology That Moves Business Forward.</p>
+          <div className="rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm">
+            <h2 className="text-2xl font-black text-emerald-200">Focus</h2>
+            <p className="mt-4 leading-8 text-white">Technology That Moves Business Forward.</p>
           </div>
         </div>
       </AnimatedSection>
