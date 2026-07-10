@@ -84,9 +84,11 @@ export default function CareersPage() {
             title="Make an impact every day."
             description="365INO is a rapidly growing technology consulting firm driven by a singular mission: helping organizations transform, modernize, and achieve their most ambitious technology objectives. We are looking for exceptional professionals who combine technical excellence with compassion, curiosity, integrity, and the courage to think differently. Here, you&apos;ll solve meaningful challenges, work alongside talented teammates, and contribute to solutions that create lasting impact for our clients."
           />
-          <div className="rounded-md border border-slate-200 bg-slate-50 p-6 lg:p-8">
-            <h3 className="text-2xl font-black text-navy">Grow your career with us</h3>
-            <p className="mt-4 text-lg leading-8 text-slate-600">
+          <div className="bg-white lg:pt-10">
+            <h3 className="text-balance text-4xl font-black tracking-tight text-navy sm:text-5xl">
+              Grow your career with us.
+            </h3>
+            <p className="mt-7 text-lg leading-8 text-slate-600">
               As we grow, we&apos;re committed to investing in your success, providing opportunities to learn, lead,
               innovate, and build a career that grows with the company. If you&apos;re passionate about making a
               difference through technology, 365INO is where your future begins.
