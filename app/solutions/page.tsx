@@ -64,9 +64,9 @@ export default function SolutionsPage() {
           <SectionHeading eyebrow="Focus areas" title="Four paths to technology-enabled performance." />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {solutions.map((solution) => (
-              <div key={solution} className="rounded-md border border-slate-200 bg-white p-7 shadow-sm">
-                <h2 className="text-2xl font-black text-navy">{solution}</h2>
-                <p className="mt-4 leading-8 text-slate-600">
+              <div key={solution} className="rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm">
+                <h2 className="text-2xl font-black text-cyan-200">{solution}</h2>
+                <p className="mt-4 leading-8 text-white">
                   Define the roadmap, align stakeholders, prioritize practical use cases, and deliver with
                   transparent governance.
                 </p>
