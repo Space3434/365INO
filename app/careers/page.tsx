@@ -90,7 +90,7 @@ export default function CareersPage() {
             <h3 className="text-balance text-4xl font-black tracking-tight text-navy sm:text-5xl">
               Grow your career with us.
             </h3>
-            <p className="mt-7 text-lg leading-8 text-slate-600">
+            <p className="mt-5 text-lg leading-8 text-slate-600">
               As we grow, we&apos;re committed to investing in your success, providing opportunities to learn, lead,
               innovate, and build a career that grows with the company. If you&apos;re passionate about making a
               difference through technology, 365INO is where your future begins.
