@@ -49,13 +49,13 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm">
-            <h2 className="text-2xl font-black text-sky-200">Vision</h2>
+            <h2 className="text-2xl font-black text-cyan-200">Vision</h2>
             <p className="mt-4 leading-8 text-white">
               Become a trusted partner helping organizations confidently adopt emerging technologies.
             </p>
           </div>
           <div className="rounded-md border border-cyan-700/40 bg-navy p-7 shadow-sm">
-            <h2 className="text-2xl font-black text-emerald-200">Focus</h2>
+            <h2 className="text-2xl font-black text-cyan-200">Focus</h2>
             <p className="mt-4 leading-8 text-white">Technology That Moves Business Forward.</p>
           </div>
         </div>
