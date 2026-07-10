@@ -28,6 +28,33 @@ const serviceAccentStyles = [
   }
 ];
 
+const industryAccentStyles = [
+  {
+    card: "border-cyan-200 bg-gradient-to-br from-white to-cyan-50 hover:border-cyan-400",
+    icon: "bg-cyan-100 text-cyan-800"
+  },
+  {
+    card: "border-blue-200 bg-gradient-to-br from-white to-blue-50 hover:border-blue-400",
+    icon: "bg-blue-100 text-blue-800"
+  },
+  {
+    card: "border-emerald-200 bg-gradient-to-br from-white to-emerald-50 hover:border-emerald-400",
+    icon: "bg-emerald-100 text-emerald-800"
+  },
+  {
+    card: "border-indigo-200 bg-gradient-to-br from-white to-indigo-50 hover:border-indigo-400",
+    icon: "bg-indigo-100 text-indigo-800"
+  },
+  {
+    card: "border-sky-200 bg-gradient-to-br from-white to-sky-50 hover:border-sky-400",
+    icon: "bg-sky-100 text-sky-800"
+  },
+  {
+    card: "border-teal-200 bg-gradient-to-br from-white to-teal-50 hover:border-teal-400",
+    icon: "bg-teal-100 text-teal-800"
+  }
+];
+
 export function ServiceCard({
   title,
   description,
@@ -52,6 +79,32 @@ export function ServiceCard({
       </div>
       <h3 className="text-xl font-black text-navy">{title}</h3>
       <p className="mt-3 text-sm leading-7 text-slate-600">{description}</p>
+    </article>
+  );
+}
+
+export function IndustryCard({
+  title,
+  icon: Icon,
+  index = 0
+}: {
+  title: string;
+  icon: LucideIcon;
+  index?: number;
+}) {
+  const accent = industryAccentStyles[index % industryAccentStyles.length];
+
+  return (
+    <article
+      className={`group rounded-md border p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
+    >
+      <div className={`mb-5 grid h-12 w-12 place-items-center rounded-md ${accent.icon}`}>
+        <Icon className="h-6 w-6" aria-hidden="true" />
+      </div>
+      <h3 className="text-2xl font-black text-navy">{title}</h3>
+      <p className="mt-3 text-sm leading-7 text-slate-600">
+        Strategy, automation, data, and delivery support tailored to sector priorities.
+      </p>
     </article>
   );
 }
