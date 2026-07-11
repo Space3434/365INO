@@ -64,16 +64,16 @@ export default function SolutionsPage() {
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
           <SectionHeading eyebrow="Focus areas" title="Four paths to technology-enabled performance." />
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
             {solutions.map((solution, index) => (
               <div
                 key={solution}
-                className="min-h-52 rounded-md border border-cyan-700/40 bg-navy p-8 shadow-sm"
+                className="min-h-48 rounded-md border border-cyan-700/40 bg-navy p-6 shadow-sm"
               >
                 <h2 className="whitespace-nowrap text-xl font-black text-cyan-200 lg:text-2xl">
                   {solutionLabels[index]}: {solution}
                 </h2>
-                <p className="mt-5 text-base leading-8 text-white">
+                <p className="mt-5 max-w-[31rem] text-base leading-7 text-white">
                   Define the roadmap, align stakeholders, prioritize practical use cases, and deliver with
                   transparent governance.
                 </p>
