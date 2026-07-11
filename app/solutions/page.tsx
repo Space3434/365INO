@@ -64,7 +64,7 @@ export default function SolutionsPage() {
       <AnimatedSection className="bg-white py-20">
         <div className="container-pad">
           <SectionHeading eyebrow="Focus areas" title="Four paths to technology-enabled performance." />
-          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-2">
+          <div className="mx-auto mt-12 grid max-w-5xl gap-y-8 gap-x-10 md:grid-cols-2">
             {solutions.map((solution, index) => (
               <div
                 key={solution}
