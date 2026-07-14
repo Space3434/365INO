@@ -21,14 +21,14 @@ export function Navbar() {
       </a>
       <nav className="container-pad flex min-h-20 items-center justify-between" aria-label="Primary navigation">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-md">
-          <span className="grid h-[3.12rem] w-[10.92rem] place-items-center rounded-md px-3">
+          <span className="grid h-12 w-[10.5rem] place-items-center rounded-md px-3">
             <Image
               src="/365ino-header-logo.png"
               alt="365INO"
               width={400}
               height={125}
               priority
-              className="h-auto w-full"
+              className="h-auto w-full scale-[1.04]"
             />
           </span>
         </Link>
