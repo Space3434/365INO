@@ -10,13 +10,15 @@ export function Footer() {
       <div className="container-pad grid gap-10 py-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <div className="mb-5 flex items-center gap-3">
-            <Image
-              src="/365ino-footer-logo.png"
-              alt="365INO"
-              width={400}
-              height={125}
-              className="h-auto w-44"
-            />
+            <span className="inline-flex bg-black">
+              <Image
+                src="/365ino-footer-logo.png"
+                alt="365INO"
+                width={400}
+                height={125}
+                className="h-auto w-44"
+              />
+            </span>
           </div>
           <p className="max-w-xl text-sm leading-7 text-slate-300">
             <span className="text-cyan-100">Technology That Moves Business Forward.</span> 365INO Corporation
