@@ -23,10 +23,10 @@ export function Navbar() {
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-md">
           <span className="grid h-12 w-40 place-items-center rounded-md bg-navy px-3 shadow-sm">
             <Image
-              src="/365ino-logo.png"
+              src="/365ino-header-logo.png"
               alt="365INO"
-              width={614}
-              height={137}
+              width={400}
+              height={125}
               priority
               className="h-auto w-full"
             />
