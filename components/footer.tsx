@@ -15,7 +15,7 @@ export function Footer() {
               alt="365INO"
               width={400}
               height={125}
-              className="h-auto w-[10.78rem]"
+              className="h-auto w-[10.67rem]"
             />
           </div>
           <p className="max-w-xl text-sm leading-7 text-slate-300">
