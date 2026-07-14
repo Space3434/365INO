@@ -11,10 +11,10 @@ export function Footer() {
         <div>
           <div className="mb-5 flex items-center gap-3">
             <Image
-              src="/365ino-logo.png"
+              src="/365ino-footer-logo.png"
               alt="365INO"
-              width={614}
-              height={137}
+              width={400}
+              height={125}
               className="h-auto w-44"
             />
           </div>
