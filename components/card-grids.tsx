@@ -53,6 +53,18 @@ const industryAccentStyles = [
   {
     card: "border-teal-200 bg-gradient-to-br from-white to-teal-50 hover:border-teal-400",
     icon: "bg-teal-100 text-teal-800"
+  },
+  {
+    card: "border-violet-200 bg-gradient-to-br from-white to-violet-50 hover:border-violet-400",
+    icon: "bg-violet-100 text-violet-800"
+  },
+  {
+    card: "border-amber-200 bg-gradient-to-br from-white to-amber-50 hover:border-amber-400",
+    icon: "bg-amber-100 text-amber-800"
+  },
+  {
+    card: "border-rose-200 bg-gradient-to-br from-white to-rose-50 hover:border-rose-400",
+    icon: "bg-rose-100 text-rose-800"
   }
 ];
 
