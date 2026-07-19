@@ -106,54 +106,63 @@ export const industries = [
     title: "Government",
     description:
       "Modernize legacy case management and citizen-facing systems while meeting compliance, security, and accountability requirements.",
+    image: "/industry-icons/government.png",
     icon: Landmark
   },
   {
     title: "Healthcare",
     description:
       "Streamline clinical and administrative workflows, improve data interoperability, and support HIPAA-aware automation initiatives.",
+    image: "/industry-icons/healthcare.png",
     icon: HeartPulse
   },
   {
     title: "Veterans Affairs",
     description:
       "Accelerate claims processing and benefits delivery through automation and data-driven case tracking built for VA program requirements.",
+    image: "/industry-icons/veterans-affairs.png",
     icon: ShieldCheck
   },
   {
     title: "Financial Services",
     description:
       "Modernize core platforms and reporting pipelines while strengthening data governance, risk controls, and regulatory readiness.",
+    image: "/industry-icons/financial-services.png",
     icon: Scale
   },
   {
     title: "Retail",
     description:
       "Connect inventory, customer, and operations data to improve forecasting, personalization, and omnichannel decision-making.",
+    image: "/industry-icons/retail.png",
     icon: ShoppingBag
   },
   {
     title: "Manufacturing",
     description:
       "Integrate plant-floor and enterprise data to support predictive maintenance, supply chain visibility, and process efficiency.",
+    image: "/industry-icons/manufacturing.png",
     icon: Building2
   },
   {
     title: "Transportation",
     description:
       "Modernize scheduling, asset tracking, and logistics systems to reduce delays and improve operational visibility.",
+    image: "/industry-icons/transportation.png",
     icon: TrainFront
   },
   {
     title: "Education",
     description:
       "Streamline student services and administrative operations through automation and improved data reporting.",
+    image: "/industry-icons/education.png",
     icon: GraduationCap
   },
   {
     title: "Non-Profit",
     description:
       "Extend limited resources further with practical automation, donor/data insight, and lean program delivery.",
+    image: "/industry-icons/non-profit.png",
     icon: Users
   }
 ];

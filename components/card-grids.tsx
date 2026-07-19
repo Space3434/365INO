@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import Image from "next/image";
 import { platformIcons, technologies } from "@/lib/content";
 
 const serviceAccentStyles = [
@@ -86,12 +87,12 @@ export function ServiceCard({
 export function IndustryCard({
   title,
   description,
-  icon: Icon,
+  image,
   index = 0
 }: {
   title: string;
   description: string;
-  icon: LucideIcon;
+  image: string;
   index?: number;
 }) {
   const accent = industryAccentStyles[index % industryAccentStyles.length];
@@ -101,7 +102,14 @@ export function IndustryCard({
       className={`group rounded-md border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
     >
       <div className={`mb-4 grid h-11 w-11 place-items-center rounded-md ${accent.icon}`}>
-        <Icon className="h-5 w-5" aria-hidden="true" />
+        <Image
+          src={image}
+          alt=""
+          width={44}
+          height={44}
+          className="h-10 w-10 object-contain"
+          aria-hidden="true"
+        />
       </div>
       <h3 className="text-2xl font-black text-navy">{title}</h3>
       <p className="mt-3 text-sm leading-6 text-slate-600">{description}</p>
