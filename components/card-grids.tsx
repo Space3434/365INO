@@ -31,39 +31,30 @@ const serviceAccentStyles = [
 
 const industryAccentStyles = [
   {
-    card: "border-cyan-400 bg-gradient-to-br from-cyan-50 to-cyan-100 hover:border-cyan-600",
     icon: "bg-cyan-200 text-cyan-900"
   },
   {
-    card: "border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 hover:border-blue-600",
     icon: "bg-blue-200 text-blue-900"
   },
   {
-    card: "border-emerald-400 bg-gradient-to-br from-emerald-50 to-emerald-100 hover:border-emerald-600",
     icon: "bg-emerald-200 text-emerald-900"
   },
   {
-    card: "border-indigo-400 bg-gradient-to-br from-indigo-50 to-indigo-100 hover:border-indigo-600",
     icon: "bg-indigo-200 text-indigo-900"
   },
   {
-    card: "border-sky-400 bg-gradient-to-br from-sky-50 to-sky-100 hover:border-sky-600",
     icon: "bg-sky-200 text-sky-900"
   },
   {
-    card: "border-teal-400 bg-gradient-to-br from-teal-50 to-teal-100 hover:border-teal-600",
     icon: "bg-teal-200 text-teal-900"
   },
   {
-    card: "border-violet-400 bg-gradient-to-br from-violet-50 to-violet-100 hover:border-violet-600",
     icon: "bg-violet-200 text-violet-900"
   },
   {
-    card: "border-amber-400 bg-gradient-to-br from-amber-50 to-amber-100 hover:border-amber-600",
     icon: "bg-amber-200 text-amber-900"
   },
   {
-    card: "border-rose-400 bg-gradient-to-br from-rose-50 to-rose-100 hover:border-rose-600",
     icon: "bg-rose-200 text-rose-900"
   }
 ];
@@ -111,7 +102,7 @@ export function IndustryCard({
 
   return (
     <article
-      className={`group rounded-md border border-t-4 px-5 py-4 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
+      className="group rounded-md border border-t-4 border-navy bg-white px-5 py-4 shadow-sm transition hover:-translate-y-1 hover:border-ocean hover:shadow-enterprise"
     >
       <div className={`mb-2 grid h-10 w-10 place-items-center rounded-md ${accent.icon}`}>
         <Image
