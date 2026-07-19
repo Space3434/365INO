@@ -85,10 +85,12 @@ export function ServiceCard({
 
 export function IndustryCard({
   title,
+  description,
   icon: Icon,
   index = 0
 }: {
   title: string;
+  description: string;
   icon: LucideIcon;
   index?: number;
 }) {
@@ -96,15 +98,13 @@ export function IndustryCard({
 
   return (
     <article
-      className={`group rounded-md border p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
+      className={`group rounded-md border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
     >
-      <div className={`mb-5 grid h-12 w-12 place-items-center rounded-md ${accent.icon}`}>
-        <Icon className="h-6 w-6" aria-hidden="true" />
+      <div className={`mb-4 grid h-11 w-11 place-items-center rounded-md ${accent.icon}`}>
+        <Icon className="h-5 w-5" aria-hidden="true" />
       </div>
       <h3 className="text-2xl font-black text-navy">{title}</h3>
-      <p className="mt-3 text-sm leading-7 text-slate-600">
-        Strategy, automation, data, and delivery support tailored to sector priorities.
-      </p>
+      <p className="mt-3 text-sm leading-6 text-slate-600">{description}</p>
     </article>
   );
 }

@@ -102,15 +102,60 @@ export const services = [
 ];
 
 export const industries = [
-  { title: "Government", icon: Landmark },
-  { title: "Healthcare", icon: HeartPulse },
-  { title: "Veterans Affairs", icon: ShieldCheck },
-  { title: "Financial Services", icon: Scale },
-  { title: "Retail", icon: ShoppingBag },
-  { title: "Manufacturing", icon: Building2 },
-  { title: "Transportation", icon: TrainFront },
-  { title: "Education", icon: GraduationCap },
-  { title: "Non-Profit", icon: Users }
+  {
+    title: "Government",
+    description:
+      "Modernize legacy case management and citizen-facing systems while meeting compliance, security, and accountability requirements.",
+    icon: Landmark
+  },
+  {
+    title: "Healthcare",
+    description:
+      "Streamline clinical and administrative workflows, improve data interoperability, and support HIPAA-aware automation initiatives.",
+    icon: HeartPulse
+  },
+  {
+    title: "Veterans Affairs",
+    description:
+      "Accelerate claims processing and benefits delivery through automation and data-driven case tracking built for VA program requirements.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Financial Services",
+    description:
+      "Modernize core platforms and reporting pipelines while strengthening data governance, risk controls, and regulatory readiness.",
+    icon: Scale
+  },
+  {
+    title: "Retail",
+    description:
+      "Connect inventory, customer, and operations data to improve forecasting, personalization, and omnichannel decision-making.",
+    icon: ShoppingBag
+  },
+  {
+    title: "Manufacturing",
+    description:
+      "Integrate plant-floor and enterprise data to support predictive maintenance, supply chain visibility, and process efficiency.",
+    icon: Building2
+  },
+  {
+    title: "Transportation",
+    description:
+      "Modernize scheduling, asset tracking, and logistics systems to reduce delays and improve operational visibility.",
+    icon: TrainFront
+  },
+  {
+    title: "Education",
+    description:
+      "Streamline student services and administrative operations through automation and improved data reporting.",
+    icon: GraduationCap
+  },
+  {
+    title: "Non-Profit",
+    description:
+      "Extend limited resources further with practical automation, donor/data insight, and lean program delivery.",
+    icon: Users
+  }
 ];
 
 export const technologies = [
