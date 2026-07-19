@@ -99,20 +99,20 @@ export function IndustryCard({
 
   return (
     <article
-      className={`group rounded-md border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
+      className={`group rounded-md border px-5 py-4 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
     >
-      <div className={`mb-4 grid h-11 w-11 place-items-center rounded-md ${accent.icon}`}>
+      <div className={`mb-2 grid h-10 w-10 place-items-center rounded-md ${accent.icon}`}>
         <Image
           src={image}
           alt=""
           width={44}
           height={44}
-          className="h-10 w-10 object-contain"
+          className="h-9 w-9 object-contain"
           aria-hidden="true"
         />
       </div>
-      <h3 className="text-2xl font-black text-navy">{title}</h3>
-      <p className="mt-3 text-sm leading-6 text-slate-600">{description}</p>
+      <h3 className="text-xl font-black text-navy">{title}</h3>
+      <p className="mt-2 text-sm leading-5 text-slate-600">{description}</p>
     </article>
   );
 }
