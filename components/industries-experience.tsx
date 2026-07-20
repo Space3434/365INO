@@ -109,6 +109,12 @@ export function IndustriesExperience() {
               className="object-contain"
               style={{ filter: "contrast(1.18) saturate(1.18) brightness(1.05) drop-shadow(0 0 18px rgba(24, 174, 202, 0.18))" }}
             />
+            <span
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-x-125 text-[64px] font-semibold tracking-[-0.09em] text-white sm:text-[72px] lg:text-[78px]"
+              style={{ fontFamily: "Arial, Helvetica, sans-serif", textShadow: "0 0 12px rgba(255,255,255,.3)" }}
+            >
+              IN
+            </span>
           </motion.div>
 
           <motion.div
