@@ -19,6 +19,7 @@ import {
   Users
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { industries } from "@/lib/content";
 
@@ -93,48 +94,37 @@ export function IndustriesExperience() {
       <section className="relative isolate min-h-[560px] overflow-hidden bg-navy text-white lg:min-h-[650px]">
         <div className="absolute inset-0 bg-mesh-grid opacity-30" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-blue-950/45" aria-hidden="true" />
-        <div className="absolute right-[-180px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full border border-cyan-300/20 shadow-[0_0_0_60px_rgba(23,105,224,.06),0_0_0_125px_rgba(24,174,202,.035)] sm:right-[-80px] lg:right-[6%] lg:h-[520px] lg:w-[520px]" aria-hidden="true">
+        <div className="absolute right-[-180px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 sm:right-[-80px] lg:right-[3%] lg:h-[580px] lg:w-[580px]" aria-hidden="true">
           <motion.div
-            className="absolute inset-[18%] rounded-full bg-[radial-gradient(circle_at_32%_26%,#67e8f9_0_2%,#1769e0_25%,#0a2b5b_66%,#061a3a_100%)] shadow-[inset_0_0_0_12px_rgba(255,255,255,.08),0_24px_55px_rgba(0,0,0,.3),0_0_45px_rgba(23,105,224,.25)]"
-            animate={reducedMotion ? undefined : { scale: [1, 1.035, 1], filter: ["brightness(1)", "brightness(1.12)", "brightness(1)"] }}
+            className="absolute inset-0"
+            animate={reducedMotion ? undefined : { scale: [1, 1.018, 1], filter: ["brightness(1)", "brightness(1.08)", "brightness(1)"] }}
             transition={reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }}
           >
-            <div className="absolute inset-[24%] grid place-items-center rounded-full border-[6px] border-orange-600 bg-white/95 text-5xl font-semibold tracking-[-0.09em] text-navy shadow-[0_0_24px_rgba(234,88,12,.35)] sm:text-6xl">
-              <span className="-translate-x-0.5 scale-x-125" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>IN</span>
-            </div>
+            <Image
+              src="/images/industries-animated-globe.png"
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 640px) 500px, 580px"
+              className="object-contain"
+            />
           </motion.div>
 
           <motion.div
-            className="absolute inset-[7%] rounded-full border border-dashed border-cyan-300/40"
+            className="absolute inset-[10.4%] rounded-full"
             animate={reducedMotion ? undefined : { rotate: 360 }}
-            transition={reducedMotion ? undefined : { duration: 18, ease: "linear", repeat: Infinity }}
+            transition={reducedMotion ? undefined : { duration: 24, ease: "linear", repeat: Infinity }}
           >
-            <span className="absolute left-[14%] top-[8%] h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_0_8px_rgba(103,232,249,.12),0_0_18px_rgba(103,232,249,.8)]" />
-            <span className="absolute bottom-[23%] right-[4%] h-2.5 w-2.5 rounded-full bg-blue-400 shadow-[0_0_0_7px_rgba(96,165,250,.12)]" />
+            <span className="absolute left-[13%] top-[11%] h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_0_5px_rgba(34,211,238,.15),0_0_16px_rgba(34,211,238,.85)]" />
+            <span className="absolute bottom-[16%] right-[7%] h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,.9)]" />
           </motion.div>
 
           <motion.div
-            className="absolute inset-[12%] rounded-full border-2 border-transparent border-r-orange-500/40 border-t-orange-500"
+            className="absolute inset-[23%] rounded-full"
             animate={reducedMotion ? undefined : { rotate: -360 }}
-            transition={reducedMotion ? undefined : { duration: 10, ease: "linear", repeat: Infinity }}
+            transition={reducedMotion ? undefined : { duration: 12, ease: "linear", repeat: Infinity }}
           >
-            <span className="absolute right-[7%] top-[12%] h-3 w-3 rounded-full bg-orange-500 shadow-[0_0_0_8px_rgba(249,115,22,.13),0_0_20px_rgba(249,115,22,.9)]" />
-          </motion.div>
-
-          <motion.div
-            className="absolute inset-[25%] rounded-full border border-cyan-100/35"
-            animate={reducedMotion ? undefined : { rotate: 360, scaleX: [1.45, 1.6, 1.45] }}
-            transition={reducedMotion ? undefined : { rotate: { duration: 13, ease: "linear", repeat: Infinity }, scaleX: { duration: 5, ease: "easeInOut", repeat: Infinity } }}
-          >
-            <span className="absolute bottom-[-4px] left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-white shadow-[0_0_12px_white]" />
-          </motion.div>
-
-          <motion.div
-            className="absolute inset-[2%] rounded-full border border-blue-300/20"
-            animate={reducedMotion ? undefined : { rotate: 360 }}
-            transition={reducedMotion ? undefined : { duration: 28, ease: "linear", repeat: Infinity }}
-          >
-            <span className="absolute bottom-[12%] left-[9%] h-2 w-2 rounded-full bg-orange-400 shadow-[0_0_14px_rgba(251,146,60,.9)]" />
+            <span className="absolute right-[4%] top-[28%] h-4 w-4 rounded-full border border-orange-100 bg-orange-500 shadow-[0_0_0_5px_rgba(249,115,22,.16),0_0_22px_rgba(249,115,22,1)]" />
           </motion.div>
         </div>
 
