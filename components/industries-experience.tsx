@@ -140,9 +140,21 @@ export function IndustriesExperience() {
       </section>
 
       <div className="overflow-hidden border-t border-white/10 bg-[#0b2851] py-5 text-white" aria-hidden="true">
-        <div className="flex min-w-max justify-center gap-8 px-6 text-xs font-black uppercase tracking-[0.16em] text-slate-300">
-          {industries.map((industry) => <span key={industry.title} className="flex items-center gap-3 before:h-2 before:w-2 before:rounded-full before:bg-emerald-400">{industry.title}</span>)}
-        </div>
+        <motion.div
+          className="flex w-max"
+          animate={reducedMotion ? undefined : { x: ["0%", "-50%"] }}
+          transition={reducedMotion ? undefined : { duration: 32, ease: "linear", repeat: Infinity }}
+        >
+          {[0, 1].map((group) => (
+            <div key={group} className="flex shrink-0 gap-8 px-4 text-xs font-black uppercase tracking-[0.16em] text-slate-300">
+              {industries.map((industry) => (
+                <span key={`${group}-${industry.title}`} className="flex items-center gap-3 whitespace-nowrap before:h-2 before:w-2 before:rounded-full before:bg-emerald-400">
+                  {industry.title}
+                </span>
+              ))}
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       <section id="industries-explorer" className="scroll-mt-24 bg-white py-20 sm:py-24">
