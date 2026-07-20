@@ -99,8 +99,8 @@ export function IndustriesExperience() {
             animate={reducedMotion ? undefined : { scale: [1, 1.035, 1], filter: ["brightness(1)", "brightness(1.12)", "brightness(1)"] }}
             transition={reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }}
           >
-            <div className="absolute inset-[18%] grid place-items-center rounded-full border border-white/40 bg-navy/35 text-5xl font-medium tracking-[-0.09em] text-white/95 shadow-inner sm:text-6xl">
-              <span className="-translate-x-0.5" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>IN</span>
+            <div className="absolute inset-[24%] grid place-items-center rounded-full border border-white/40 bg-navy/35 text-5xl font-black tracking-[-0.04em] text-white/95 shadow-inner sm:text-6xl">
+              <span className="-translate-x-0.5 scale-x-125" style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>IN</span>
             </div>
           </motion.div>
 
