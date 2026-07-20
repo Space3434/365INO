@@ -120,7 +120,7 @@ export function IndustriesExperience() {
             <span className="absolute bottom-[16%] right-[7%] h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,.9)]" />
           </motion.div>
 
-          <div className="absolute inset-[23.4%] rounded-full border-2 border-[#FF3300] shadow-[0_0_12px_rgba(255,51,0,.72)]" />
+          <div className="absolute inset-[23.4%] rounded-full border border-[#FF3300] shadow-[0_0_12px_rgba(255,51,0,.72)]" />
 
           <motion.div
             className="absolute inset-[16.5%] rounded-full"
