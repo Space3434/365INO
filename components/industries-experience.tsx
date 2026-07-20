@@ -120,12 +120,14 @@ export function IndustriesExperience() {
             <span className="absolute bottom-[16%] right-[7%] h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,.9)]" />
           </motion.div>
 
+          <div className="absolute inset-[23.4%] rounded-full border-[3px] border-[#FF3300] shadow-[0_0_12px_rgba(255,51,0,.72)]" />
+
           <motion.div
-            className="absolute inset-[23%] rounded-full"
+            className="absolute inset-[16.5%] rounded-full"
             animate={reducedMotion ? undefined : { rotate: -360 }}
             transition={reducedMotion ? undefined : { duration: 12, ease: "linear", repeat: Infinity }}
           >
-            <span className="absolute right-[4%] top-[28%] h-4 w-4 rounded-full border border-orange-100 bg-orange-500 shadow-[0_0_0_5px_rgba(249,115,22,.16),0_0_22px_rgba(249,115,22,1)]" />
+            <span className="absolute right-[-8px] top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border-2 border-[#FF3300] bg-[#FF3300] shadow-[0_0_0_5px_rgba(255,51,0,.16),0_0_22px_rgba(255,51,0,1)]" />
           </motion.div>
         </div>
 
