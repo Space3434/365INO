@@ -247,10 +247,10 @@ export function IndustriesExperience() {
             </ol>
           </div>
           <Image
-            src="/images/industries-approach-stairs-only.png"
+            src="/images/industries-approach-stairs-cropped.png"
             alt=""
             width={1774}
-            height={887}
+            height={777}
             unoptimized
             className="mx-auto mt-4 block h-auto w-[88%] max-w-[1180px]"
             sizes="(max-width: 1536px) 100vw, 1536px"
