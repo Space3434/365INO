@@ -91,9 +91,9 @@ export function IndustriesExperience() {
 
   return (
     <>
-      <section className="relative isolate h-[570px] min-h-[560px] overflow-hidden bg-[#020d20] text-white sm:h-[min(680px,calc(100vh-110px))]">
+      <section className="relative isolate h-[570px] min-h-[560px] overflow-hidden bg-[#000e24] text-white sm:h-[min(680px,calc(100vh-110px))]">
         <div className="absolute inset-0 bg-mesh-grid opacity-30" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#010a19] via-[#021127]/[.9] to-[#020d20]/55" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000817] via-[#000e24]/[.9] to-[#000e24]/55" aria-hidden="true" />
         <div className="absolute right-[-173px] top-1/2 h-[425px] w-[425px] -translate-y-1/2 sm:right-[-43px] lg:right-[6%] lg:h-[442px] lg:w-[442px]" aria-hidden="true">
           <motion.div
             className="absolute inset-0"
@@ -101,7 +101,7 @@ export function IndustriesExperience() {
             transition={reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="/images/industries-globe-matched-navy.png"
+              src="/images/industries-globe-000e24-review.png"
               alt=""
               fill
               priority
