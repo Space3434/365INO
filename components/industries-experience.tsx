@@ -4,17 +4,13 @@ import { useEffect, useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowRight,
-  BarChart3,
-  CheckCircle2,
   Factory,
   GraduationCap,
   HeartPulse,
   Landmark,
-  PencilRuler,
   Scale,
   ShieldCheck,
   ShoppingCart,
-  Target,
   TrainFront,
   Users
 } from "lucide-react";
@@ -58,13 +54,6 @@ const sectorDetails: Array<{
   { color: "#c6570d", icon: TrainFront, chips: ["Asset tracking", "Logistics", "Scheduling"] },
   { color: "#5b2993", icon: GraduationCap, chips: ["Student services", "Automation", "Reporting"] },
   { color: "#956916", icon: Users, chips: ["Donor insight", "Lean delivery", "Automation"] }
-];
-
-const approach = [
-  { title: "Plan", icon: Target, copy: "Clarify mission goals, stakeholder needs, constraints, dependencies, and measures of success." },
-  { title: "Design", icon: PencilRuler, copy: "Translate operating needs into secure, scalable architectures and implementation roadmaps." },
-  { title: "Deliver", icon: CheckCircle2, copy: "Build, integrate, test, and deploy capabilities through disciplined, transparent execution." },
-  { title: "Modernize", icon: BarChart3, copy: "Continuously improve platforms, workflows, data visibility, and organizational performance." }
 ];
 
 export function IndustriesExperience() {
@@ -249,19 +238,23 @@ export function IndustriesExperience() {
             <h2 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Strategy through sustained execution.</h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">A practical delivery model designed to move complex technology initiatives from ambition to measurable operational value.</p>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {approach.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <motion.article key={step.title} initial={reducedMotion ? false : { opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="relative rounded-2xl border border-blue-300/20 bg-blue-950/45 p-7">
-                  <span className="text-xs font-black tracking-widest text-cyan-300">0{index + 1}</span>
-                  <Icon className="mt-7 h-16 w-16 text-cyan-300" strokeWidth={1.4} aria-hidden="true" />
-                  <h3 className="mt-6 text-2xl font-black">{step.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">{step.copy}</p>
-                </motion.article>
-              );
-            })}
+          <div className="sr-only">
+            <ol>
+              <li>Plan: Clarify mission goals, stakeholder needs, constraints, dependencies, and measures of success.</li>
+              <li>Design: Translate operating needs into secure, scalable architectures and implementation roadmaps.</li>
+              <li>Deliver: Build, integrate, test, and deploy capabilities through disciplined, transparent execution.</li>
+              <li>Modernize: Continuously improve platforms, workflows, data visibility, and organizational performance.</li>
+            </ol>
           </div>
+          <Image
+            src="/images/industries-approach-review.png"
+            alt=""
+            width={1774}
+            height={887}
+            unoptimized
+            className="mt-12 block h-auto w-full"
+            sizes="(max-width: 1536px) 100vw, 1536px"
+          />
         </div>
       </section>
 
