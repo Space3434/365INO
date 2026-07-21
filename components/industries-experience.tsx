@@ -101,7 +101,7 @@ export function IndustriesExperience() {
             transition={reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="/images/industries-reference-globe.webp"
+              src="/images/industries-reference-globe-white-in.png"
               alt=""
               fill
               priority
