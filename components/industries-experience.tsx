@@ -91,9 +91,9 @@ export function IndustriesExperience() {
 
   return (
     <>
-      <section className="relative isolate min-h-[560px] overflow-hidden bg-[#041126] text-white lg:min-h-[650px]">
+      <section className="relative isolate min-h-[560px] overflow-hidden bg-[#020b1a] text-white lg:min-h-[650px]">
         <div className="absolute inset-0 bg-mesh-grid opacity-30" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#041126] via-[#051631]/95 to-blue-950/55" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#020b1a] via-[#031027]/95 to-blue-950/60" aria-hidden="true" />
         <div className="absolute right-[-180px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 sm:right-[-80px] lg:right-[3%] lg:h-[580px] lg:w-[580px]" aria-hidden="true">
           <motion.div
             className="absolute inset-0"
