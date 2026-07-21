@@ -91,23 +91,23 @@ export function IndustriesExperience() {
 
   return (
     <>
-      <section className="relative isolate min-h-[560px] overflow-hidden bg-[#020b1a] text-white lg:min-h-[650px]">
+      <section className="relative isolate h-[570px] min-h-[560px] overflow-hidden bg-[#061a3a] text-white sm:h-[min(680px,calc(100vh-110px))]">
         <div className="absolute inset-0 bg-mesh-grid opacity-30" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#020b1a] via-[#031027]/95 to-blue-950/60" aria-hidden="true" />
-        <div className="absolute right-[-180px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 sm:right-[-80px] lg:right-[3%] lg:h-[580px] lg:w-[580px]" aria-hidden="true">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#02122b] via-[#041938]/[.84] to-[#031530]/35" aria-hidden="true" />
+        <div className="absolute right-[-210px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 sm:right-[-80px] lg:right-[6%] lg:h-[520px] lg:w-[520px]" aria-hidden="true">
           <motion.div
             className="absolute inset-0"
             animate={reducedMotion ? undefined : { scale: [1, 1.018, 1], filter: ["brightness(1)", "brightness(1.08)", "brightness(1)"] }}
             transition={reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="/images/industries-animated-globe.png"
+              src="/images/industries-reference-globe.webp"
               alt=""
               fill
               priority
-              sizes="(max-width: 640px) 500px, 580px"
-              className="object-contain"
-              style={{ filter: "contrast(1.18) saturate(1.18) brightness(1.05) drop-shadow(0 0 18px rgba(24, 174, 202, 0.18))" }}
+              sizes="(max-width: 640px) 500px, 520px"
+              className="rounded-full object-cover"
+              style={{ filter: "drop-shadow(0 24px 38px rgba(0,0,0,.28))" }}
             />
           </motion.div>
 
@@ -137,21 +137,21 @@ export function IndustriesExperience() {
             initial={reducedMotion ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
-            className="max-w-2xl"
+            className="w-full max-w-[620px] lg:max-w-[48vw]"
           >
             <p className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.22em] text-emerald-300 before:h-0.5 before:w-8 before:bg-emerald-300">
               {currentSlide.eyebrow}
             </p>
-            <h1 className="mt-6 text-5xl font-black leading-[0.96] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 text-[44px] font-black leading-[0.94] tracking-[-0.055em] sm:text-[clamp(42px,5.2vw,74px)]">
               {currentSlide.title}
               <span className="mt-2 block text-blue-400">{currentSlide.accent}</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-200">{currentSlide.copy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="#industries-explorer" className="focus-ring inline-flex min-h-12 items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-black text-navy transition hover:bg-cyan-50">
+              <Link href="#industries-explorer" className="focus-ring inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:bg-cyan-50">
                 Explore our experience <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="#delivery-approach" className="focus-ring inline-flex min-h-12 items-center rounded-md border border-white/40 px-5 py-3 text-sm font-black text-white transition hover:bg-white/10">
+              <Link href="#delivery-approach" className="focus-ring inline-flex min-h-12 items-center rounded-full border border-white/40 px-5 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-white/10">
                 How we deliver
               </Link>
             </div>
@@ -223,7 +223,7 @@ export function IndustriesExperience() {
               role="tabpanel"
               initial={reducedMotion ? false : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              className="relative min-h-[480px] overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white shadow-enterprise"
+              className="relative min-h-[600px] overflow-hidden rounded-[28px] border border-slate-200 bg-gradient-to-br from-slate-50 to-white shadow-enterprise"
             >
               <div className="relative z-10 max-w-xl p-8 sm:p-12 lg:p-16">
                 <p className="text-xs font-black uppercase tracking-[0.16em]" style={{ color: currentDetail.color }}>{String(activeSector + 1).padStart(2, "0")} / 09 · Industry experience</p>
