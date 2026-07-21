@@ -101,10 +101,11 @@ export function IndustriesExperience() {
             transition={reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="/images/industries-globe-000e24-review.png"
+              src="/images/industries-globe-high-res-review.png"
               alt=""
               fill
               priority
+              unoptimized
               sizes="(max-width: 640px) 425px, 442px"
               className="rounded-full object-cover"
               style={{ filter: "drop-shadow(0 24px 38px rgba(0,0,0,.28))" }}
