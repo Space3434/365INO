@@ -252,7 +252,7 @@ export function IndustriesExperience() {
             width={1774}
             height={777}
             unoptimized
-            className="mx-auto mt-4 block h-auto w-[88%] max-w-[1180px]"
+            className="mr-auto mt-4 block h-auto w-[88%] max-w-[1180px]"
             sizes="(max-width: 1536px) 100vw, 1536px"
           />
         </div>
