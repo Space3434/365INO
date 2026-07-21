@@ -247,7 +247,7 @@ export function IndustriesExperience() {
             </ol>
           </div>
           <Image
-            src="/images/industries-approach-review.png"
+            src="/images/industries-approach-stairs-only.png"
             alt=""
             width={1774}
             height={887}
