@@ -94,18 +94,18 @@ export function IndustriesExperience() {
       <section className="relative isolate h-[570px] min-h-[560px] overflow-hidden bg-[#020d20] text-white sm:h-[min(680px,calc(100vh-110px))]">
         <div className="absolute inset-0 bg-mesh-grid opacity-30" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#010a19] via-[#021127]/[.9] to-[#020d20]/55" aria-hidden="true" />
-        <div className="absolute right-[-210px] top-1/2 h-[500px] w-[500px] -translate-y-1/2 sm:right-[-80px] lg:right-[6%] lg:h-[520px] lg:w-[520px]" aria-hidden="true">
+        <div className="absolute right-[-173px] top-1/2 h-[425px] w-[425px] -translate-y-1/2 sm:right-[-43px] lg:right-[6%] lg:h-[442px] lg:w-[442px]" aria-hidden="true">
           <motion.div
             className="absolute inset-0"
             animate={reducedMotion ? undefined : { scale: [1, 1.018, 1], filter: ["brightness(1)", "brightness(1.08)", "brightness(1)"] }}
             transition={reducedMotion ? undefined : { duration: 6, ease: "easeInOut", repeat: Infinity }}
           >
             <Image
-              src="/images/industries-reference-globe-white-in.png"
+              src="/images/industries-globe-white-in-dark-blue.png"
               alt=""
               fill
               priority
-              sizes="(max-width: 640px) 500px, 520px"
+              sizes="(max-width: 640px) 425px, 442px"
               className="rounded-full object-cover"
               style={{ filter: "drop-shadow(0 24px 38px rgba(0,0,0,.28))" }}
             />
