@@ -80,7 +80,7 @@ export function IndustriesExperience() {
 
   return (
     <>
-      <section className="relative isolate h-[35.625rem] min-h-[35rem] overflow-hidden bg-[#000e24] text-white sm:h-[min(42.5rem,calc(100vh-6.875rem))]">
+      <section className="relative isolate h-[32rem] min-h-[31.5rem] overflow-hidden bg-[#000e24] text-white sm:h-[min(38rem,calc(100vh-6.875rem))]">
         <div className="absolute inset-0 bg-mesh-grid opacity-30" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#000817] via-[#000e24]/[.9] to-[#000e24]/55" aria-hidden="true" />
         <div className="absolute right-[-10.8125rem] top-1/2 h-[26.5625rem] w-[26.5625rem] -translate-y-1/2 sm:right-[-2.6875rem] lg:right-[6%] lg:h-[27.625rem] lg:w-[27.625rem]" aria-hidden="true">
@@ -121,7 +121,7 @@ export function IndustriesExperience() {
           </motion.div>
         </div>
 
-        <div className="container-pad relative z-10 flex min-h-[35rem] items-center py-20 lg:min-h-[40.625rem]">
+        <div className="container-pad relative z-10 flex min-h-[31.5rem] items-center py-14 lg:min-h-[36.5rem]">
           <motion.div
             key={slide}
             initial={reducedMotion ? false : { opacity: 0, y: 18 }}
