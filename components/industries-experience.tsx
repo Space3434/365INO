@@ -40,6 +40,39 @@ const heroSlides = [
   }
 ];
 
+type AiNewsItem = {
+  title: string;
+  link: string;
+  published?: string;
+};
+
+const fallbackAiNews: AiNewsItem[] = [
+  {
+    title: "AI catches up with humans to score 100% at top math contest",
+    link: "https://techxplore.com/news/2026-07-ai-humans-score-math-contest.html"
+  },
+  {
+    title: "AI chatbots can be as effective as humans at emotional support—sometimes better",
+    link: "https://techxplore.com/news/2026-07-ai-chatbots-effective-humans-emotional.html"
+  },
+  {
+    title: "Machine learning accelerates search for longer-lasting materials for solar cells",
+    link: "https://techxplore.com/news/2026-07-machine-longer-materials-solar-cells.html"
+  },
+  {
+    title: "AI is rewriting cybersecurity's rules",
+    link: "https://techxplore.com/news/2026-07-ai-rewriting-cybersecurity.html"
+  },
+  {
+    title: "Microsoft strikes deal for Mistral's AI computing power",
+    link: "https://techxplore.com/news/2026-07-microsoft-mistral-ai-power.html"
+  },
+  {
+    title: "AI detects personalities of individual 3D printers to cut manufacturing errors",
+    link: "https://techxplore.com/news/2026-07-ai-personalities-individual-3d-printers.html"
+  }
+];
+
 const sectorDetails: Array<{
   color: string;
   icon: LucideIcon;
@@ -60,6 +93,7 @@ export function IndustriesExperience() {
   const reducedMotion = useReducedMotion();
   const [slide, setSlide] = useState(0);
   const [activeSector, setActiveSector] = useState(0);
+  const [aiNews, setAiNews] = useState<AiNewsItem[]>(fallbackAiNews);
 
   useEffect(() => {
     if (reducedMotion) return;
@@ -72,6 +106,22 @@ export function IndustriesExperience() {
     const timer = window.setInterval(() => setActiveSector((value) => (value + 1) % industries.length), 6000);
     return () => window.clearInterval(timer);
   }, [reducedMotion]);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    fetch("/api/ai-news", { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error("Unable to load AI news");
+        return response.json() as Promise<{ items?: AiNewsItem[] }>;
+      })
+      .then((data) => {
+        if (data.items?.length) setAiNews(data.items);
+      })
+      .catch(() => undefined);
+
+    return () => controller.abort();
+  }, []);
 
   const currentSlide = heroSlides[slide];
   const currentIndustry = industries[activeSector];
@@ -158,18 +208,30 @@ export function IndustriesExperience() {
         </div>
       </section>
 
-      <div className="overflow-hidden border-t border-white/10 bg-[#0b2851] py-5 text-white" aria-hidden="true">
+      <div className="overflow-hidden border-t border-white/10 bg-[#0b2851] py-5 text-white" aria-label="Latest artificial intelligence news from Tech Xplore">
         <motion.div
           className="flex w-max"
           animate={reducedMotion ? undefined : { x: ["0%", "-50%"] }}
-          transition={reducedMotion ? undefined : { duration: 32, ease: "linear", repeat: Infinity }}
+          transition={reducedMotion ? undefined : { duration: 70, ease: "linear", repeat: Infinity }}
         >
           {[0, 1].map((group) => (
-            <div key={group} className="flex shrink-0 gap-8 px-4 text-xs font-black uppercase tracking-[0.16em] text-slate-300">
-              {industries.map((industry) => (
-                <span key={`${group}-${industry.title}`} className="flex items-center gap-3 whitespace-nowrap before:h-2 before:w-2 before:rounded-full before:bg-emerald-400">
-                  {industry.title}
-                </span>
+            <div
+              key={group}
+              className="flex shrink-0 gap-8 px-4 text-xs font-black uppercase tracking-[0.12em] text-slate-300"
+              aria-hidden={group === 1 ? "true" : undefined}
+            >
+              {aiNews.map((item) => (
+                <a
+                  key={`${group}-${item.link}`}
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  tabIndex={group === 1 ? -1 : undefined}
+                  className="flex items-center gap-3 whitespace-nowrap transition hover:text-white before:h-2 before:w-2 before:rounded-full before:bg-emerald-400"
+                >
+                  <span className="text-emerald-300">Latest AI News</span>
+                  <span>{item.title}</span>
+                </a>
               ))}
             </div>
           ))}
