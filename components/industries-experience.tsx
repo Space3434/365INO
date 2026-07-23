@@ -1,23 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { LucideIcon } from "lucide-react";
 import {
   ArrowRight,
-  Factory,
-  GraduationCap,
-  HeartPulse,
-  Landmark,
-  Scale,
-  ShieldCheck,
-  ShoppingCart,
-  TrainFront,
-  Users
+  BarChart3,
+  Settings,
+  ShieldCheck
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { industries } from "@/lib/content";
+import { IndustryPrismGallery } from "@/components/industry-prism-gallery";
 
 const heroSlides = [
   {
@@ -73,37 +66,14 @@ const fallbackAiNews: AiNewsItem[] = [
   }
 ];
 
-const sectorDetails: Array<{
-  color: string;
-  icon: LucideIcon;
-  chips: string[];
-}> = [
-  { color: "#1769e0", icon: Landmark, chips: ["Legacy modernization", "Compliance", "Citizen services"] },
-  { color: "#078b8f", icon: HeartPulse, chips: ["Interoperability", "Automation", "HIPAA-aware"] },
-  { color: "#267f2a", icon: ShieldCheck, chips: ["Claims processing", "Benefits delivery", "Case tracking"] },
-  { color: "#98213a", icon: Scale, chips: ["Data governance", "Risk controls", "Reporting"] },
-  { color: "#1466bc", icon: ShoppingCart, chips: ["Forecasting", "Personalization", "Omnichannel"] },
-  { color: "#46515f", icon: Factory, chips: ["Predictive maintenance", "Supply chain", "Plant data"] },
-  { color: "#c6570d", icon: TrainFront, chips: ["Asset tracking", "Logistics", "Scheduling"] },
-  { color: "#5b2993", icon: GraduationCap, chips: ["Student services", "Automation", "Reporting"] },
-  { color: "#956916", icon: Users, chips: ["Donor insight", "Lean delivery", "Automation"] }
-];
-
 export function IndustriesExperience() {
   const reducedMotion = useReducedMotion();
   const [slide, setSlide] = useState(0);
-  const [activeSector, setActiveSector] = useState(0);
   const [aiNews, setAiNews] = useState<AiNewsItem[]>(fallbackAiNews);
 
   useEffect(() => {
     if (reducedMotion) return;
     const timer = window.setInterval(() => setSlide((value) => (value + 1) % heroSlides.length), 6500);
-    return () => window.clearInterval(timer);
-  }, [reducedMotion]);
-
-  useEffect(() => {
-    if (reducedMotion) return;
-    const timer = window.setInterval(() => setActiveSector((value) => (value + 1) % industries.length), 6000);
     return () => window.clearInterval(timer);
   }, [reducedMotion]);
 
@@ -124,9 +94,6 @@ export function IndustriesExperience() {
   }, []);
 
   const currentSlide = heroSlides[slide];
-  const currentIndustry = industries[activeSector];
-  const currentDetail = sectorDetails[activeSector];
-  const CurrentIcon = currentDetail.icon;
 
   return (
     <>
@@ -238,60 +205,7 @@ export function IndustriesExperience() {
         </motion.div>
       </div>
 
-      <section id="industries-explorer" className="scroll-mt-24 bg-white py-20 sm:py-24">
-        <div className="container-pad">
-          <div className="grid items-end gap-6 lg:grid-cols-[1fr_430px]">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-700">Industries we serve</p>
-              <h2 className="mt-3 max-w-3xl text-4xl font-black tracking-tight text-navy sm:text-5xl">Experience built around your operating reality.</h2>
-            </div>
-            <p className="text-base leading-7 text-slate-600">Select an industry to see how 365INO applies modernization, automation, integration, and data insight to its most important challenges.</p>
-          </div>
-
-          <div className="mt-12 grid gap-6 lg:grid-cols-[minmax(280px,360px)_1fr]">
-            <div role="tablist" aria-label="Select an industry" className="grid sm:grid-cols-3 lg:block">
-              {industries.map((industry, index) => {
-                const detail = sectorDetails[index];
-                return (
-                  <button
-                    key={industry.title}
-                    type="button"
-                    role="tab"
-                    aria-selected={activeSector === index}
-                    onClick={() => setActiveSector(index)}
-                    className="group grid w-full grid-cols-[40px_1fr_auto] items-center gap-3 border-b border-slate-200 px-1 py-3 text-left transition hover:bg-slate-50"
-                    style={{ color: activeSector === index ? detail.color : "#0b1d3d" }}
-                  >
-                    <span className="grid h-9 w-9 place-items-center rounded-full border text-xs font-black" style={{ borderColor: detail.color, color: detail.color }}>{String(index + 1).padStart(2, "0")}</span>
-                    <span className="text-sm font-black">{industry.title}</span>
-                    <ArrowRight className={`h-4 w-4 transition ${activeSector === index ? "translate-x-1" : "text-slate-400"}`} />
-                  </button>
-                );
-              })}
-            </div>
-
-            <motion.article
-              key={activeSector}
-              role="tabpanel"
-              initial={reducedMotion ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="relative min-h-[37.5rem] overflow-hidden rounded-[1.75rem] border border-slate-200 bg-gradient-to-br from-slate-50 to-white shadow-enterprise"
-            >
-              <div className="relative z-10 max-w-xl p-8 sm:p-12 lg:p-16">
-                <p className="text-xs font-black uppercase tracking-[0.16em]" style={{ color: currentDetail.color }}>{String(activeSector + 1).padStart(2, "0")} / 09 · Industry experience</p>
-                <h3 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: currentDetail.color }}>{currentIndustry.title}</h3>
-                <p className="mt-5 text-lg leading-8 text-slate-600">{currentIndustry.description}</p>
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {currentDetail.chips.map((chip) => <span key={chip} className="rounded-full border border-slate-200 bg-white px-3 py-2 text-xs font-black text-slate-700 shadow-sm">{chip}</span>)}
-                </div>
-              </div>
-              <div className="absolute -bottom-24 -right-20 h-80 w-80 rounded-full border opacity-20 sm:bottom-auto sm:right-[-5%] sm:top-1/2 sm:-translate-y-1/2" style={{ borderColor: currentDetail.color, boxShadow: `0 0 0 42px ${currentDetail.color}12, 0 0 0 88px ${currentDetail.color}08` }} aria-hidden="true" />
-              <CurrentIcon className="absolute bottom-12 right-10 h-28 w-28 opacity-80 sm:right-[10%] sm:top-1/2 sm:-translate-y-1/2" style={{ color: currentDetail.color }} strokeWidth={1.25} aria-hidden="true" />
-              <div className="absolute bottom-0 left-0 h-1 w-full bg-slate-100"><div className="h-full" style={{ width: `${((activeSector + 1) / industries.length) * 100}%`, backgroundColor: currentDetail.color }} /></div>
-            </motion.article>
-          </div>
-        </div>
-      </section>
+      <IndustryPrismGallery reducedMotion={Boolean(reducedMotion)} />
 
       <section id="delivery-approach" className="scroll-mt-24 bg-navy py-8 text-white sm:py-10">
         <div className="container-pad">
@@ -320,27 +234,109 @@ export function IndustriesExperience() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-20 sm:py-24">
+      <section className="bg-slate-50 py-10 sm:py-16">
         <div className="container-pad">
-          <div className="grid items-end gap-6 lg:grid-cols-[1fr_430px]">
-            <div>
+          <motion.div
+            initial={reducedMotion ? false : { opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.55, ease: "easeOut" }}
+            className="grid items-center gap-5 rounded-2xl border border-slate-200 bg-white px-5 py-6 shadow-sm sm:gap-7 sm:px-8 sm:py-7 md:grid-cols-[1.1fr_0.8fr] lg:grid-cols-[1.2fr_0.72fr_0.85fr_auto_2.2fr] lg:gap-6 lg:px-10"
+          >
+            <header>
               <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-700">Designed for outcomes</p>
-              <h2 className="mt-3 text-4xl font-black tracking-tight text-navy sm:text-5xl">Technology that advances the mission.</h2>
+              <h2 className="mt-3 text-balance text-3xl font-black tracking-tight text-navy sm:text-4xl">
+                Technology that advances the mission.
+              </h2>
+              <p className="mt-4 text-sm leading-6 text-slate-600">
+                Our work is focused on practical improvements that leaders, employees, customers, and communities can experience.
+              </p>
+            </header>
+
+            <div className="relative mx-auto w-full max-w-[12rem] sm:max-w-[15rem]" aria-hidden="true">
+              <div className="absolute inset-[18%] rounded-full bg-blue-100/60 blur-2xl" />
+              <svg viewBox="0 0 240 180" className="relative block h-auto w-full overflow-visible">
+                {[
+                  "M18 168 A146 146 0 0 1 211 24",
+                  "M54 168 A110 110 0 0 1 202 61",
+                  "M91 168 A74 74 0 0 1 190 98"
+                ].map((path, index) => (
+                  <motion.path
+                    key={path}
+                    d={path}
+                    fill="none"
+                    stroke={index === 0 ? "#1d4ed8" : "#2563eb"}
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    initial={reducedMotion ? false : { pathLength: 0, opacity: 0 }}
+                    whileInView={{ pathLength: 1, opacity: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.9, delay: index * 0.14, ease: "easeOut" }}
+                  />
+                ))}
+                <motion.circle
+                  cx="174"
+                  cy="39"
+                  r="5"
+                  fill="#65a30d"
+                  animate={reducedMotion ? undefined : { r: [4.5, 6.5, 4.5], opacity: [0.75, 1, 0.75] }}
+                  transition={reducedMotion ? undefined : { duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.circle
+                  cx="155"
+                  cy="68"
+                  r="4.5"
+                  fill="#1d4ed8"
+                  animate={reducedMotion ? undefined : { cx: [151, 158, 151], cy: [72, 65, 72] }}
+                  transition={reducedMotion ? undefined : { duration: 9, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <motion.circle
+                  cx="139"
+                  cy="100"
+                  r="4.5"
+                  fill="#2563eb"
+                  animate={reducedMotion ? undefined : { cx: [136, 144, 136], cy: [103, 96, 103] }}
+                  transition={reducedMotion ? undefined : { duration: 11, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <circle cx="121" cy="142" r="18" fill="#eff6ff" />
+              </svg>
             </div>
-            <p className="text-base leading-7 text-slate-600">Our work is focused on practical improvements that leaders, employees, customers, and communities can experience.</p>
-          </div>
-          <div className="mt-12 grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-enterprise lg:grid-cols-[1.25fr_repeat(3,1fr)]">
-            <div className="bg-gradient-to-br from-blue-700 to-navy p-8 text-white lg:p-10">
-              <h3 className="text-3xl font-black">Modernization with purpose.</h3>
-              <p className="mt-4 leading-7 text-slate-200">365INO combines program leadership, software delivery, business analysis, PMO support, and systems integration.</p>
+
+            <div className="border-t border-slate-200 pt-5 md:col-span-2 lg:col-span-1 lg:border-0 lg:pt-0">
+              <span className="mb-3 block h-0.5 w-8 bg-lime-500" />
+              <h3 className="text-2xl font-black tracking-tight text-navy">Modernization with purpose.</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                365INO combines program leadership, software delivery, business analysis, PMO support, and systems integration.
+              </p>
             </div>
-            {["Reduce manual processing and operational friction.", "Improve data visibility and decision-making.", "Strengthen scalability, security, and maintainability."].map((metric, index) => (
-              <div key={metric} className="border-t border-slate-200 p-8 lg:border-l lg:border-t-0">
-                <strong className="text-4xl font-black text-blue-700">0{index + 1}</strong>
-                <p className="mt-4 text-sm leading-6 text-slate-600">{metric}</p>
-              </div>
-            ))}
-          </div>
+
+            <div className="hidden h-36 w-px bg-slate-200 lg:block" aria-hidden="true" />
+
+            <div className="grid border-t border-slate-200 md:col-span-2 md:grid-cols-3 lg:col-span-1 lg:border-t-0">
+              {[
+                { icon: Settings, text: "Reduce manual processing and operational friction." },
+                { icon: BarChart3, text: "Improve data visibility and decision-making." },
+                { icon: ShieldCheck, text: "Strengthen scalability, security, and maintainability." }
+              ].map((outcome, index) => {
+                const OutcomeIcon = outcome.icon;
+                return (
+                  <motion.article
+                    key={outcome.text}
+                    initial={reducedMotion ? false : { opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.4, delay: reducedMotion ? 0 : 0.12 + index * 0.1 }}
+                    className="group flex items-center gap-4 border-b border-slate-200 py-4 last:border-b-0 md:block md:border-b-0 md:border-l md:border-dashed md:px-5 md:py-2 md:text-center md:first:border-l-0"
+                  >
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-blue-50 text-blue-700 transition group-hover:bg-blue-100 group-hover:text-blue-800 md:mx-auto">
+                      <OutcomeIcon className="h-6 w-6" strokeWidth={1.8} aria-hidden="true" />
+                    </span>
+                    <p className="text-sm font-semibold leading-6 text-navy md:mt-4">{outcome.text}</p>
+                  </motion.article>
+                );
+              })}
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
