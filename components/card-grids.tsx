@@ -31,31 +31,40 @@ const serviceAccentStyles = [
 
 const industryAccentStyles = [
   {
-    icon: "bg-cyan-200 text-cyan-900"
+    card: "border-cyan-200 bg-gradient-to-br from-white to-cyan-50 hover:border-cyan-400",
+    icon: "bg-cyan-100 text-cyan-800"
   },
   {
-    icon: "bg-blue-200 text-blue-900"
+    card: "border-blue-200 bg-gradient-to-br from-white to-blue-50 hover:border-blue-400",
+    icon: "bg-blue-100 text-blue-800"
   },
   {
-    icon: "bg-emerald-200 text-emerald-900"
+    card: "border-emerald-200 bg-gradient-to-br from-white to-emerald-50 hover:border-emerald-400",
+    icon: "bg-emerald-100 text-emerald-800"
   },
   {
-    icon: "bg-indigo-200 text-indigo-900"
+    card: "border-indigo-200 bg-gradient-to-br from-white to-indigo-50 hover:border-indigo-400",
+    icon: "bg-indigo-100 text-indigo-800"
   },
   {
-    icon: "bg-sky-200 text-sky-900"
+    card: "border-sky-200 bg-gradient-to-br from-white to-sky-50 hover:border-sky-400",
+    icon: "bg-sky-100 text-sky-800"
   },
   {
-    icon: "bg-teal-200 text-teal-900"
+    card: "border-teal-200 bg-gradient-to-br from-white to-teal-50 hover:border-teal-400",
+    icon: "bg-teal-100 text-teal-800"
   },
   {
-    icon: "bg-violet-200 text-violet-900"
+    card: "border-violet-200 bg-gradient-to-br from-white to-violet-50 hover:border-violet-400",
+    icon: "bg-violet-100 text-violet-800"
   },
   {
-    icon: "bg-amber-200 text-amber-900"
+    card: "border-amber-200 bg-gradient-to-br from-white to-amber-50 hover:border-amber-400",
+    icon: "bg-amber-100 text-amber-800"
   },
   {
-    icon: "bg-rose-200 text-rose-900"
+    card: "border-rose-200 bg-gradient-to-br from-white to-rose-50 hover:border-rose-400",
+    icon: "bg-rose-100 text-rose-800"
   }
 ];
 
@@ -102,7 +111,7 @@ export function IndustryCard({
 
   return (
     <article
-      className="group rounded-md border border-t-4 border-navy bg-white px-5 py-4 shadow-sm transition hover:-translate-y-1 hover:border-ocean hover:shadow-enterprise"
+      className={`group rounded-md border px-5 py-4 shadow-sm transition hover:-translate-y-1 hover:shadow-enterprise ${accent.card}`}
     >
       <div className={`mb-2 grid h-10 w-10 place-items-center rounded-md ${accent.icon}`}>
         <Image
