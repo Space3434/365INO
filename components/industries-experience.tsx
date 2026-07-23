@@ -212,7 +212,7 @@ export function IndustriesExperience() {
         <motion.div
           className="flex w-max"
           animate={reducedMotion ? undefined : { x: ["0%", "-50%"] }}
-          transition={reducedMotion ? undefined : { duration: 70, ease: "linear", repeat: Infinity }}
+          transition={reducedMotion ? undefined : { duration: 120, ease: "linear", repeat: Infinity }}
         >
           {[0, 1].map((group) => (
             <div
