@@ -193,8 +193,8 @@ export default function CareersPage() {
       </AnimatedSection>
 
       <AnimatedSection className="bg-white py-20">
-        <div className="container-pad grid items-center gap-10 lg:grid-cols-[312px_1fr]">
-          <div className="group relative mx-auto aspect-[2/3] w-full max-w-[312px] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise">
+        <div className="container-pad grid items-center gap-10 lg:grid-cols-[19.5rem_1fr]">
+          <div className="group relative mx-auto aspect-[2/3] w-full max-w-[19.5rem] overflow-hidden rounded-md border border-slate-200 bg-slate-50 shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise">
             <a
               href="/careers-at-365ino.png"
               target="_blank"
@@ -208,7 +208,7 @@ export default function CareersPage() {
                 width={1024}
                 height={1536}
                 className="h-full w-full object-cover"
-                sizes="312px"
+                sizes="(min-width: 1024px) 281px, 312px"
               />
               <span className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-md bg-navy text-white shadow-md transition group-hover:bg-cyan-600">
                 <Maximize2 className="h-5 w-5" aria-hidden="true" />

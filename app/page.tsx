@@ -53,7 +53,7 @@ export default function HomePage() {
               href="/past-performance-client-success.png"
               target="_blank"
               rel="noreferrer"
-              className="focus-ring group relative mx-auto block aspect-square w-full max-w-[340px] overflow-hidden rounded-md border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise"
+              className="focus-ring group relative mx-auto block aspect-square w-full max-w-[21.25rem] overflow-hidden rounded-md border border-slate-200 bg-white shadow-md transition hover:-translate-y-1 hover:border-cyan-400 hover:shadow-enterprise"
               aria-label="Open the 365INO capability statement PDF"
             >
               <Image
@@ -62,7 +62,7 @@ export default function HomePage() {
                 width={1254}
                 height={1254}
                 className="h-full w-full object-contain transition duration-300 group-hover:scale-[1.02]"
-                sizes="340px"
+                sizes="(min-width: 1024px) 306px, 340px"
               />
               <span className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-md bg-navy text-white shadow-md transition group-hover:bg-cyan-600">
                 <Maximize2 className="h-5 w-5" aria-hidden="true" />

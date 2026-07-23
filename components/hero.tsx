@@ -10,7 +10,7 @@ export function Hero({ content }: { content: EditableSiteContent["hero"] }) {
   return (
     <section className="relative isolate overflow-hidden">
       <AnimatedBackground />
-      <div className="relative h-[300px] overflow-hidden sm:h-[380px] lg:h-[440px]">
+      <div className="relative h-[18.75rem] overflow-hidden sm:h-[23.75rem] lg:h-[27.5rem]">
         <Image
           src={collaborationImage}
           alt="IT professionals collaborating around laptops in a modern workplace"
