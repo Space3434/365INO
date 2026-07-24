@@ -175,7 +175,7 @@ export function IndustriesExperience() {
         </div>
       </section>
 
-      <div className="overflow-hidden border-t border-white/10 bg-[#0b2851] py-5 text-white" aria-label="Latest artificial intelligence news from Tech Xplore">
+      <div className="overflow-hidden border-t border-white/15 bg-[#174a7a] py-5 text-white" aria-label="Latest artificial intelligence news from Tech Xplore">
         <motion.div
           className="flex w-max"
           animate={reducedMotion ? undefined : { x: ["0%", "-50%"] }}
