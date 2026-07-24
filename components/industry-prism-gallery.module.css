@@ -59,12 +59,16 @@
 }
 .industryNav h2 {
   margin: 0;
-  font-size: clamp(42px, 4.2vw, 72px);
-  line-height: .93;
-  letter-spacing: -.045em;
-  font-weight: 500;
+  font-size: clamp(28px, 2.45vw, 40px);
+  line-height: .96;
+  letter-spacing: -.035em;
+  font-weight: 900;
 }
-.industryNav h2 em { color: var(--blue); font-style: normal; }
+.industryNav h2 em {
+  color: #fff;
+  font-style: normal;
+  font-weight: 900;
+}
 .orangeRule { width: 56px; height: 2px; margin: 24px 0 20px; background: var(--orange); }
 .industryNav [role="tablist"] { display: grid; gap: 3px; }
 
@@ -333,7 +337,7 @@
 @media (max-width: 760px) {
   .industrySection { min-height: 0; overflow-y: auto; background: linear-gradient(160deg, #020919 0 76%, #eaf2fc 100%); }
   .galleryShell { display: block; width: 100%; padding: 34px 20px 0; }
-  .industryNav h2 { font-size: 48px; }
+  .industryNav h2 { font-size: 37px; }
   .industryNav [role="tablist"] { display: flex; overflow-x: auto; gap: 8px; padding-bottom: 10px; scrollbar-width: none; }
   .industryLink {
     min-width: 124px;
