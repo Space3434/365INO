@@ -138,20 +138,20 @@ export function IndustriesExperience() {
           </motion.div>
         </div>
 
-        <div className="container-pad relative z-10 flex min-h-[31.5rem] items-center py-14 lg:min-h-[36.5rem]">
+        <div className="relative z-10 flex min-h-[31.5rem] w-full items-center px-4 py-14 text-left md:px-8 lg:min-h-[36.5rem] xl:px-16">
           <motion.div
             key={slide}
             initial={reducedMotion ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
-            className="w-full max-w-[38.75rem] lg:max-w-[48vw]"
+            className="w-full text-left"
           >
             <p className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.22em] text-emerald-300 before:h-0.5 before:w-8 before:bg-emerald-300">
               {currentSlide.eyebrow}
             </p>
-            <h1 className="mt-6 text-[44px] font-black leading-[0.94] tracking-[-0.055em] sm:text-[clamp(2.625rem,5.2vw,4.625rem)]">
+            <h1 className="mt-6 text-[44px] font-black leading-[0.94] tracking-[-0.055em] sm:whitespace-nowrap sm:text-[clamp(2.625rem,4vw,3.75rem)]">
               {currentSlide.title}
-              <span className="mt-2 block text-blue-400">{currentSlide.accent}</span>
+              <span className="ml-[0.22em] text-blue-400">{currentSlide.accent}</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-200">{currentSlide.copy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -166,7 +166,7 @@ export function IndustriesExperience() {
         </div>
 
         <div className="absolute bottom-8 left-0 right-0 z-20">
-          <div className="container-pad flex items-center gap-3">
+          <div className="flex w-full items-center gap-3 px-4 md:px-8 xl:px-16">
             {heroSlides.map((item, index) => (
               <button key={item.eyebrow} type="button" onClick={() => setSlide(index)} className={`h-1 rounded-full transition-all ${slide === index ? "w-12 bg-emerald-300" : "w-8 bg-white/30 hover:bg-white/60"}`} aria-label={`Show hero message ${index + 1}`} aria-current={slide === index ? "true" : undefined} />
             ))}
