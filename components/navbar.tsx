@@ -19,7 +19,10 @@ export function Navbar() {
       >
         Skip to content
       </a>
-      <nav className="container-pad flex min-h-20 items-center justify-between" aria-label="Primary navigation">
+      <nav
+        className="flex min-h-20 w-full items-center px-4 md:px-8 xl:px-16"
+        aria-label="Primary navigation"
+      >
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-md">
           <span className="grid h-12 w-[10.5rem] place-items-center rounded-md px-3">
             <Image
@@ -33,7 +36,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="ml-5 hidden w-full max-w-[52rem] flex-1 items-center justify-start gap-3 xl:flex xl:ml-8">
           {navItems.map((item) => {
             const active = pathname === item.href;
             return (
@@ -52,7 +55,7 @@ export function Navbar() {
 
         <Link
           href="/contact"
-          className="focus-ring hidden rounded-md bg-navy px-5 py-3 text-sm font-bold text-white shadow-enterprise transition hover:bg-cyan-800 lg:inline-flex"
+          className="focus-ring ml-auto hidden shrink-0 rounded-md bg-navy px-5 py-3 text-sm font-bold text-white shadow-enterprise transition hover:bg-cyan-800 xl:inline-flex"
         >
           Schedule Consultation
         </Link>
@@ -62,14 +65,14 @@ export function Navbar() {
           aria-expanded={open}
           aria-label="Toggle navigation menu"
           onClick={() => setOpen((value) => !value)}
-          className="focus-ring inline-grid h-11 w-11 place-items-center rounded-md border border-slate-200 text-navy lg:hidden"
+          className="focus-ring ml-auto inline-grid h-11 w-11 place-items-center rounded-md border border-slate-200 text-navy xl:hidden"
         >
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
       </nav>
 
       {open ? (
-        <div className="border-t border-slate-200 bg-white lg:hidden">
+        <div className="border-t border-slate-200 bg-white xl:hidden">
           <div className="container-pad grid gap-2 py-4">
             {navItems.map((item) => (
               <Link

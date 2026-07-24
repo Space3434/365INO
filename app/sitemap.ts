@@ -11,6 +11,8 @@ const routes = [
   "/government-solutions",
   "/commercial-solutions",
   "/industries",
+  "/contracts",
+  "/partners",
   "/case-studies",
   "/leadership",
   "/careers",
