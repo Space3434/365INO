@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-navy text-white">
       <div className="w-full px-4 pb-2 pt-5 md:px-8 xl:px-16">
-        <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+        <div className="grid gap-6 md:grid-cols-[1.2fr_0.5fr_1.1fr]">
           <div>
             <div className="mb-5 flex items-center gap-3">
               <Image
@@ -49,24 +49,28 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="md:pt-8">
             <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Quick Links</h2>
-            <div className="grid grid-cols-2 gap-3 text-sm text-slate-300">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href} className="hover:text-white">
+            <div className="grid grid-cols-[max-content_max-content] gap-x-12 gap-y-3 text-sm text-slate-300">
+              {navItems.map((item, index) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`${index % 2 === 1 ? "text-[13px]" : ""} hover:text-white`}
+                >
                   {item.label}
                 </Link>
               ))}
               <Link href="/privacy-policy" className="hover:text-white">
                 Privacy
               </Link>
-              <Link href="/terms-of-use" className="hover:text-white">
+              <Link href="/terms-of-use" className="text-[13px] hover:text-white">
                 Terms
               </Link>
             </div>
           </div>
 
-          <div>
+          <div className="md:pt-8">
             <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Connect</h2>
             <div className="space-y-3 text-sm text-slate-300">
               <p className="flex items-center gap-4">
@@ -94,7 +98,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <p className="mt-4 text-center text-xs text-[#FF3300]">
+        <p className="mt-4 text-left text-[11px] text-[#FF3300]">
           Copyright 2026 365INO, CO. All rights reserved.
         </p>
       </div>

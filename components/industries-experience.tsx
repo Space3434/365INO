@@ -207,12 +207,13 @@ export function IndustriesExperience() {
 
       <IndustryPrismGallery reducedMotion={Boolean(reducedMotion)} />
 
-      <section id="delivery-approach" className="scroll-mt-24 bg-navy py-8 text-white sm:py-10">
-        <div className="container-pad">
-          <div className="max-w-3xl">
+      <div className="flex flex-col-reverse">
+        <section id="delivery-approach" className="scroll-mt-24 bg-white py-8 text-black sm:py-10">
+        <div className="container-pad grid items-center gap-8 text-left lg:grid-cols-[0.72fr_1.6fr]">
+          <div className="max-w-xl">
             <p className="text-xs font-black uppercase tracking-[0.2em] text-emerald-300">Our approach</p>
             <h2 className="mt-1 text-4xl font-black tracking-tight sm:text-5xl">Strategy through sustained execution.</h2>
-            <p className="mt-2 max-w-2xl text-lg leading-8 text-slate-300">A practical delivery model designed to move complex technology initiatives from ambition to measurable operational value.</p>
+            <p className="mt-2 max-w-2xl text-lg leading-8 text-black">A practical delivery model designed to move complex technology initiatives from ambition to measurable operational value.</p>
           </div>
           <div className="sr-only">
             <ol>
@@ -228,14 +229,14 @@ export function IndustriesExperience() {
             width={1774}
             height={777}
             unoptimized
-            className="mx-auto mt-4 block h-auto w-full"
+            className="mx-auto block h-auto w-full"
             sizes="(max-width: 1536px) 100vw, 1536px"
           />
         </div>
-      </section>
+        </section>
 
-      <section className="bg-slate-50 py-10 sm:py-16">
-        <div className="container-pad">
+        <section className="bg-white py-10 sm:py-16">
+        <div className="container-pad text-left">
           <motion.div
             initial={reducedMotion ? false : { opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -338,7 +339,8 @@ export function IndustriesExperience() {
             </div>
           </motion.div>
         </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
