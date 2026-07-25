@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-navy text-white">
       <div className="w-full px-4 pb-2 pt-5 md:px-8 xl:px-16">
-        <div className="grid gap-6 md:grid-cols-[1.2fr_0.5fr_1.1fr]">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-[1.2fr_0.65fr_0.95fr_1fr]">
           <div>
             <div className="mb-5 flex items-center gap-3">
               <Image
@@ -49,7 +49,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:pt-8">
+          <div className="md:pt-8 lg:justify-self-center">
             <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Quick Links</h2>
             <div className="grid grid-cols-[max-content_max-content] gap-x-12 gap-y-3 text-sm text-slate-300">
               {navItems.map((item, index) => (
@@ -70,7 +70,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:pt-8">
+          <div className="md:pt-8 lg:justify-self-center">
             <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Connect</h2>
             <div className="space-y-3 text-sm text-slate-300">
               <p className="flex items-center gap-4">
@@ -97,8 +97,37 @@ export function Footer() {
               </a>
             </div>
           </div>
+
+          <div className="md:pt-8">
+            <h3 className="mb-2 text-sm font-black text-cyan-200">Stay Connected With Us!</h3>
+            <form
+              action="/contact"
+              method="get"
+              className="flex w-full max-w-sm flex-col gap-2 sm:flex-row"
+              aria-label="Stay connected by email"
+            >
+              <label htmlFor="footer-email" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="footer-email"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                placeholder="Enter your email address"
+                className="focus-ring min-h-10 min-w-0 flex-1 rounded-md border border-white/20 bg-white px-3 text-sm text-navy placeholder:text-slate-500"
+              />
+              <button
+                type="submit"
+                className="focus-ring min-h-10 rounded-md bg-cyan-500 px-4 text-sm font-black text-navy transition hover:bg-cyan-300"
+              >
+                Connect
+              </button>
+            </form>
+          </div>
         </div>
-        <p className="mt-4 text-left text-[11px] text-[#FF3300]">
+        <p className="mt-4 text-left text-[10px] text-[#FF3300]">
           Copyright 2026 365INO, CO. All rights reserved.
         </p>
       </div>
