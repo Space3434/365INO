@@ -1,27 +1,25 @@
 import { ExternalLink, FileText, Maximize2 } from "lucide-react";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/animated-section";
+import { CapabilityOrbit } from "@/components/capability-orbit";
 import { CaseStudyCard } from "@/components/case-study-card";
-import { IndustryCard, ServiceCard, TechnologyGrid } from "@/components/card-grids";
+import { IndustryCard, TechnologyGrid } from "@/components/card-grids";
 import { CtaBanner } from "@/components/cta-banner";
 import { FAQ } from "@/components/faq";
 import { Hero } from "@/components/hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Stats } from "@/components/stats";
 import { Timeline } from "@/components/timeline";
-import { industries, services as serviceModels } from "@/lib/content";
+import { industries } from "@/lib/content";
 import { getEditableSiteContent } from "@/lib/site-content";
 
 export default function HomePage() {
   const content = getEditableSiteContent();
-  const editableServices = content.services.map((service, index) => ({
-    ...service,
-    icon: serviceModels[index]?.icon ?? serviceModels[0].icon
-  }));
   return (
     <>
       <Hero content={content.hero} />
       <Stats stats={content.stats} />
+      <CapabilityOrbit services={content.services} />
 
       <AnimatedSection className="bg-white py-16">
         <div className="container-pad">
@@ -68,21 +66,6 @@ export default function HomePage() {
                 <Maximize2 className="h-5 w-5" aria-hidden="true" />
               </span>
             </a>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      <AnimatedSection className="bg-white py-20">
-        <div className="container-pad">
-          <SectionHeading
-            eyebrow={content.homeSections.services.eyebrow}
-            title={content.homeSections.services.title}
-            description={content.homeSections.services.description}
-          />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {editableServices.map((service, index) => (
-              <ServiceCard key={service.title} {...service} index={index} />
-            ))}
           </div>
         </div>
       </AnimatedSection>
