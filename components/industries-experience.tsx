@@ -149,9 +149,9 @@ export function IndustriesExperience() {
             <p className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.22em] text-emerald-300 before:h-0.5 before:w-8 before:bg-emerald-300">
               {currentSlide.eyebrow}
             </p>
-            <h1 className="mt-6 text-[44px] font-black leading-[0.94] tracking-[-0.055em] sm:whitespace-nowrap sm:text-[clamp(2.625rem,4vw,3.75rem)]">
+            <h1 className="mt-6 text-[44px] font-black leading-[0.94] tracking-[-0.055em] text-white sm:whitespace-nowrap sm:text-[clamp(2.625rem,4vw,3.75rem)]">
               {currentSlide.title}
-              <span className="ml-[0.22em] text-blue-400">{currentSlide.accent}</span>
+              <span className="ml-[0.22em] text-white">{currentSlide.accent}</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-200">{currentSlide.copy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
