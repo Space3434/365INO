@@ -20,12 +20,12 @@ export function Footer() {
               />
             </div>
             <p className="max-w-xl text-sm leading-7 text-slate-300">
-              <span className="text-cyan-100">Technology That Moves Business Forward.</span> 365INO Corporation
+              <span className="font-bold text-white">Technology That Moves Business Forward.</span> 365INO Corporation
               helps organizations modernize operations through AI, automation, cloud technologies, data insight,
               and enterprise delivery leadership.
             </p>
-            <p className="mt-5 text-sm font-medium leading-6 text-cyan-100">
-              UEI: YLN7PLWJGMP6 <span className="mx-2 text-cyan-300/70">|</span> CAGE: 8NW98
+            <p className="mt-5 text-sm font-medium leading-6 text-[#00B0F0]">
+              UEI: YLN7PLWJGMP6 <span className="mx-2">|</span> CAGE: 8NW98
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <div className="flex h-14 w-36 items-center justify-center rounded-md bg-white p-2.5">
@@ -50,7 +50,7 @@ export function Footer() {
           </div>
 
           <div className="md:pt-8 lg:justify-self-center">
-            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Quick Links</h2>
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#00B0F0]">Quick Links</h2>
             <div className="grid grid-cols-[max-content_max-content] gap-x-12 gap-y-3 text-sm text-slate-300">
               {navItems.map((item, index) => (
                 <Link
@@ -71,19 +71,19 @@ export function Footer() {
           </div>
 
           <div className="md:pt-8 lg:justify-self-center">
-            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-200">Connect</h2>
+            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#00B0F0]">Connect</h2>
             <div className="space-y-3 text-sm text-slate-300">
               <p className="flex items-center gap-4">
-                <Mail className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.email}
+                <Mail className="h-4 w-4 text-[#00B0F0]" aria-hidden="true" /> {companyContact.email}
               </p>
               <p className="flex items-center gap-4">
-                <Phone className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.phone}
+                <Phone className="h-4 w-4 text-[#00B0F0]" aria-hidden="true" /> {companyContact.phone}
               </p>
               <p className="flex items-center gap-4">
-                <Printer className="h-4 w-4 text-cyan-300" aria-hidden="true" /> {companyContact.fax}
+                <Printer className="h-4 w-4 text-[#00B0F0]" aria-hidden="true" /> {companyContact.fax}
               </p>
               <div className="flex items-start gap-4">
-                <MapPin className="mt-1 h-4 w-4 shrink-0 text-cyan-300" aria-hidden="true" />
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-[#00B0F0]" aria-hidden="true" />
                 <address className="not-italic leading-6">
                   {companyAddressLines.map((line) => (
                     <span key={line} className="block">
@@ -93,13 +93,13 @@ export function Footer() {
                 </address>
               </div>
               <a href={companyContact.linkedIn} className="inline-flex items-center gap-4 hover:text-white">
-                <Linkedin className="h-4 w-4 text-cyan-300" aria-hidden="true" /> LinkedIn
+                <Linkedin className="h-4 w-4 text-[#00B0F0]" aria-hidden="true" /> LinkedIn
               </a>
             </div>
           </div>
 
           <div className="md:pt-8">
-            <h3 className="mb-2 text-sm font-black text-cyan-200">Stay Connected With Us!</h3>
+            <h3 className="mb-2 text-sm font-black text-[#00B0F0]">Stay Connected With Us!</h3>
             <form
               action="/contact"
               method="get"
@@ -120,7 +120,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="focus-ring min-h-10 rounded-md bg-cyan-500 px-4 text-sm font-black text-navy transition hover:bg-cyan-300"
+                className="focus-ring min-h-10 rounded-md bg-[#00B0F0] px-4 text-sm font-black text-navy transition hover:bg-[#00B0F0]/80"
               >
                 Connect
               </button>
