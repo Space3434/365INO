@@ -127,7 +127,7 @@ export function Footer() {
             </form>
           </div>
         </div>
-        <p className="mt-4 text-left text-[10px] text-[#FF3300]">
+        <p className="mt-4 text-left text-[9px] text-white">
           Copyright 2026 365INO, CO. All rights reserved.
         </p>
       </div>
