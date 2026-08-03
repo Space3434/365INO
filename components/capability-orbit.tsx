@@ -102,11 +102,10 @@ export function CapabilityOrbit({
             />
 
             <div className="absolute left-1/2 top-1/2 z-10 grid aspect-square w-[24%] -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-navy text-center text-white shadow-[0_1.25rem_3.75rem_rgba(11,91,211,0.27)]">
-              <span className="text-[8px] font-bold uppercase tracking-[0.12em] text-slate-300 sm:text-[10px]">
-                Continuous
-              </span>
-              <strong className="my-1 text-sm font-black sm:text-xl">Adoption</strong>
-              <span className="text-[8px] font-semibold text-orange-300 sm:text-[10px]">Strategy → Value</span>
+              <strong className="text-[10px] font-black leading-tight sm:text-base">
+                <span className="block">Continuous</span>
+                <span className="block">Adoption</span>
+              </strong>
             </div>
 
             {orbitItems.map((item, index) => {
