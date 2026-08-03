@@ -48,7 +48,10 @@ export function CapabilityOrbit({
   const activeService = services[activeIndex] ?? services[0];
 
   return (
-    <section className="overflow-hidden bg-white py-14 sm:py-16 lg:py-20" aria-labelledby="capability-orbit-title">
+    <section
+      className="overflow-hidden bg-white py-[3.15rem] sm:py-[3.6rem] lg:py-[4.5rem]"
+      aria-labelledby="capability-orbit-title"
+    >
       <div className="w-full px-4 sm:px-8 lg:px-16">
         <div className="mx-auto grid w-full max-w-[96rem] items-center gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-10">
           <div className="relative z-10 lg:pl-12 xl:pl-16">
@@ -88,7 +91,7 @@ export function CapabilityOrbit({
           </div>
 
           <div
-            className="relative mx-auto aspect-square w-full max-w-[35.2rem] lg:ml-auto lg:mr-0"
+            className="relative mx-auto aspect-square w-full max-w-[31.68rem] lg:ml-auto lg:mr-0"
             aria-label="Interactive capability orbit"
           >
             <div className="absolute inset-[34%] rounded-full border border-slate-300" aria-hidden="true" />
@@ -148,7 +151,7 @@ export function CapabilityOrbit({
         }
 
         .capability-orbit-satellite {
-          animation: capability-satellite-spin 9s linear infinite;
+          animation: capability-satellite-spin 15s linear infinite;
         }
 
         @keyframes capability-ring-spin {
