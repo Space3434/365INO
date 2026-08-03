@@ -1,6 +1,10 @@
 export function ContactForm() {
   return (
-    <form className="grid gap-4 rounded-md border border-slate-200 bg-white p-6 shadow-sm" aria-label="Contact form">
+    <form
+      id="contact-form"
+      className="scroll-mt-28 grid gap-4 rounded-md border border-slate-200 bg-white p-6 shadow-sm"
+      aria-label="Contact form"
+    >
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="grid gap-2 text-sm font-bold text-slate-700">
           First name

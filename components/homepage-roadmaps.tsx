@@ -8,11 +8,11 @@ export function HomepageRoadmaps() {
     <section className="w-full bg-white" aria-label="Practical roadmaps and measurable outcomes">
       <div className="relative mx-auto w-full overflow-hidden md:w-[70.125%]">
         <Image
-          src="/homepage-practical-roadmaps.png"
+          src="/homepage-practical-roadmaps-hd.png"
           alt="Practical roadmaps and measurable outcomes through discover, design, deliver, and improve."
-          width={1672}
-          height={941}
-          quality={100}
+          width={3344}
+          height={1882}
+          unoptimized
           className="block h-auto w-full"
           sizes="(max-width: 767px) 100vw, 70vw"
         />
