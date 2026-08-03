@@ -65,7 +65,7 @@ export function CapabilityOrbit({
             >
               From ambition
               <br />
-              to <span className="text-[#F47B3B]">adoption.</span>
+              to <span className="text-[#FF3300]">adoption.</span>
             </h2>
             <p className="mt-6 max-w-xl text-base leading-7 text-slate-600">
               365INO connects strategy, technology, and disciplined execution to turn complex priorities into

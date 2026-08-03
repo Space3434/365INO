@@ -6,7 +6,7 @@ export function CtaBanner() {
     <section className="bg-white py-14 sm:py-16">
       <div className="container-pad">
         <div className="grid gap-10 lg:grid-cols-[0.25fr_0.75fr] lg:gap-14">
-          <div className="border-t-4 border-[#FF6B21] pt-6">
+          <div className="border-t-4 border-[#FF3300] pt-6">
             <p className="max-w-[11rem] text-base font-black uppercase leading-tight tracking-[0.14em] text-navy">
               Start with
               <br />
@@ -15,7 +15,7 @@ export function CtaBanner() {
           </div>
 
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FF6B21]">Collaborate with 365INO</p>
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#FF3300]">Collaborate with 365INO</p>
             <h2 className="mt-4 text-balance text-3xl font-black tracking-tight text-navy sm:text-4xl">
               Let&apos;s Build What&apos;s Next—Together
             </h2>
@@ -29,7 +29,7 @@ export function CtaBanner() {
             </p>
             <Link
               href="/contact#contact-form"
-              className="focus-ring mt-7 inline-flex min-h-12 items-center justify-center gap-5 rounded-sm bg-[#FF6B21] px-6 py-3 text-sm font-black text-white shadow-[0_0.6rem_1.5rem_rgba(255,107,33,0.2)] transition hover:bg-[#FF3300]"
+              className="focus-ring mt-7 inline-flex min-h-12 items-center justify-center gap-5 rounded-sm bg-[#FF3300] px-6 py-3 text-sm font-black text-white shadow-[0_0.6rem_1.5rem_rgba(255,51,0,0.2)] transition hover:bg-[#E62E00]"
             >
               Schedule Consultation
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
