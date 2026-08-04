@@ -91,7 +91,7 @@ export function CapabilityOrbit({
           </div>
 
           <div
-            className="relative mx-auto aspect-square w-full max-w-[31.68rem] lg:ml-auto lg:mr-0"
+            className="relative mx-auto aspect-square w-full max-w-[26.93rem] lg:ml-auto lg:mr-0"
             aria-label="Interactive capability orbit"
           >
             <div className="absolute inset-[34%] rounded-full border border-slate-300" aria-hidden="true" />
@@ -102,7 +102,7 @@ export function CapabilityOrbit({
             />
 
             <div className="absolute left-1/2 top-1/2 z-10 grid aspect-square w-[24%] -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-navy text-center text-white shadow-[0_1.25rem_3.75rem_rgba(11,91,211,0.27)]">
-              <strong className="text-[10px] font-black leading-tight sm:text-base">
+              <strong className="text-[9px] font-black leading-tight sm:text-sm">
                 <span className="block">Continuous</span>
                 <span className="block">Adoption</span>
               </strong>
@@ -116,7 +116,7 @@ export function CapabilityOrbit({
                   key={item.shortTitle}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className="focus-ring absolute z-20 w-[7rem] -translate-x-1/2 -translate-y-1/2 text-center text-[8px] font-black uppercase tracking-[0.05em] text-slate-600 sm:w-[8rem] sm:text-[10px]"
+                  className="focus-ring absolute z-20 w-[7rem] -translate-x-1/2 -translate-y-1/2 text-center text-[8px] font-normal uppercase tracking-[0.05em] text-slate-600 sm:w-[8rem] sm:text-[10px]"
                   style={{ left: `${item.x}%`, top: `${item.y}%` }}
                   aria-pressed={isActive}
                 >

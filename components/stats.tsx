@@ -37,7 +37,7 @@ export function Stats({ stats }: { stats: EditableSiteContent["stats"] }) {
       <div className="container-pad grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
           <div key={stat.label} className="rounded-md border border-white/10 bg-white/5 p-6">
-            <p className="text-4xl font-black text-cyan-200">
+            <p className="text-4xl font-black text-[#00B0F0]">
               <Counter value={stat.value} suffix={stat.suffix} />
             </p>
             <p className="mt-2 text-sm font-semibold text-slate-200">{stat.label}</p>

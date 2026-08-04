@@ -48,19 +48,23 @@ export function TechnologyEcosystemPathway() {
   }
 
   return (
-    <section className="w-full overflow-hidden bg-white px-4 py-14 text-navy sm:px-8 lg:px-16 lg:py-20" aria-labelledby="technology-ecosystem-heading">
-      <div className="mx-auto w-full max-w-[86.25rem]">
-        <header className="grid items-end gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+    <section className="w-full overflow-hidden bg-white px-4 pb-0 pt-[3.15rem] text-navy sm:px-8 lg:px-16 lg:pb-0 lg:pt-[4.5rem]" aria-labelledby="technology-ecosystem-heading">
+      <div className="mx-auto w-full max-w-[77.63rem]">
+        <header className="grid items-end gap-7 lg:grid-cols-[1.05fr_0.95fr] lg:gap-[3.6rem]">
           <div>
             <p className="flex items-center gap-3 text-sm font-black uppercase tracking-[0.18em] text-[#00B0F0]">
               Technology ecosystem
               <span className="h-px w-9 bg-current" aria-hidden="true" />
             </p>
-            <h2 id="technology-ecosystem-heading" className="mt-4 max-w-3xl text-balance text-4xl font-medium leading-[0.98] tracking-[-0.045em] text-navy sm:text-5xl lg:text-[3.7rem]">
-              Experience that connects strategy, platforms, and delivery.
+            <h2 id="technology-ecosystem-heading" className="mt-3.5 max-w-[43rem] text-balance text-[1.71rem] font-medium leading-[0.98] tracking-[-0.045em] text-navy sm:text-[2.31rem] lg:text-[2.85rem]">
+              Experience that
+              <br />
+              connects strategy,
+              <br />
+              platforms, and delivery.
             </h2>
           </div>
-          <div className="border-l-[3px] pl-6" style={{ borderLeftColor: "#FF3300" }}>
+          <div className="border-l-[3px] pl-5 lg:-ml-[5rem] lg:pl-[3.25rem]" style={{ borderLeftColor: "#FF3300" }}>
             <p className="text-sm leading-7 text-slate-600">
               365INO brings together experienced consultants and technology professionals who understand how modern platforms work in real delivery environments—not as isolated tools, but as parts of a secure, integrated operating model.
             </p>
@@ -70,7 +74,7 @@ export function TechnologyEcosystemPathway() {
           </div>
         </header>
 
-        <div className="mt-10 border-t border-slate-300 pt-4">
+        <div className="mt-9 border-t border-slate-300 pt-3.5">
           <p className="mb-3 text-[10px] font-black uppercase tracking-[0.15em] text-[#FF3300]">One connected delivery ecosystem</p>
           <div className="flex gap-2 overflow-x-auto pb-1 lg:grid lg:grid-cols-5" role="tablist" aria-label="Technology categories">
             {categories.map((category, index) => {
@@ -85,7 +89,7 @@ export function TechnologyEcosystemPathway() {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActiveCategory(category)}
                   onKeyDown={(event) => handleTabKeyDown(event, index)}
-                  className={`focus-ring min-h-[4.3rem] min-w-[9.75rem] border-b-[3px] px-3 py-3 text-left text-[10px] font-black transition hover:-translate-y-0.5 ${selected ? "border-[#FF3300] bg-[#082D48] text-white" : "border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-100"}`}
+                  className={`focus-ring min-h-[3.87rem] min-w-[8.78rem] border-b-[3px] px-3 py-2.5 text-left text-[10px] font-black transition hover:-translate-y-0.5 ${selected ? "border-[#FF3300] bg-[#082D48] text-white" : "border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-100"}`}
                 >
                   <strong className="mb-1.5 block text-[10px] text-[#FF3300]">0{index + 1}</strong>
                   {category}
@@ -95,12 +99,12 @@ export function TechnologyEcosystemPathway() {
           </div>
         </div>
 
-        <div className="relative mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4" role="tabpanel" aria-live="polite">
-          <span className="absolute left-[5%] right-[5%] top-[1.45rem] hidden h-0.5 bg-gradient-to-r from-[#FF3300] to-[#00A6C7] lg:block" aria-hidden="true" />
+        <div className="relative mt-[2.7rem] grid gap-7 sm:grid-cols-2 lg:grid-cols-4" role="tabpanel" aria-live="polite">
+          <span className="absolute left-[5%] right-[5%] top-[1.3rem] hidden h-0.5 bg-gradient-to-r from-[#FF3300] to-[#00A6C7] lg:block" aria-hidden="true" />
           {activeTechnologies.map((technology, index) => (
             <article key={technology.name} className="technology-card-in relative z-10 min-w-0" style={{ animationDelay: `${index * 55}ms` }}>
-              <div className="mb-4 flex items-center">
-                <span className="grid h-[2.9rem] w-[2.9rem] place-items-center rounded-xl border-2 border-[#00B0F0] bg-white text-[10px] font-black tracking-wide text-[#00B0F0] shadow-[0_0.45rem_1.25rem_rgba(11,80,101,0.12)]" aria-hidden="true">
+              <div className="mb-3.5 flex items-center">
+                <span className="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl border-2 border-[#00B0F0] bg-white text-[10px] font-black tracking-wide text-[#00B0F0] shadow-[0_0.45rem_1.25rem_rgba(11,80,101,0.12)]" aria-hidden="true">
                   {technology.mark}
                 </span>
               </div>
@@ -116,7 +120,7 @@ export function TechnologyEcosystemPathway() {
           ))}
         </div>
 
-        <footer className="mt-8 flex flex-wrap items-center gap-3 bg-[#EEF6F8] px-6 py-4">
+        <footer className="mt-7 flex flex-wrap items-center gap-3 bg-[#EEF6F8] px-5 py-3.5">
           <strong className="text-xs font-black tracking-[0.08em] text-[#073B58]">PLAN</strong>
           <span className="text-[#FF3300]" aria-hidden="true">→</span>
           <strong className="text-xs font-black tracking-[0.08em] text-[#073B58]">DELIVER</strong>
