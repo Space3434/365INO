@@ -99,11 +99,11 @@ export function TechnologyEcosystemPathway() {
         </div>
 
         <div className="relative mt-[2.7rem] grid gap-7 sm:grid-cols-2 lg:grid-cols-4" role="tabpanel" aria-live="polite">
-          <span className="absolute left-[5%] right-[5%] top-[1.3rem] hidden h-0.5 bg-gradient-to-r from-[#FF3300] to-[#00A6C7] lg:block" aria-hidden="true" />
+          <span className="absolute left-[5%] right-[5%] top-[1.3rem] hidden h-0.5 bg-black lg:block" aria-hidden="true" />
           {activeTechnologies.map((technology, index) => (
             <article key={technology.name} className="technology-card-in relative z-10 min-w-0" style={{ animationDelay: `${index * 55}ms` }}>
               <div className="mb-3.5 flex items-center">
-                <span className="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl border-2 border-[#00B0F0] bg-white text-[10px] font-black tracking-wide text-[#00B0F0] shadow-[0_0.45rem_1.25rem_rgba(11,80,101,0.12)]" aria-hidden="true">
+                <span className="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl border-2 border-[#FF3300] bg-white text-[10px] font-black tracking-wide text-[#FF3300] shadow-[0_0.45rem_1.25rem_rgba(11,80,101,0.12)]" aria-hidden="true">
                   {technology.mark}
                 </span>
               </div>
