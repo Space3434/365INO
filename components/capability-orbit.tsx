@@ -91,7 +91,7 @@ export function CapabilityOrbit({
           </div>
 
           <div
-            className="relative mx-auto aspect-square w-full max-w-[26.93rem] lg:ml-auto lg:mr-0"
+            className="relative mx-auto aspect-square w-full max-w-[26.93rem] lg:ml-auto lg:mr-8"
             aria-label="Interactive capability orbit"
           >
             <div className="absolute inset-[34%] rounded-full border border-slate-300" aria-hidden="true" />

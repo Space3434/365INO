@@ -5,8 +5,8 @@ const capabilityStatementHref = "/past-performance-client-success.png";
 
 export function HomepageRoadmaps() {
   return (
-    <section className="w-full bg-white" aria-label="Practical roadmaps and measurable outcomes">
-      <div className="relative mx-auto w-full overflow-hidden md:w-[70.125%]">
+    <section className="w-full bg-navy" aria-label="Practical roadmaps and measurable outcomes">
+      <div className="relative mx-auto w-full overflow-hidden border-x-[3px] border-b-[3px] border-t-[24px] border-navy md:w-[70.125%]">
         <Image
           src="/homepage-practical-roadmaps-hd.png"
           alt="Practical roadmaps and measurable outcomes through discover, design, deliver, and improve."

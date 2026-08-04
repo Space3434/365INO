@@ -89,9 +89,8 @@ export function TechnologyEcosystemPathway() {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActiveCategory(category)}
                   onKeyDown={(event) => handleTabKeyDown(event, index)}
-                  className={`focus-ring min-h-[3.87rem] min-w-[8.78rem] border-b-[3px] px-3 py-2.5 text-left text-[10px] font-black transition hover:-translate-y-0.5 ${selected ? "border-[#FF3300] bg-[#082D48] text-white" : "border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-100"}`}
+                  className={`focus-ring flex min-h-[3.87rem] min-w-[8.78rem] items-center justify-center border-b-[3px] px-3 py-2.5 text-center text-base font-black leading-tight transition hover:-translate-y-0.5 ${selected ? "border-[#FF3300] bg-[#082D48] text-white" : "border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-100"}`}
                 >
-                  <strong className="mb-1.5 block text-[10px] text-[#FF3300]">0{index + 1}</strong>
                   {category}
                 </button>
               );
