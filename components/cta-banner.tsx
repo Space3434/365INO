@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export function CtaBanner() {
   return (
-    <section className="bg-white py-14 sm:py-16">
+    <section className="bg-white py-10 sm:py-12">
       <div className="container-pad">
         <div className="grid gap-10 lg:grid-cols-[0.25fr_0.75fr] lg:gap-14">
           <div className="border-t-4 border-[#FF3300] pt-6">
             <p className="max-w-[11rem] text-base font-black uppercase leading-tight tracking-[0.14em] text-navy">
-              Start with
+              Start with one
               <br />
-              one conversation.
+              conversation.
             </p>
           </div>
 

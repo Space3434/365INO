@@ -55,7 +55,7 @@ export function CapabilityOrbit({
       <div className="w-full px-4 sm:px-8 lg:px-16">
         <div className="mx-auto grid w-full max-w-[96rem] items-center gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-10">
           <div className="relative z-10 lg:pl-12 xl:pl-16">
-            <p className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.18em] text-cyan-700">
+            <p className="flex items-center gap-3 text-sm font-black uppercase tracking-[0.18em] text-[#00B0F0]">
               Enterprise Capabilities
               <span className="h-px w-9 bg-current" aria-hidden="true" />
             </p>
