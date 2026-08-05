@@ -65,10 +65,8 @@ export function TechnologyEcosystemPathway() {
             </h2>
           </div>
           <div className="border-l-[3px] pl-5 lg:-ml-[5rem] lg:pl-[3.25rem]" style={{ borderLeftColor: "#FF3300" }}>
-            <p className="text-sm leading-7 text-slate-600">
+            <p className="text-base leading-7 text-slate-600">
               365INO brings together experienced consultants and technology professionals who understand how modern platforms work in real delivery environments—not as isolated tools, but as parts of a secure, integrated operating model.
-            </p>
-            <p className="mt-2 text-sm leading-7 text-slate-600">
               We help organizations select, implement, govern, and improve the technologies that move priorities from concept to measurable mission and business outcomes.
             </p>
           </div>

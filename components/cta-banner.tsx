@@ -7,7 +7,7 @@ export function CtaBanner() {
       <div className="container-pad">
         <div className="grid gap-10 lg:grid-cols-[0.25fr_0.75fr] lg:gap-14">
           <div className="border-t-4 border-[#FF3300] pt-6">
-            <p className="max-w-[11rem] text-base font-black uppercase leading-tight tracking-[0.14em] text-navy">
+            <p className="max-w-none text-[1.71rem] font-medium leading-[0.98] tracking-[-0.045em] text-navy sm:text-[2.31rem] lg:text-[2.85rem]">
               Start with one
               <br />
               conversation.
