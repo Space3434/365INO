@@ -1,6 +1,6 @@
 import { CapabilityOrbit } from "@/components/capability-orbit";
+import { AnimatedHomeHero } from "@/components/animated-home-hero";
 import { CtaBanner } from "@/components/cta-banner";
-import { Hero } from "@/components/hero";
 import { HomepageRoadmaps } from "@/components/homepage-roadmaps";
 import { Stats } from "@/components/stats";
 import { TechnologyEcosystemPathway } from "@/components/technology-ecosystem-pathway";
@@ -10,7 +10,7 @@ export default function HomePage() {
   const content = getEditableSiteContent();
   return (
     <>
-      <Hero content={content.hero} />
+      <AnimatedHomeHero />
       <Stats stats={content.stats} />
       <CapabilityOrbit services={content.services} />
       <HomepageRoadmaps />

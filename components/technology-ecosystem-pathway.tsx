@@ -97,7 +97,7 @@ export function TechnologyEcosystemPathway() {
         </div>
 
         <div className="relative mt-[2.7rem] grid gap-7 sm:grid-cols-2 lg:grid-cols-4" role="tabpanel" aria-live="polite">
-          <span className="absolute left-[5%] right-[5%] top-[1.3rem] hidden h-0.5 bg-black lg:block" aria-hidden="true" />
+          <span className="absolute left-[5%] right-[5%] top-[1.3rem] hidden h-0.5 bg-[#FF3300] lg:block" aria-hidden="true" />
           {activeTechnologies.map((technology, index) => (
             <article key={technology.name} className="technology-card-in relative z-10 min-w-0" style={{ animationDelay: `${index * 55}ms` }}>
               <div className="mb-3.5 flex items-center">
