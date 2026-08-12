@@ -34,7 +34,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 export function Stats({ stats }: { stats: EditableSiteContent["stats"] }) {
   return (
     <section className="bg-navy py-12 text-white">
-      <div className="container-pad grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="stats-grid mx-auto grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
           <div key={stat.label} className="rounded-md border border-white/10 bg-white/5 p-6">
             <p className="text-4xl font-black text-[#00B0F0]">
@@ -44,6 +44,23 @@ export function Stats({ stats }: { stats: EditableSiteContent["stats"] }) {
           </div>
         ))}
       </div>
+      <style jsx>{`
+        .stats-grid {
+          width: min(88.75rem, calc(100% - 6rem));
+        }
+
+        @media (max-width: 65.625rem) {
+          .stats-grid {
+            width: min(calc(100% - 3rem), 57.5rem);
+          }
+        }
+
+        @media (max-width: 42.5rem) {
+          .stats-grid {
+            width: calc(100% - 2.125rem);
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -93,24 +93,18 @@ export function AnimatedHomeHero() {
               </Link>
             </div>
           </div>
-
-          <div className={styles.sceneStory} aria-hidden="true">
-            <span className={styles.storyKicker}>365INO in action</span>
-            <div className={styles.storyItems}>
-              <span><b>01</b> Lead with clarity</span>
-              <span><b>02</b> Connect infrastructure</span>
-              <span><b>03</b> Automate the work</span>
-              <span><b>04</b> Modernize at scale</span>
-            </div>
-            <div className={styles.storyProgress}><i /></div>
-          </div>
         </div>
       </div>
     </section>
     <section className={styles.afterHero} aria-labelledby="home-outcomes-title">
       <div className={styles.afterHeroInner}>
-        <p>Built for meaningful outcomes</p>
-        <h2 id="home-outcomes-title">Plan with clarity. Deliver with discipline. Modernize with purpose.</h2>
+        <h2 id="home-outcomes-title">
+          Plan with clarity.
+          <br />
+          Deliver with discipline.
+          <br />
+          Modernize with purpose.
+        </h2>
       </div>
     </section>
     </>

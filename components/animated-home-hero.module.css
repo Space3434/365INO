@@ -3,7 +3,7 @@
   --hero-night: #061827;
   --hero-night-deep: #03111c;
   --hero-cyan: #41d6d4;
-  --hero-orange: #ff6b2c;
+  --hero-orange: #ff3300;
   --hero-muted: #adc0c8;
   position: relative;
   min-height: calc(100svh - 5rem);
@@ -160,8 +160,8 @@
   align-items: center;
   gap: 0.75rem;
   margin: 0 0 1.875rem;
-  color: var(--hero-cyan);
-  font-size: 0.75rem;
+  color: #00b0f0;
+  font-size: 1.0153125rem;
   font-weight: 700;
   letter-spacing: 0.17em;
   text-transform: uppercase;
@@ -177,7 +177,7 @@
 .heading {
   max-width: 53.125rem;
   margin: 0;
-  font-size: clamp(3.625rem, 6vw, 6.5rem);
+  font-size: clamp(3.08125rem, 5.1vw, 5.525rem);
   font-weight: 500;
   line-height: 0.93;
   letter-spacing: -0.058em;
@@ -195,7 +195,7 @@
   position: relative;
   height: 1.08em;
   overflow: hidden;
-  color: var(--hero-orange);
+  color: #ffffff;
 }
 
 .rotatingWords {
@@ -212,8 +212,6 @@
 .heroSummary {
   max-width: 41.25rem;
   margin: 2.1875rem 0 0;
-  padding-left: 1.625rem;
-  border-left: 2px solid var(--hero-cyan);
   color: var(--hero-muted);
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   line-height: 1.55;
@@ -242,7 +240,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.1875rem 1.25rem;
-  background: var(--hero-cyan);
+  background: #00b0f0;
   color: #071623;
   transition: 0.25s ease;
 }
@@ -278,7 +276,7 @@
 .storyKicker {
   display: block;
   margin-bottom: 0.9375rem;
-  color: var(--hero-cyan);
+  color: #00b0f0;
   font-size: 0.5625rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -321,15 +319,15 @@
 }
 
 .afterHero {
-  min-height: 58vh;
   width: 100%;
-  background: #f1f0ea;
+  background: #e7e6df;
   color: #0c2937;
 }
 
 .afterHeroInner {
-  width: 100%;
-  padding: 7.5rem max(7vw, 2.1875rem);
+  width: min(88.75rem, calc(100% - 6rem));
+  margin-inline: auto;
+  padding-block: 4.5rem;
 }
 
 .afterHero p {
@@ -343,8 +341,8 @@
 
 .afterHero h2 {
   max-width: 70rem;
-  margin: 1.5625rem 0 0;
-  font-size: clamp(2.625rem, 6vw, 5.625rem);
+  margin: 0;
+  font-size: clamp(1.96875rem, 4.5vw, 4.21875rem);
   font-weight: 500;
   line-height: 0.97;
   letter-spacing: -0.055em;
@@ -412,16 +410,17 @@
   .heroStage { min-height: calc(100svh - 5rem); grid-template-columns: 1fr; }
   .heroCopy { max-width: 47.5rem; }
   .sceneStory { justify-self: end; }
-  .heading { font-size: clamp(3.5rem, 9vw, 5.375rem); }
+  .heading { font-size: clamp(2.975rem, 7.65vw, 4.56875rem); }
+  .afterHeroInner { width: min(calc(100% - 3rem), 57.5rem); }
 }
 
 @media (max-width: 42.5rem) {
   .shell { width: calc(100% - 2.125rem); }
   .heroStage { min-height: calc(100svh - 5rem); align-items: start; padding-top: 3.5rem; }
-  .eyebrow { margin-bottom: 1.375rem; font-size: 0.5625rem; }
-  .heading { font-size: clamp(2.625rem, 13vw, 4rem); line-height: 0.98; }
+  .eyebrow { margin-bottom: 1.375rem; font-size: 0.761484375rem; }
+  .heading { font-size: clamp(2.23125rem, 11.05vw, 3.4rem); line-height: 0.98; }
   .rotatingWords > span { white-space: normal; }
-  .heroSummary { max-width: 94%; margin-top: 1.75rem; padding-left: 1rem; font-size: 0.9375rem; }
+  .heroSummary { max-width: 94%; margin-top: 1.75rem; font-size: 0.9375rem; }
   .heroActions { flex-direction: column; align-items: stretch; gap: 0.75rem; margin-top: 1.75rem; }
   .buttonPrimary { width: 100%; min-width: 0; }
   .buttonSecondary { align-self: flex-start; }
@@ -429,7 +428,7 @@
   .sceneBriefing img { object-position: 58% center; }
   .sceneBuild video { object-position: right center; transform: translateX(11%) scale(0.78); }
   .sceneStory { display: none; }
-  .afterHeroInner { padding: 5rem 1.0625rem; }
+  .afterHeroInner { width: calc(100% - 2.125rem); padding-block: 3.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
