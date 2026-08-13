@@ -33,10 +33,10 @@ export function ConversationPathCards() {
             type="button"
             onClick={() => setActiveIndex(index)}
             aria-pressed={active}
-            className={`group relative z-10 flex min-h-[18rem] flex-col items-center justify-center rounded-2xl bg-[linear-gradient(145deg,#10366f,#021030)] px-5 py-7 text-center text-white outline-none transition duration-300 focus-visible:border-[#FF6A00] sm:min-h-[19rem] ${
+            className={`group relative z-10 flex min-h-[18rem] flex-col items-center justify-center rounded-2xl bg-[linear-gradient(145deg,#10366f,#021030)] px-5 py-7 text-center text-white shadow-none outline-none [filter:none] transition duration-300 focus-visible:border-[#FF6A00] sm:min-h-[19rem] ${
               active
-                ? "scale-[1.12] border-2 border-[#FF6A00]"
-                : `${idle ? "scale-100" : "scale-[0.94]"} border-2 border-[#2588FF] hover:scale-[0.98]`
+                ? "scale-[1.02] border-2 border-[#FF6A00]"
+                : `${idle ? "scale-100" : "scale-[0.94]"} border-2 border-[#176EB8] hover:scale-[0.98]`
             }`}
           >
             <span className="relative grid h-[9.25rem] w-[9.25rem] overflow-hidden place-items-center rounded-full border border-[#56A9FF] text-white shadow-[inset_0_0_1.2rem_rgba(0,122,255,0.3),0_0_1.4rem_rgba(0,122,255,0.45)]" aria-hidden="true">
