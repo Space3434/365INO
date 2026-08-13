@@ -1,7 +1,7 @@
 import { CapabilityOrbit } from "@/components/capability-orbit";
 import { AnimatedHomeHero } from "@/components/animated-home-hero";
 import { CtaBanner } from "@/components/cta-banner";
-import { HomepageRoadmaps } from "@/components/homepage-roadmaps";
+import { ObservabilityDashboard } from "@/components/observability-dashboard";
 import { Stats } from "@/components/stats";
 import { TechnologyEcosystemPathway } from "@/components/technology-ecosystem-pathway";
 import { getEditableSiteContent } from "@/lib/site-content";
@@ -13,7 +13,7 @@ export default function HomePage() {
       <AnimatedHomeHero />
       <Stats stats={content.stats} />
       <CapabilityOrbit services={content.services} />
-      <HomepageRoadmaps />
+      <ObservabilityDashboard />
 
       <TechnologyEcosystemPathway />
 
