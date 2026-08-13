@@ -17,7 +17,8 @@ export default function HomePage() {
 
       <TechnologyEcosystemPathway />
 
-      <CtaBanner />
+      <CtaBanner showCards={false} />
+
     </>
   );
 }
