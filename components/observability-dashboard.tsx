@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import styles from "./observability-dashboard.module.css";
 
 const cases = [
@@ -116,13 +117,31 @@ export function ObservabilityDashboard() {
         </div>
 
         <div className={styles.capabilityBanner}>
-          <div className={styles.capabilityIcon}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z" /></svg></div>
+          <div className={styles.capabilityIcon}>
+            <Image
+              src="/capability-network-icon.png"
+              alt=""
+              fill
+              sizes="52px"
+              quality={100}
+              className={styles.capabilityIconImage}
+            />
+          </div>
           <div className={styles.capabilityText}>
             <div className={styles.capabilityLabel}>Capability Statement</div>
             <h3>Preview the 365INO capability statement.</h3>
             <p>Services, differentiators, business information, and delivery experience in one overview report.</p>
           </div>
-          <a className={styles.capabilityButton} href="/365ino-capability-statement.pdf" target="_blank" rel="noreferrer">Export Report ↓</a>
+          <a className={styles.capabilityButton} href="/past-performance-client-success.png" target="_blank" rel="noreferrer" aria-label="View full 365INO past performance and client success document">
+            <Image
+              src="/capability-document-button.png"
+              alt=""
+              fill
+              sizes="260px"
+              quality={100}
+              className={styles.buttonArtwork}
+            />
+          </a>
         </div>
       </div>
     </section>
