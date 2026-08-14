@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 
 const categories = [
   "AI & Productivity",
@@ -34,6 +34,17 @@ export function TechnologyEcosystemPathway() {
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const activeTechnologies = technologies.filter((technology) => technology.category === activeCategory);
 
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveCategory((currentCategory) => {
+        const currentIndex = categories.indexOf(currentCategory);
+        return categories[(currentIndex + 1) % categories.length];
+      });
+    }, 8000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   function handleTabKeyDown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     let nextIndex = index;
     if (event.key === "ArrowRight") nextIndex = (index + 1) % categories.length;
@@ -64,7 +75,7 @@ export function TechnologyEcosystemPathway() {
             </h2>
           </div>
           <div className="lg:-ml-[5rem]">
-            <p className="text-base leading-7 text-slate-600">
+            <p className="text-base leading-7 text-black">
               365INO brings together experienced consultants and technology professionals who understand how modern platforms work in real delivery environments—not as isolated tools, but as parts of a secure, integrated operating model.
               We help organizations select, implement, govern, and improve the technologies that move priorities from concept to measurable mission and business outcomes.
             </p>
@@ -86,7 +97,7 @@ export function TechnologyEcosystemPathway() {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActiveCategory(category)}
                   onKeyDown={(event) => handleTabKeyDown(event, index)}
-                  className={`focus-ring flex min-h-[3.87rem] min-w-[8.78rem] items-center justify-center border-b-[3px] px-3 py-2.5 text-center text-base font-black leading-tight transition hover:-translate-y-0.5 ${selected ? "border-[#FF3300] bg-[#082D48] text-white" : "border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-100"}`}
+                  className={`focus-ring flex min-h-[3.87rem] min-w-[8.78rem] items-center justify-center border-b-[3px] px-3 py-2.5 text-center text-base font-black leading-tight transition hover:-translate-y-0.5 ${selected ? "border-[#FF3300] bg-[#082D48] text-white" : "border-slate-400 bg-slate-200 text-slate-700 hover:bg-slate-300"}`}
                 >
                   {category}
                 </button>
@@ -100,17 +111,17 @@ export function TechnologyEcosystemPathway() {
           {activeTechnologies.map((technology, index) => (
             <article key={technology.name} className="technology-card-in relative z-10 min-w-0" style={{ animationDelay: `${index * 55}ms` }}>
               <div className="mb-3.5 flex items-center">
-                <span className="grid h-[2.6rem] w-[2.6rem] place-items-center rounded-xl border-2 border-[#00B0F0] bg-white text-[10px] font-black tracking-wide text-[#00B0F0] shadow-[0_0.45rem_1.25rem_rgba(11,80,101,0.12)]" aria-hidden="true">
+                <span className="grid h-[2.86rem] w-[2.86rem] place-items-center rounded-xl border-2 border-[#00B0F0] bg-white text-[11px] font-black tracking-wide text-[#00B0F0] shadow-[0_0.45rem_1.25rem_rgba(11,80,101,0.12)]" aria-hidden="true">
                   {technology.mark}
                 </span>
               </div>
-              <h3 className="text-lg font-medium text-navy">{technology.name}</h3>
-              <p className="mt-3 min-h-[3.65rem] text-base leading-7 text-slate-600">{technology.brief}</p>
+              <h3 className="text-lg font-medium text-black">{technology.name}</h3>
+              <p className="mt-3 min-h-[3.65rem] text-base leading-7 text-black">{technology.brief}</p>
               <details className="mt-2">
                 <summary className="focus-ring w-fit cursor-pointer list-none text-[10px] font-black uppercase tracking-[0.045em] text-[#FF3300] marker:hidden">
                   Team experience <span>+</span>
                 </summary>
-                <p className="mt-3 text-base leading-7 text-slate-600">{technology.detail}</p>
+                <p className="mt-3 text-base leading-7 text-black">{technology.detail}</p>
               </details>
             </article>
           ))}

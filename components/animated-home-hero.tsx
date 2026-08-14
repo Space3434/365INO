@@ -60,7 +60,6 @@ export function AnimatedHomeHero() {
         <div className={styles.heroStage}>
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>
-              <span aria-hidden="true" />
               Strategy. Technology. Execution.
             </p>
 

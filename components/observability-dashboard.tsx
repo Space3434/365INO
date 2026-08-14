@@ -33,15 +33,6 @@ const cases = [
   },
 ];
 
-function SearchIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <circle cx="10.5" cy="10.5" r="6.5" />
-      <line x1="20" y1="20" x2="15.5" y2="15.5" />
-    </svg>
-  );
-}
-
 export function ObservabilityDashboard() {
   const [openCase, setOpenCase] = useState<number | null>(null);
 
@@ -69,22 +60,34 @@ export function ObservabilityDashboard() {
 
         <div className={styles.metrics}>
           <article className={styles.metric}>
-            <div className={styles.label}><span className={styles.icon}><SearchIcon /></span>01 · Discover</div>
+            <div className={`${styles.label} ${styles.labelAccent}`}>Discover</div>
             <h3>Mission &amp; Stakeholders</h3>
-            <p>Needs, priorities, existing systems, and measurable outcomes.</p>
+            <p>Needs, priorities, systems and outcomes.</p>
+            <svg className={styles.metricGraphic} viewBox="0 0 120 26" aria-label="Discovery signal">
+              <circle cx="52" cy="12" r="7" />
+              <circle cx="52" cy="12" r="3" />
+              <path d="M59 17l8 7M14 18h16l6-6 7 7" />
+            </svg>
           </article>
           <article className={styles.metric}>
-            <div className={styles.label}><span className={styles.icon}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 15l4-4 3 3 5-6 4 5" /></svg></span>02 · Design</div>
+            <div className={`${styles.label} ${styles.labelAccent}`}>Design</div>
             <h3>Roadmap &amp; Architecture</h3>
             <p>Operating model and delivery governance shaped.</p>
+            <svg className={styles.metricGraphic} viewBox="0 0 120 26" aria-label="Roadmap path">
+              <path d="M10 19h22l9-12h25l9 12h34" />
+              <circle cx="10" cy="19" r="2.5" /><circle cx="41" cy="7" r="2.5" /><circle cx="75" cy="19" r="2.5" /><circle cx="109" cy="19" r="2.5" />
+            </svg>
           </article>
           <article className={styles.metric}>
-            <div className={styles.label}><span className={styles.icon}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><rect x="2" y="9" width="12" height="8" rx="1.5" /><path d="M14 12h4l3 3v2h-7z" /></svg></span>03 · Deliver</div>
+            <div className={`${styles.label} ${styles.labelAccent}`}>Deliver</div>
             <h3>Focused Increments</h3>
             <p>Transparent decisions, risk management, adoption.</p>
+            <svg className={styles.metricGraphic} viewBox="0 0 120 26" aria-label="Delivery progress">
+              <path d="M10 20h22v-6h22V8h38" /><path d="M84 3l8 5-8 5" />
+            </svg>
           </article>
           <article className={styles.metric}>
-            <div className={styles.label}><span className={styles.icon}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M3 17l6-6 4 4 8-9" /></svg></span>04 · Improve</div>
+            <div className={`${styles.label} ${styles.labelAccent}`}>Improve</div>
             <h3>Measured Value</h3>
             <p>Refine workflows, strengthen controls, expand.</p>
             <svg className={styles.spark} viewBox="0 0 120 26" aria-hidden="true"><path d="M0,20 L15,17 L30,19 L45,10 L60,13 L75,6 L90,9 L105,3 L120,5" /></svg>

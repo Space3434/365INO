@@ -13,7 +13,7 @@ export function CtaBanner({ showCards = true }: CtaBannerProps) {
     >
       <div className="mx-auto w-[calc(100%-2.125rem)] sm:w-[min(calc(100%-3rem),57.5rem)] lg:w-full lg:px-16">
         <div className={`${showCards ? "grid gap-10 lg:grid-cols-[minmax(20rem,calc((100vw-88.75rem)/2+24.5rem))_minmax(0,1fr)] lg:items-center lg:gap-12" : ""}`}>
-          <div className="lg:pl-[max(0px,calc((100vw-88.75rem)/2-4rem))]">
+          <div className="lg:pl-[max(0px,calc((100vw-88.75rem)/2-5rem))]">
             <p className="max-w-[34rem] text-[clamp(1.96875rem,4.5vw,4.21875rem)] font-medium leading-[0.97] tracking-[-0.055em] text-[#0C2937]">
               Start with one
               <br />
