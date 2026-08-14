@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { ConversationPathCards } from "@/components/conversation-path-cards";
 
@@ -21,10 +20,9 @@ export function CtaBanner({ showCards = true }: CtaBannerProps) {
             </p>
             <Link
               href="/contact#contact-form"
-              className="focus-ring mt-7 inline-flex min-h-12 items-center justify-center gap-5 rounded-sm bg-[#FF3300] px-6 py-3 text-sm font-black text-white shadow-[0_0.6rem_1.5rem_rgba(255,51,0,0.2)] transition hover:bg-[#E62E00]"
+              className="focus-ring mt-7 inline-flex min-h-12 items-center justify-center gap-5 rounded-sm bg-[#FF3300] px-6 py-3 text-sm font-black text-white shadow-[0_0.6rem_1.5rem_rgba(255,51,0,0.2)] transition hover:bg-white hover:text-black"
             >
               Schedule Consultation
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
 

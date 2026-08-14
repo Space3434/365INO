@@ -55,7 +55,7 @@ export function Navbar() {
 
         <Link
           href="/contact"
-          className="focus-ring ml-auto hidden shrink-0 rounded-md bg-navy px-5 py-3 text-sm font-bold text-white shadow-enterprise transition hover:bg-cyan-800 xl:inline-flex"
+          className="focus-ring ml-auto hidden shrink-0 rounded-md bg-[#FF3300] px-5 py-3 text-sm font-bold text-white shadow-[0_0.6rem_1.5rem_rgba(255,51,0,0.24)] transition hover:bg-white hover:text-black xl:inline-flex"
         >
           Schedule Consultation
         </Link>

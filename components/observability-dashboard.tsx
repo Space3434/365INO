@@ -43,7 +43,12 @@ export function ObservabilityDashboard() {
         <div className={styles.topbar}>
           <div className={styles.brand}>
             <span className={styles.pulse} />
-            365INO / Engagement Monitor
+            <span>365INO / Engagement Monitor<span className={styles.cursor} aria-hidden="true" /></span>
+          </div>
+          <div className={styles.monitorDots} aria-hidden="true">
+            <span className={styles.monitorDotRed} />
+            <span className={styles.monitorDotAmber} />
+            <span className={styles.monitorDotGreen} />
           </div>
           <div className={styles.statusRow}>
             <div>UPTIME <b>99.98%</b></div>
@@ -134,10 +139,10 @@ export function ObservabilityDashboard() {
           </div>
           <a className={styles.capabilityButton} href="/past-performance-client-success.png" target="_blank" rel="noreferrer" aria-label="View full 365INO past performance and client success document">
             <Image
-              src="/capability-document-button.png"
-              alt=""
+              src="/past-performance-client-success.png"
+              alt="365INO Past Performance and Client Success document"
               fill
-              sizes="260px"
+              sizes="82px"
               quality={100}
               className={styles.buttonArtwork}
             />

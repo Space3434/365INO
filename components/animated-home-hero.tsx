@@ -85,10 +85,10 @@ export function AnimatedHomeHero() {
 
             <div className={styles.heroActions}>
               <Link className={styles.buttonPrimary} href="/services">
-                Explore our capabilities <span aria-hidden="true">→</span>
+                Explore our capabilities
               </Link>
               <Link className={styles.buttonSecondary} href="/contact#contact-form">
-                Schedule a consultation
+                Schedule Consultation
               </Link>
             </div>
           </div>

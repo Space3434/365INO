@@ -125,6 +125,23 @@ export function Footer() {
                 Connect
               </button>
             </form>
+            <a
+              href="/past-performance-client-success.png"
+              target="_blank"
+              rel="noreferrer"
+              className="focus-ring mt-4 block w-[6.3rem] transition hover:-translate-y-1 hover:drop-shadow-[0_0_12px_rgba(0,176,240,0.45)]"
+              aria-label="View the 365INO Past Performance and Client Success document"
+            >
+              <Image
+                src="/past-performance-client-success.png"
+                alt="365INO Past Performance and Client Success document"
+                width={1024}
+                height={1536}
+                sizes="101px"
+                quality={100}
+                className="h-auto w-full object-contain"
+              />
+            </a>
           </div>
         </div>
         <p className="mt-4 text-left text-[9px] text-white">

@@ -206,7 +206,7 @@
 .heroSummary {
   max-width: 41.25rem;
   margin: 2.1875rem 0 0;
-  color: var(--hero-muted);
+  color: #fff;
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   line-height: 1.55;
   animation: revealUp 0.85s 0.45s both;
@@ -231,30 +231,40 @@
 .buttonPrimary {
   display: inline-flex;
   min-width: 16.125rem;
+  min-height: 3.5rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1.1875rem 1.25rem;
-  background: #00b0f0;
-  color: #071623;
+  background: #009ed8;
+  color: white;
   transition: 0.25s ease;
 }
 
 .buttonPrimary:hover {
   background: white;
+  color: black;
   transform: translateY(-2px);
 }
 
 .buttonPrimary span { font-size: 1.25rem; }
 
 .buttonSecondary {
-  padding-block: 0.625rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  transition: 0.25s ease;
+  display: inline-flex;
+  min-width: 16.125rem;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1875rem 1.25rem;
+  background: #ff3300;
+  color: white;
+  box-shadow: 0 0.6rem 1.5rem rgba(255, 51, 0, 0.24);
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .buttonSecondary:hover {
-  border-color: var(--hero-orange);
-  color: var(--hero-orange);
+  background: white;
+  color: black;
+  transform: translateY(-2px);
 }
 
 .sceneStory {
@@ -417,7 +427,7 @@
   .heroSummary { max-width: 94%; margin-top: 1.75rem; font-size: 0.9375rem; }
   .heroActions { flex-direction: column; align-items: stretch; gap: 0.75rem; margin-top: 1.75rem; }
   .buttonPrimary { width: 100%; min-width: 0; }
-  .buttonSecondary { align-self: flex-start; }
+  .buttonSecondary { width: 100%; min-width: 0; }
   .heroScene video,
   .sceneBriefing img { object-position: 58% center; }
   .sceneBuild video { object-position: right center; transform: translateX(11%) scale(0.78); }
