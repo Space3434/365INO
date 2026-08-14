@@ -51,7 +51,7 @@
 .capabilityLabel { font-size:14.44px; color:var(--blue); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
 .capabilityText h3 { margin:0 0 4px; font-size:15.5px; font-weight:800; }
 .capabilityText p { max-width:520px; color:#fff; }
-.capabilityButton { position:relative; flex-shrink:0; width:81.56px; height:122.34px; margin-left:16px; overflow:visible; transition:transform .2s ease,filter .2s ease; }
+.capabilityButton { position:relative; flex-shrink:0; width:81.56px; height:122.34px; margin-left:64px; overflow:visible; transition:transform .2s ease,filter .2s ease; }
 .capabilityButton:hover { transform:translateY(-2px); filter:drop-shadow(0 0 12px rgba(90,167,255,.42)); }
 .buttonArtwork { object-fit:contain; }
 @media (max-width:980px) { .metrics { grid-template-columns:repeat(2,1fr); } .casesRow { grid-template-columns:1fr; } }
