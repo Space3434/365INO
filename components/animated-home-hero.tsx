@@ -1,30 +1,10 @@
 import Link from "next/link";
 import styles from "./animated-home-hero.module.css";
 
-const videoScenes = [
-  {
-    className: styles.sceneStrategy,
-    src: "https://videos.pexels.com/video-files/5028622/5028622-uhd_3840_2160_25fps.mp4"
-  },
-  {
-    className: styles.sceneBuild,
-    src: "https://cdn.pixabay.com/video/2021/04/20/71696-540442444_large.mp4"
-  },
-  {
-    className: styles.sceneModernize,
-    src: "https://videos.pexels.com/video-files/10822505/10822505-uhd_3840_2160_25fps.mp4"
-  },
-  {
-    className: styles.sceneCircuit,
-    src: "https://cdn.pixabay.com/video/2016/09/21/5364-183788428_medium.mp4"
-  },
+const imageScenes = [
   {
     className: styles.sceneNetwork,
-    src: "https://cdn.pixabay.com/video/2025/04/07/270323_small.mp4"
-  },
-  {
-    className: styles.sceneSecurity,
-    src: "https://cdn.pixabay.com/video/2026/03/14/340193_small.mp4"
+    src: "/hero-global-network-sharpened.png"
   }
 ];
 
@@ -42,11 +22,10 @@ export function AnimatedHomeHero() {
           <span className={`${styles.briefingPulse} ${styles.pulseTwo}`} />
         </div>
 
-        {videoScenes.map((scene) => (
+        {imageScenes.map((scene) => (
           <div key={scene.src} className={`${styles.heroScene} ${scene.className}`}>
-            <video autoPlay muted loop playsInline preload="metadata">
-              <source src={scene.src} type="video/mp4" />
-            </video>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={scene.src} alt="" />
           </div>
         ))}
       </div>

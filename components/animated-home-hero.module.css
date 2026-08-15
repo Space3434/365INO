@@ -38,35 +38,24 @@
   position: absolute;
   inset: -2%;
   overflow: hidden;
-  opacity: 0;
   transform: scale(1.035);
-  animation: sceneCycle 42s ease-in-out infinite;
 }
 
-.heroScene video,
-.sceneBriefing img {
+.heroScene img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.heroScene video {
-  filter: saturate(0.72) contrast(1.08) brightness(0.72) hue-rotate(3deg);
+.sceneBriefing {
+  opacity: 1;
+  animation: sceneBriefingCycle 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
-.sceneBriefing { animation-delay: 0s; }
-.sceneStrategy { animation-delay: 6s; }
-.sceneBuild { animation-delay: 12s; background: var(--hero-night-deep); }
-.sceneModernize { animation-delay: 18s; }
-.sceneCircuit { animation-delay: 24s; }
-.sceneNetwork { animation-delay: 30s; }
-.sceneSecurity { animation-delay: 36s; }
-
-.sceneBuild video {
-  object-fit: contain;
-  object-position: right center;
-  transform: translateX(8%) scale(0.84);
+.sceneNetwork {
+  opacity: 0;
+  animation: sceneNetworkCycle 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
 .sceneBriefing img {
@@ -357,10 +346,16 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes sceneCycle {
-  0% { opacity: 0; transform: scale(1.04); }
-  2%, 14.3% { opacity: 1; }
-  16.3%, 100% { opacity: 0; transform: scale(1); }
+@keyframes sceneBriefingCycle {
+  0%, 38% { opacity: 1; transform: scale(1.04); }
+  62%, 88% { opacity: 0; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes sceneNetworkCycle {
+  0%, 38% { opacity: 0; transform: scale(1); }
+  62%, 88% { opacity: 1; transform: scale(1.04); }
+  100% { opacity: 0; transform: scale(1); }
 }
 
 @keyframes storyCycle {
@@ -428,15 +423,12 @@
   .heroActions { flex-direction: column; align-items: stretch; gap: 0.75rem; margin-top: 1.75rem; }
   .buttonPrimary { width: 100%; min-width: 0; }
   .buttonSecondary { width: 100%; min-width: 0; }
-  .heroScene video,
-  .sceneBriefing img { object-position: 58% center; }
-  .sceneBuild video { object-position: right center; transform: translateX(11%) scale(0.78); }
+  .heroScene img { object-position: 62% center; }
   .sceneStory { display: none; }
   .afterHeroInner { width: calc(100% - 2.125rem); padding-block: 3.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .heroScene,
   .sceneBriefing img,
   .briefingScan,
   .briefingPulse,
@@ -453,6 +445,5 @@
     animation-iteration-count: 1 !important;
   }
 
-  .sceneBriefing { opacity: 1; }
   .rotatingWords { transform: translateY(0) !important; }
 }
