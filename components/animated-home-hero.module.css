@@ -36,10 +36,14 @@
 
 .heroScene {
   position: absolute;
-  inset: -2%;
+  inset: 0;
   overflow: hidden;
-  transform: scale(1.035);
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 2s cubic-bezier(0.45, 0, 0.55, 1);
 }
+
+.sceneActive { opacity: 1; }
 
 .heroScene img {
   width: 100%;
@@ -48,19 +52,19 @@
   object-position: center;
 }
 
-.sceneBriefing {
-  opacity: 1;
-  animation: sceneBriefingCycle 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+.sceneInnovation img {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.06) brightness(0.88);
 }
 
-.sceneNetwork {
-  opacity: 0;
-  animation: sceneNetworkCycle 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+.sceneTechnologyCore img {
+  object-fit: contain;
+  object-position: right center;
+  background: #020b1c;
 }
 
 .sceneBriefing img {
   filter: saturate(0.76) contrast(1.06) brightness(0.78);
-  animation: briefingCamera 6s ease-out infinite;
 }
 
 .briefingScan {
@@ -346,18 +350,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes sceneBriefingCycle {
-  0%, 38% { opacity: 1; transform: scale(1.04); }
-  62%, 88% { opacity: 0; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1.04); }
-}
-
-@keyframes sceneNetworkCycle {
-  0%, 38% { opacity: 0; transform: scale(1); }
-  62%, 88% { opacity: 1; transform: scale(1.04); }
-  100% { opacity: 0; transform: scale(1); }
-}
-
 @keyframes storyCycle {
   0%, 21% { transform: translateY(0); }
   25%, 46% { transform: translateY(-1.625rem); }
@@ -377,11 +369,6 @@
   50%, 71% { transform: translateY(-2.16em); }
   75%, 96% { transform: translateY(-3.24em); }
   100% { transform: translateY(-4.32em); }
-}
-
-@keyframes briefingCamera {
-  from { transform: scale(1.02) translateX(0); }
-  to { transform: scale(1.1) translateX(-1.5%); }
 }
 
 @keyframes briefingScan {

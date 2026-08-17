@@ -50,7 +50,7 @@ export function Footer() {
           </div>
 
           <div className="md:pt-8 lg:justify-self-center">
-            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#00B0F0]">Quick Links</h2>
+            <h2 className="mb-4 text-base font-black text-[#00B0F0]">Quick Links</h2>
             <div className="grid grid-cols-[max-content_max-content] gap-x-12 gap-y-3 text-sm text-slate-300">
               {navItems.map((item, index) => (
                 <Link
@@ -71,7 +71,7 @@ export function Footer() {
           </div>
 
           <div className="md:pt-8 lg:justify-self-center">
-            <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#00B0F0]">Connect</h2>
+            <h2 className="mb-4 text-base font-black text-[#00B0F0]">Connect</h2>
             <div className="space-y-3 text-sm text-slate-300">
               <p className="flex items-center gap-4">
                 <Mail className="h-4 w-4 text-[#00B0F0]" aria-hidden="true" /> {companyContact.email}
@@ -99,7 +99,7 @@ export function Footer() {
           </div>
 
           <div className="md:pt-8">
-            <h3 className="mb-2 text-sm font-black text-[#00B0F0]">Stay Connected With Us!</h3>
+            <h2 className="mb-4 text-base font-black text-[#00B0F0]">Stay Connected With Us!</h2>
             <form
               action="/contact"
               method="get"
@@ -125,23 +125,16 @@ export function Footer() {
                 Connect
               </button>
             </form>
-            <a
-              href="/past-performance-client-success.png"
-              target="_blank"
-              rel="noreferrer"
-              className="focus-ring mt-4 block w-[6.3rem] transition hover:-translate-y-1 hover:drop-shadow-[0_0_12px_rgba(0,176,240,0.45)]"
-              aria-label="View the 365INO Past Performance and Client Success document"
-            >
-              <Image
-                src="/past-performance-client-success.png"
-                alt="365INO Past Performance and Client Success document"
-                width={1024}
-                height={1536}
-                sizes="101px"
-                quality={100}
-                className="h-auto w-full object-contain"
-              />
-            </a>
+            <h2 className="mb-4 mt-4 text-base font-black text-[#00B0F0]">
+              <a
+                href="/past-performance-client-success.png"
+                target="_blank"
+                rel="noreferrer"
+                className="focus-ring"
+              >
+                Capability Statement
+              </a>
+            </h2>
           </div>
         </div>
         <p className="mt-4 text-left text-[9px] text-white">

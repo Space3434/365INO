@@ -1,19 +1,50 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import styles from "./animated-home-hero.module.css";
 
 const imageScenes = [
   {
-    className: styles.sceneNetwork,
-    src: "/hero-global-network-sharpened.png"
+    className: styles.sceneOrangeServers,
+    src: "/hero-orange-server-racks.png"
+  },
+  {
+    className: styles.sceneInnovation,
+    src: "/hero-innovation-lightbulbs.png"
+  },
+  {
+    className: styles.sceneAiProcessor,
+    src: "/hero-ai-processor.png"
+  },
+  {
+    className: styles.sceneCircuitBoard,
+    src: "/hero-monochrome-circuit-board.png"
+  },
+  {
+    className: styles.sceneTechnologyCore,
+    src: "/hero-technology-core-enhanced.png"
   }
 ];
 
 export function AnimatedHomeHero() {
+  const [activeScene, setActiveScene] = useState(0);
+  const sceneCount = imageScenes.length + 1;
+
+  useEffect(() => {
+    const sceneDuration = activeScene === 0 ? 10000 : 5000;
+    const rotation = window.setTimeout(() => {
+      setActiveScene((current) => (current + 1) % sceneCount);
+    }, sceneDuration);
+
+    return () => window.clearTimeout(rotation);
+  }, [activeScene, sceneCount]);
+
   return (
     <>
     <section className={styles.hero} aria-labelledby="home-hero-title">
       <div className={styles.heroScenes} aria-hidden="true">
-        <div className={`${styles.heroScene} ${styles.sceneBriefing}`}>
+        <div className={`${styles.heroScene} ${styles.sceneBriefing} ${activeScene === 0 ? styles.sceneActive : ""}`}>
           {/* The first scene uses the approved, locally hosted leadership image. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/homepage-header.png" alt="" />
@@ -22,8 +53,8 @@ export function AnimatedHomeHero() {
           <span className={`${styles.briefingPulse} ${styles.pulseTwo}`} />
         </div>
 
-        {imageScenes.map((scene) => (
-          <div key={scene.src} className={`${styles.heroScene} ${scene.className}`}>
+        {imageScenes.map((scene, index) => (
+          <div key={scene.src} className={`${styles.heroScene} ${scene.className} ${activeScene === index + 1 ? styles.sceneActive : ""}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={scene.src} alt="" />
           </div>
